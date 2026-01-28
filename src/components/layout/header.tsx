@@ -32,6 +32,12 @@ export function Header() {
             </span>
           </Link>
           <nav className="hidden items-center gap-6 text-sm md:flex">
+            <Link
+              href="/"
+              className="font-medium text-foreground/60 transition-colors hover:text-foreground/80"
+            >
+              {t.home}
+            </Link>
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center gap-1 font-medium text-foreground/60 transition-colors hover:text-foreground/80 focus:outline-none">
                 {t.insight}
@@ -94,6 +100,12 @@ export function Header() {
                 <span className="font-bold font-headline">Huntr</span>
               </Link>
               <div className="mt-6 flex flex-col gap-4">
+                <Link
+                  href="/"
+                  className="font-medium text-foreground/60 transition-colors hover:text-foreground/80"
+                >
+                  {t.home}
+                </Link>
                 <div className="flex flex-col gap-3 pt-2">
                   <h4 className="font-semibold text-foreground/80">{t.insight}</h4>
                   <Link href="/use-case" className="pl-2 font-medium text-foreground/60 transition-colors hover:text-foreground/80">
