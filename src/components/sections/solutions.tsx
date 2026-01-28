@@ -31,8 +31,8 @@ export function Solutions() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
-            <Card key={index} className="text-center flex flex-col items-center">
-              <CardHeader>
+            <Card key={index} className="text-center">
+              <CardHeader className="items-center">
                 {solution.icon}
                 <CardTitle className="mt-4 font-headline">{solution.title}</CardTitle>
               </CardHeader>
