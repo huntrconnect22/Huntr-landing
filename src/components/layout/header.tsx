@@ -63,6 +63,24 @@ export function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
 
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1 font-medium text-foreground/60 transition-colors hover:text-foreground/80 focus:outline-none">
+                {t.about}
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                <DropdownMenuItem asChild>
+                  <Link href="/our-company">{t.ourCompany}</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/our-team">{t.ourTeam}</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/privacy-policy">{t.privacyPolicy}</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Link
               href="/#contact"
               className="font-medium text-foreground/60 transition-colors hover:text-foreground/80"
@@ -112,6 +130,19 @@ export function Header() {
                   </Link>
                   <Link href="/article" className="pl-2 font-medium text-foreground/60 transition-colors hover:text-foreground/80">
                     {t.article}
+                  </Link>
+                </div>
+
+                <div className="flex flex-col gap-3 pt-2">
+                  <h4 className="font-semibold text-foreground/80">{t.about}</h4>
+                  <Link href="/our-company" className="pl-2 font-medium text-foreground/60 transition-colors hover:text-foreground/80">
+                    {t.ourCompany}
+                  </Link>
+                  <Link href="/our-team" className="pl-2 font-medium text-foreground/60 transition-colors hover:text-foreground/80">
+                    {t.ourTeam}
+                  </Link>
+                  <Link href="/privacy-policy" className="pl-2 font-medium text-foreground/60 transition-colors hover:text-foreground/80">
+                    {t.privacyPolicy}
                   </Link>
                 </div>
 
