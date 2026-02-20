@@ -49,65 +49,19 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center justify-between">
-        {/* === Left side: Logo & Nav === */}
-        <div className="flex items-center gap-6">
-          <Link href="/" className="mr-4 flex items-center space-x-2">
-            <HuntrLogo className="h-6 w-6 text-primary" />
-            <span className="font-bold sm:inline-block font-headline">
-              Huntr
-            </span>
-          </Link>
-          <nav className="hidden items-center gap-6 text-sm md:flex">
-             <Link
-              href="/"
-              className="font-medium text-foreground/80 transition-colors hover:text-foreground"
-            >
-              {t.home}
-            </Link>
-            {navLinks.map((link) => (
-               <DropdownMenu key={link.title}>
-                <DropdownMenuTrigger className="flex items-center gap-1 font-medium text-foreground/80 transition-colors hover:text-foreground focus:outline-none">
-                  {link.title}
-                  <ChevronDown className="h-4 w-4" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="start">
-                  {link.items.map((item) => (
-                    <DropdownMenuItem key={item.href} asChild>
-                      <Link href={item.href}>{item.title}</Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
-            ))}
-             <Link
-              href="/contact"
-              className="font-medium text-foreground/80 transition-colors hover:text-foreground"
-            >
-              {t.contact}
-            </Link>
-          </nav>
-        </div>
+      <div className="container relative flex h-14 items-center">
         
-        {/* === Right side: Actions & Mobile Menu === */}
-        <div className="flex items-center gap-2">
-          <div className="hidden md:flex items-center gap-2">
-             <LanguageToggle />
-             <Button asChild>
-              <Link href="/contact">{t.requestDemo}</Link>
-            </Button>
-          </div>
-         
-          {/* Mobile Menu */}
+        {/* Left side: Logo & Mobile Menu Trigger */}
+        <div className="flex items-center">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="md:hidden">
+              <Button variant="outline" size="icon" className="md:hidden mr-4">
                 <Menu className="h-4 w-4" />
                 <span className="sr-only">{t.openMenu}</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full max-w-sm">
-              <div className="flex items-center justify-between">
+            <SheetContent side="left" className="w-full max-w-sm">
+               <div className="flex items-center justify-between">
                 <Link href="/" className="flex items-center space-x-2">
                   <HuntrLogo className="h-6 w-6 text-primary" />
                   <span className="font-bold font-headline">Huntr</span>
@@ -147,9 +101,56 @@ export function Header() {
                   </Button>
                 </div>
               </div>
-
             </SheetContent>
           </Sheet>
+          
+          <Link href="/" className="flex items-center space-x-2">
+            <HuntrLogo className="h-6 w-6 text-primary" />
+            <span className="font-bold sm:inline-block font-headline">
+              Huntr
+            </span>
+          </Link>
+        </div>
+
+        {/* Center Nav (Desktop) */}
+        <nav className="hidden md:flex gap-6 text-sm absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <Link
+            href="/"
+            className="font-medium text-foreground/80 transition-colors hover:text-foreground"
+          >
+            {t.home}
+          </Link>
+          {navLinks.map((link) => (
+             <DropdownMenu key={link.title}>
+              <DropdownMenuTrigger className="flex items-center gap-1 font-medium text-foreground/80 transition-colors hover:text-foreground focus:outline-none">
+                {link.title}
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="center">
+                {link.items.map((item) => (
+                  <DropdownMenuItem key={item.href} asChild>
+                    <Link href={item.href}>{item.title}</Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          ))}
+           <Link
+            href="/contact"
+            className="font-medium text-foreground/80 transition-colors hover:text-foreground"
+          >
+            {t.contact}
+          </Link>
+        </nav>
+
+        {/* Right Side: Actions */}
+        <div className="flex items-center gap-2 ml-auto">
+          <div className="hidden md:flex items-center gap-2">
+             <LanguageToggle />
+             <Button asChild>
+              <Link href="/contact">{t.requestDemo}</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </header>
