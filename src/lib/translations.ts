@@ -70,6 +70,17 @@ export const translations = {
           historyText1: 'From our beginnings as a small team of industry experts frustrated with inefficient procurement processes, Huntr has grown into a comprehensive platform serving businesses worldwide. We saw the need for a unified solution that combines e-procurement, supply chain management, and secure payments.',
           historyText2: 'Every milestone, from the launch of our first module to the integration of HUNTR Pay, has been driven by our commitment to solving real-world challenges for our clients. Our journey is a testament to the power of a clear vision and relentless innovation.'
         },
+        privacyPolicy: {
+          title: "Privacy Policy",
+          subtitle: "Your privacy is important to us. This policy explains what information we collect and how we use it.",
+          lastUpdated: "Last Updated: [Date]",
+          introductionTitle: "Introduction",
+          introductionText: "Welcome to Huntr. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy, or our practices with regards to your personal information, please contact us.",
+          informationCollectionTitle: "Information We Collect",
+          informationCollectionText: "We collect personal information that you voluntarily provide to us when you register on the website, express an interest in obtaining information about us or our products and services, when you participate in activities on the website or otherwise when you contact us.",
+          howWeUseTitle: "How We Use Your Information",
+          howWeUseText: "We use personal information collected via our website for a variety of business purposes described below. We process your personal information for these purposes in reliance on our legitimate business interests, in order to enter into or perform a contract with you, with your consent, and/or for compliance with our legal obligations."
+        },
         footer: {
           copy: 'Huntr Inc. All rights reserved.',
         },
@@ -144,6 +155,17 @@ export const translations = {
           historyTitle: 'Perjalanan Kami',
           historyText1: 'Dari awal kami sebagai tim kecil ahli industri yang frustrasi dengan proses pengadaan yang tidak efisien, Huntr telah berkembang menjadi platform komprehensif yang melayani bisnis di seluruh dunia. Kami melihat perlunya solusi terpadu yang menggabungkan e-procurement, manajemen rantai pasokan, dan pembayaran yang aman.',
           historyText2: 'Setiap tonggak sejarah, mulai dari peluncuran modul pertama kami hingga integrasi HUNTR Pay, telah didorong oleh komitmen kami untuk memecahkan tantangan dunia nyata bagi klien kami. Perjalanan kami adalah bukti kekuatan visi yang jelas dan inovasi tanpa henti.'
+        },
+        privacyPolicy: {
+            title: "Kebijakan Privasi",
+            subtitle: "Privasi Anda penting bagi kami. Kebijakan ini menjelaskan informasi apa yang kami kumpulkan dan bagaimana kami menggunakannya.",
+            lastUpdated: "Terakhir Diperbarui: [Date]",
+            introductionTitle: "Pendahuluan",
+            introductionText: "Selamat datang di Huntr. Kami berkomitmen untuk melindungi informasi pribadi Anda dan hak privasi Anda. Jika Anda memiliki pertanyaan atau kekhawatiran tentang kebijakan kami, atau praktik kami sehubungan dengan informasi pribadi Anda, silakan hubungi kami.",
+            informationCollectionTitle: "Informasi yang Kami Kumpulkan",
+            informationCollectionText: "Kami mengumpulkan informasi pribadi yang Anda berikan secara sukarela kepada kami saat Anda mendaftar di situs web, menyatakan minat untuk memperoleh informasi tentang kami atau produk dan layanan kami, saat Anda berpartisipasi dalam aktivitas di situs web atau saat Anda menghubungi kami.",
+            howWeUseTitle: "Bagaimana Kami Menggunakan Informasi Anda",
+            howWeUseText: "Kami menggunakan informasi pribadi yang dikumpulkan melalui situs web kami untuk berbagai tujuan bisnis yang dijelaskan di bawah ini. Kami memproses informasi pribadi Anda untuk tujuan ini dengan mengandalkan kepentingan bisnis kami yang sah, untuk masuk ke dalam atau melaksanakan kontrak dengan Anda, dengan persetujuan Anda, dan/atau untuk kepatuhan terhadap kewajiban hukum kami."
         },
         footer: {
           copy: 'Huntr Inc. Hak cipta dilindungi undang-undang.',
