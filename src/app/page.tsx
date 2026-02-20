@@ -1,3 +1,5 @@
+'use client';
+
 import { Header } from "@/components/layout/header";
 import { Hero } from "@/components/sections/hero";
 import { Solutions } from "@/components/sections/solutions";
@@ -5,6 +7,7 @@ import { Features } from "@/components/sections/features";
 import { Footer } from "@/components/layout/footer";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Cta } from "@/components/sections/cta";
+import { Faq } from "@/components/sections/faq";
 
 export default function Home() {
   return (
@@ -15,6 +18,7 @@ export default function Home() {
         <Solutions />
         <Features />
         <Testimonials />
+        <Faq />
         <Cta />
       </main>
       <Footer />
