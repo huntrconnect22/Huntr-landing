@@ -49,7 +49,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full p-2">
-      <div className="relative mx-auto flex h-14 max-w-screen-xl items-center justify-between rounded-lg border border-border/40 bg-background/95 px-4 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="relative mx-auto flex h-16 max-w-screen-xl items-center justify-between rounded-xl border border-border/40 bg-background/95 px-4 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-background/60">
         
         {/* Left side: Logo & Mobile Menu Trigger */}
         <div className="flex items-center">
@@ -94,11 +94,6 @@ export function Header() {
                   <Link href="/contact" className="px-2 py-2 font-medium text-foreground/80 transition-colors hover:text-foreground">
                     {t.contact}
                   </Link>
-                </div>
-                <div className="mt-auto">
-                   <Button asChild className="w-full">
-                    <Link href="/contact">{t.requestDemo}</Link>
-                  </Button>
                 </div>
               </div>
             </SheetContent>
@@ -147,9 +142,6 @@ export function Header() {
         <div className="flex items-center justify-end gap-2">
           <div className="hidden md:flex items-center gap-2">
              <LanguageToggle />
-             <Button asChild>
-              <Link href="/contact">{t.requestDemo}</Link>
-            </Button>
           </div>
         </div>
       </div>
