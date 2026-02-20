@@ -43,7 +43,7 @@ export default function OurCompanyPage() {
   return (
     <div className="flex flex-col min-h-dvh bg-background">
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 -mt-24">
         {/* Hero Section */}
         <section className="relative py-24 sm:py-32 bg-secondary">
           <div className="container mx-auto px-4 text-center">
