@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-dvh bg-background">
       <Header />
-      <main className="flex-1 -mt-[4.5rem]">
+      <main className="flex-1 -mt-24">
         <Hero />
         <Solutions />
         <Features />
