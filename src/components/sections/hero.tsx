@@ -16,7 +16,7 @@ export function Hero() {
   const t = translations[lang].hero;
 
   return (
-    <section className="relative w-full h-[70vh] min-h-[500px] flex items-center justify-center text-center">
+    <section className="relative w-full h-screen flex items-center justify-center text-center">
        {heroImage && (
         <Image
           src={heroImage.imageUrl}
