@@ -30,7 +30,7 @@ export function Testimonials() {
 
   return (
     <section id="testimonials" className="relative py-16 sm:py-24 bg-cover bg-center" style={{backgroundImage: "url('/assets/img/section-bg2.webp')"}}>
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-black/30" />
       <div className="relative container mx-auto px-4">
         <AnimateOnScroll className="text-center max-w-3xl mx-auto mb-12 fade-in zoom-in-95 duration-500">
           <h2 className="text-3xl sm:text-4xl font-headline font-bold text-white">{t.title}</h2>
@@ -43,7 +43,7 @@ export function Testimonials() {
               className="fade-in zoom-in-95 duration-700"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <Card className="flex flex-col h-full bg-black/20 backdrop-blur-md border-white/10">
+              <Card className="flex flex-col h-full bg-black/20 border-white/10">
                 <CardContent className="flex-1 flex flex-col justify-center items-center p-8 text-center">
                   <p className="text-white/80 italic">"{testimonial.quote}"</p>
                   <div className="mt-6 flex items-center gap-4">

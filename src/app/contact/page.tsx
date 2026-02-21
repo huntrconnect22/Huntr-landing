@@ -38,10 +38,10 @@ export default function ContactPage() {
           style={{ backgroundImage: heroImage ? `url(${heroImage.imageUrl})` : 'none' }}
           aria-label={heroImage ? heroImage.description : 'Contact form background'}
         >
-          <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-black/50" />
           <div className="relative container mx-auto px-4">
             <AnimateOnScroll className="max-w-xl mx-auto fade-in zoom-in-95 duration-700">
-              <Card className="bg-black/20 backdrop-blur-md border-white/10">
+              <Card className="bg-black/20 border-white/10">
                 <CardContent className="pt-6">
                   <form className="space-y-4">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

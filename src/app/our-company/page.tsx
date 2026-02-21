@@ -83,14 +83,14 @@ export default function OurCompanyPage() {
           className="relative py-16 sm:py-24 bg-cover bg-center"
           style={{backgroundImage: "url('/assets/img/section-bg1.webp')"}}
         >
-          <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-black/30" />
           <div className="relative container mx-auto px-4">
             <AnimateOnScroll className="text-center max-w-3xl mx-auto mb-12 fade-in zoom-in-95 duration-500">
               <h2 className="text-3xl sm:text-4xl font-headline font-bold text-white">{t.visionMissionTitle}</h2>
             </AnimateOnScroll>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <AnimateOnScroll className="fade-in zoom-in-95 duration-700">
-                <Card className="bg-black/20 backdrop-blur-md border-white/10">
+                <Card className="bg-black/20 border-white/10">
                   <CardHeader className="flex-row items-center gap-4">
                     <Eye className="h-10 w-10 text-primary" />
                     <CardTitle className="font-headline text-white">{t.visionTitle}</CardTitle>
@@ -101,7 +101,7 @@ export default function OurCompanyPage() {
                 </Card>
               </AnimateOnScroll>
               <AnimateOnScroll className="fade-in zoom-in-95 duration-700" style={{ animationDelay: '100ms' }}>
-                <Card className="bg-black/20 backdrop-blur-md border-white/10">
+                <Card className="bg-black/20 border-white/10">
                   <CardHeader className="flex-row items-center gap-4">
                     <Target className="h-10 w-10 text-primary" />
                     <CardTitle className="font-headline text-white">{t.missionTitle}</CardTitle>

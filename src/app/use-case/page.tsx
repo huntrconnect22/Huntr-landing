@@ -83,7 +83,7 @@ export default function UseCasePage() {
           className="relative py-16 sm:py-24 bg-cover bg-center"
           style={{backgroundImage: "url('/assets/img/section-bg2.webp')"}}
         >
-          <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-black/30" />
           <div className="relative container mx-auto px-4">
             <Tabs defaultValue="eprocurement" className="w-full">
               <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 h-auto md:h-10 mb-8 bg-black/20 text-white/70">
@@ -94,7 +94,7 @@ export default function UseCasePage() {
               
               {useCases.map((useCase) => (
                 <TabsContent value={useCase.value} key={useCase.value}>
-                  <Card className="bg-black/20 backdrop-blur-md border-white/10">
+                  <Card className="bg-black/20 border-white/10">
                     <CardContent className="p-6">
                       <AnimateOnScroll className="grid md:grid-cols-2 gap-8 items-center fade-in-50 duration-500">
                         <div className="space-y-4">
