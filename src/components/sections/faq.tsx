@@ -9,6 +9,7 @@ import {
 import { useContext } from "react";
 import { LanguageContext } from "@/context/language-context";
 import { translations } from "@/lib/translations";
+import { AnimateOnScroll } from "../animate-on-scroll";
 
 export function Faq() {
   const context = useContext(LanguageContext);
@@ -39,13 +40,13 @@ export function Faq() {
   return (
     <section id="faq" className="py-16 sm:py-24">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-12 animate-in fade-in zoom-in-95 duration-500">
+        <AnimateOnScroll className="text-center max-w-3xl mx-auto mb-12 fade-in zoom-in-95 duration-500">
           <h2 className="text-3xl sm:text-4xl font-headline font-bold">{t.title}</h2>
           <p className="mt-4 text-lg text-muted-foreground">
             {t.subtitle}
           </p>
-        </div>
-        <div className="max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-10 duration-700">
+        </AnimateOnScroll>
+        <AnimateOnScroll className="max-w-3xl mx-auto fade-in slide-in-from-bottom-10 duration-700">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem value={`item-${index}`} key={index}>
@@ -56,7 +57,7 @@ export function Faq() {
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
+        </AnimateOnScroll>
       </div>
     </section>
   );

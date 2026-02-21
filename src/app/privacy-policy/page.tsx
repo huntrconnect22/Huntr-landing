@@ -8,6 +8,7 @@ import { translations } from "@/lib/translations";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PageHero } from "@/components/sections/page-hero";
 import { useDynamicSeo } from "@/hooks/use-dynamic-seo";
+import { AnimateOnScroll } from "@/components/animate-on-scroll";
 
 export default function PrivacyPolicyPage() {
   const context = useContext(LanguageContext);
@@ -41,28 +42,30 @@ export default function PrivacyPolicyPage() {
         {/* Main Content Section */}
         <section className="py-16 sm:py-24">
           <div className="container mx-auto px-4">
-            <Card className="max-w-4xl mx-auto animate-in fade-in duration-700">
-              <CardHeader>
-                <CardTitle className="text-3xl font-headline">{t.title}</CardTitle>
-                <p className="text-sm text-muted-foreground">{t.lastUpdated.replace('[Date]', date)}</p>
-              </CardHeader>
-              <CardContent className="space-y-6 text-muted-foreground">
-                <div>
-                  <h2 className="text-2xl font-bold font-headline text-foreground mb-2">{t.introductionTitle}</h2>
-                  <p>{t.introductionText}</p>
-                </div>
-                
-                <div>
-                  <h2 className="text-2xl font-bold font-headline text-foreground mb-2">{t.informationCollectionTitle}</h2>
-                  <p>{t.informationCollectionText}</p>
-                </div>
+            <AnimateOnScroll className="max-w-4xl mx-auto fade-in duration-700">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-3xl font-headline">{t.title}</CardTitle>
+                  <p className="text-sm text-muted-foreground">{t.lastUpdated.replace('[Date]', date)}</p>
+                </CardHeader>
+                <CardContent className="space-y-6 text-muted-foreground">
+                  <div>
+                    <h2 className="text-2xl font-bold font-headline text-foreground mb-2">{t.introductionTitle}</h2>
+                    <p>{t.introductionText}</p>
+                  </div>
+                  
+                  <div>
+                    <h2 className="text-2xl font-bold font-headline text-foreground mb-2">{t.informationCollectionTitle}</h2>
+                    <p>{t.informationCollectionText}</p>
+                  </div>
 
-                <div>
-                  <h2 className="text-2xl font-bold font-headline text-foreground mb-2">{t.howWeUseTitle}</h2>
-                  <p>{t.howWeUseText}</p>
-                </div>
-              </CardContent>
-            </Card>
+                  <div>
+                    <h2 className="text-2xl font-bold font-headline text-foreground mb-2">{t.howWeUseTitle}</h2>
+                    <p>{t.howWeUseText}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimateOnScroll>
           </div>
         </section>
       </main>

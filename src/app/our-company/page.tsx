@@ -12,6 +12,7 @@ import { Eye, Target } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { PageHero } from "@/components/sections/page-hero";
 import { useDynamicSeo } from "@/hooks/use-dynamic-seo";
+import { AnimateOnScroll } from "@/components/animate-on-scroll";
 
 const mainImage = PlaceHolderImages.find(p => p.id === 'our-company-main');
 
@@ -56,7 +57,7 @@ export default function OurCompanyPage() {
         {/* Main Content Section */}
         <section className="py-16 sm:py-24">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-12 items-center animate-in fade-in slide-in-from-bottom-10 duration-700">
+            <AnimateOnScroll className="grid md:grid-cols-2 gap-12 items-center fade-in slide-in-from-bottom-10 duration-700">
               <div className="prose lg:prose-lg max-w-none text-muted-foreground">
                 <h2 className="text-3xl font-bold font-headline text-foreground">{t.historyTitle}</h2>
                 <p>{t.historyText1}</p>
@@ -73,7 +74,7 @@ export default function OurCompanyPage() {
                   />
                 </div>
               )}
-            </div>
+            </AnimateOnScroll>
           </div>
         </section>
 
@@ -84,28 +85,32 @@ export default function OurCompanyPage() {
         >
           <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
           <div className="relative container mx-auto px-4">
-            <div className="text-center max-w-3xl mx-auto mb-12 animate-in fade-in zoom-in-95 duration-500">
+            <AnimateOnScroll className="text-center max-w-3xl mx-auto mb-12 fade-in zoom-in-95 duration-500">
               <h2 className="text-3xl sm:text-4xl font-headline font-bold text-white">{t.visionMissionTitle}</h2>
-            </div>
+            </AnimateOnScroll>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <Card className="bg-black/20 backdrop-blur-md border-white/10 animate-in fade-in zoom-in-95 duration-700">
-                <CardHeader className="flex-row items-center gap-4">
-                  <Eye className="h-10 w-10 text-primary" />
-                  <CardTitle className="font-headline text-white">{t.visionTitle}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-white/80">{t.visionText}</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-black/20 backdrop-blur-md border-white/10 animate-in fade-in zoom-in-95 duration-700" style={{ animationDelay: '100ms' }}>
-                <CardHeader className="flex-row items-center gap-4">
-                  <Target className="h-10 w-10 text-primary" />
-                  <CardTitle className="font-headline text-white">{t.missionTitle}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-white/80">{t.missionText}</p>
-                </CardContent>
-              </Card>
+              <AnimateOnScroll className="fade-in zoom-in-95 duration-700">
+                <Card className="bg-black/20 backdrop-blur-md border-white/10">
+                  <CardHeader className="flex-row items-center gap-4">
+                    <Eye className="h-10 w-10 text-primary" />
+                    <CardTitle className="font-headline text-white">{t.visionTitle}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-white/80">{t.visionText}</p>
+                  </CardContent>
+                </Card>
+              </AnimateOnScroll>
+              <AnimateOnScroll className="fade-in zoom-in-95 duration-700" style={{ animationDelay: '100ms' }}>
+                <Card className="bg-black/20 backdrop-blur-md border-white/10">
+                  <CardHeader className="flex-row items-center gap-4">
+                    <Target className="h-10 w-10 text-primary" />
+                    <CardTitle className="font-headline text-white">{t.missionTitle}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-white/80">{t.missionText}</p>
+                  </CardContent>
+                </Card>
+              </AnimateOnScroll>
             </div>
           </div>
         </section>

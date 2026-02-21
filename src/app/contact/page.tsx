@@ -13,6 +13,7 @@ import { translations } from "@/lib/translations";
 import { PageHero } from "@/components/sections/page-hero";
 import { useDynamicSeo } from "@/hooks/use-dynamic-seo";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { AnimateOnScroll } from "@/components/animate-on-scroll";
 
 const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
 
@@ -39,7 +40,7 @@ export default function ContactPage() {
         >
           <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
           <div className="relative container mx-auto px-4">
-            <div className="max-w-xl mx-auto animate-in fade-in zoom-in-95 duration-700">
+            <AnimateOnScroll className="max-w-xl mx-auto fade-in zoom-in-95 duration-700">
               <Card className="bg-black/20 backdrop-blur-md border-white/10">
                 <CardContent className="pt-6">
                   <form className="space-y-4">
@@ -82,7 +83,7 @@ export default function ContactPage() {
                   </form>
                 </CardContent>
               </Card>
-            </div>
+            </AnimateOnScroll>
           </div>
         </section>
       </main>

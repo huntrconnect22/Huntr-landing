@@ -12,6 +12,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { useDynamicSeo } from "@/hooks/use-dynamic-seo";
+import { AnimateOnScroll } from "@/components/animate-on-scroll";
 
 const eprocurementImage = PlaceHolderImages.find(p => p.id === 'use-case-eprocurement');
 const esupplychainImage = PlaceHolderImages.find(p => p.id === 'use-case-esupplychain');
@@ -92,10 +93,10 @@ export default function UseCasePage() {
               </TabsList>
               
               {useCases.map((useCase) => (
-                <TabsContent value={useCase.value} key={useCase.value} className="data-[state=active]:animate-in data-[state=active]:fade-in-50 data-[state=active]:duration-500">
+                <TabsContent value={useCase.value} key={useCase.value}>
                   <Card className="bg-black/20 backdrop-blur-md border-white/10">
                     <CardContent className="p-6">
-                      <div className="grid md:grid-cols-2 gap-8 items-center">
+                      <AnimateOnScroll className="grid md:grid-cols-2 gap-8 items-center fade-in-50 duration-500">
                         <div className="space-y-4">
                           <h3 className="text-2xl font-bold font-headline text-white">{useCase.title}</h3>
                           <p className="text-white/80">{useCase.description}</p>
@@ -119,7 +120,7 @@ export default function UseCasePage() {
                             />
                           </div>
                         )}
-                      </div>
+                      </AnimateOnScroll>
                     </CardContent>
                   </Card>
                 </TabsContent>

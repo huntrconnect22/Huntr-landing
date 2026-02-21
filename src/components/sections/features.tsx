@@ -4,6 +4,7 @@ import { BarChart3, CreditCard, FileText, Users } from "lucide-react";
 import { useContext } from "react";
 import { LanguageContext } from "@/context/language-context";
 import { translations } from "@/lib/translations";
+import { AnimateOnScroll } from "../animate-on-scroll";
 
 export function Features() {
   const context = useContext(LanguageContext);
@@ -36,15 +37,18 @@ export function Features() {
   return (
     <section id="features" className="py-16 sm:py-24">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-12 animate-in fade-in zoom-in-95 duration-500">
+        <AnimateOnScroll className="text-center max-w-3xl mx-auto mb-12 fade-in zoom-in-95 duration-500">
           <h2 className="text-3xl sm:text-4xl font-headline font-bold">{t.title}</h2>
           <p className="mt-4 text-lg text-muted-foreground">
             {t.subtitle}
           </p>
-        </div>
+        </AnimateOnScroll>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {features.map((feature, index) => (
-            <div key={index} className="flex gap-6 animate-in fade-in slide-in-from-bottom-10 duration-700" style={{ animationDelay: `${index * 100}ms` }}>
+            <AnimateOnScroll 
+              key={index} 
+              className="flex gap-6 fade-in slide-in-from-bottom-10 duration-700" 
+              style={{ animationDelay: `${index * 100}ms` }}>
               <div className="flex-shrink-0">
                 {feature.icon}
               </div>
@@ -52,7 +56,7 @@ export function Features() {
                 <h3 className="text-xl font-headline font-bold">{feature.title}</h3>
                 <p className="mt-2 text-muted-foreground">{feature.description}</p>
               </div>
-            </div>
+            </AnimateOnScroll>
           ))}
         </div>
       </div>
