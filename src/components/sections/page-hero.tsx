@@ -27,7 +27,7 @@ export function PageHero({ title, subtitle }: PageHeroProps) {
   
   return (
     <section 
-      className="relative pt-40 pb-24 sm:pt-48 sm:pb-32 bg-cover bg-center bg-fixed"
+      className="relative pt-40 pb-24 sm:pt-48 sm:pb-32 bg-cover bg-center"
       style={{ backgroundImage: `url(${heroImage.imageUrl})` }}
       aria-label={heroImage.description}
     >

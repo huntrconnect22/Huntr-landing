@@ -21,7 +21,7 @@ export function Solutions() {
   };
 
   return (
-    <section id="solutions" className="relative py-16 sm:py-24 bg-cover bg-center bg-fixed" style={{backgroundImage: "url('/assets/img/section-bg1.webp')"}}>
+    <section id="solutions" className="relative py-16 sm:py-24 bg-cover bg-center" style={{backgroundImage: "url('/assets/img/section-bg1.webp')"}}>
       <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
       <div className="relative container mx-auto px-4">
         <AnimateOnScroll className="text-center max-w-3xl mx-auto mb-16 fade-in zoom-in-95 duration-500">

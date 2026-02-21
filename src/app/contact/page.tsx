@@ -34,7 +34,7 @@ export default function ContactPage() {
         <PageHero title={t.title} subtitle={t.description} />
 
         <section 
-          className="relative py-16 sm:py-24 bg-cover bg-center bg-fixed"
+          className="relative py-16 sm:py-24 bg-cover bg-center"
           style={{ backgroundImage: heroImage ? `url(${heroImage.imageUrl})` : 'none' }}
           aria-label={heroImage ? heroImage.description : 'Contact form background'}
         >

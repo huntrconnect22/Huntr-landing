@@ -80,7 +80,7 @@ export default function UseCasePage() {
 
         {/* Main Content Section */}
         <section 
-          className="relative py-16 sm:py-24 bg-cover bg-center bg-fixed"
+          className="relative py-16 sm:py-24 bg-cover bg-center"
           style={{backgroundImage: "url('/assets/img/section-bg2.webp')"}}
         >
           <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />

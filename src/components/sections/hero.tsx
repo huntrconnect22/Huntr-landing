@@ -16,7 +16,7 @@ export function Hero() {
 
   return (
     <section 
-      className="relative w-full h-screen flex items-center justify-center text-center bg-cover bg-center bg-fixed"
+      className="relative w-full h-screen flex items-center justify-center text-center bg-cover bg-center"
       style={{ backgroundImage: heroImage ? `url(${heroImage.imageUrl})` : 'none' }}
       aria-label={heroImage ? heroImage.description : 'Hero background'}
     >

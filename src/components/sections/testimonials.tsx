@@ -29,7 +29,7 @@ export function Testimonials() {
   ];
 
   return (
-    <section id="testimonials" className="relative py-16 sm:py-24 bg-cover bg-center bg-fixed" style={{backgroundImage: "url('/assets/img/section-bg2.webp')"}}>
+    <section id="testimonials" className="relative py-16 sm:py-24 bg-cover bg-center" style={{backgroundImage: "url('/assets/img/section-bg2.webp')"}}>
       <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
       <div className="relative container mx-auto px-4">
         <AnimateOnScroll className="text-center max-w-3xl mx-auto mb-12 fade-in zoom-in-95 duration-500">
