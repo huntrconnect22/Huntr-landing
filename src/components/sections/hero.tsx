@@ -19,7 +19,6 @@ export function Hero() {
       className="relative w-full h-screen flex items-center justify-center text-center bg-cover"
       style={{ 
         backgroundImage: heroImage ? `url(${heroImage.imageUrl})` : 'none',
-        backgroundAttachment: 'fixed',
         backgroundPosition: 'center'
       }}
       aria-label={heroImage ? heroImage.description : 'Hero background'}
