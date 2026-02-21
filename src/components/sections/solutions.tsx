@@ -20,8 +20,9 @@ export function Solutions() {
   };
 
   return (
-    <section id="solutions" className="py-16 sm:py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="solutions" className="relative py-16 sm:py-24 bg-cover bg-center" style={{backgroundImage: "url('/assets/img/section-bg1.webp')"}}>
+      <div className="absolute inset-0 bg-background/90 backdrop-blur-sm" />
+      <div className="relative container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl font-headline font-bold">{t.title}</h2>
           <p className="mt-4 text-lg text-muted-foreground">
