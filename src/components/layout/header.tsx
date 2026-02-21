@@ -45,6 +45,8 @@ export function Header() {
       items: [
         { href: '/our-company', title: t.ourCompany },
         { href: '/our-team', title: t.ourTeam },
+        { href: '/careers', title: t.careers },
+        { href: '/investor-relations', title: t.investorRelations },
         { href: '/privacy-policy', title: t.privacyPolicy },
       ]
     }

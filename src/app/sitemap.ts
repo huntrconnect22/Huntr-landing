@@ -10,6 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/article',
     '/our-company',
     '/our-team',
+    '/careers',
+    '/investor-relations',
     '/privacy-policy',
     '/contact',
   ];

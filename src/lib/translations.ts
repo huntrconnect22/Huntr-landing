@@ -13,6 +13,8 @@ export const translations = {
           about: 'About Us',
           ourCompany: 'Our Company',
           ourTeam: 'Our Team',
+          careers: 'Careers',
+          investorRelations: 'Investor Relations',
           privacyPolicy: 'Privacy Policy',
           contact: 'Contact',
           openMenu: 'Open menu',
@@ -29,6 +31,14 @@ export const translations = {
           ourTeam: {
             description: "Meet the professional team behind Huntr's success.",
             contentPlaceholder: 'Information about our team will be displayed here.'
+          },
+          careers: {
+            description: 'Join our team and help us revolutionize the procurement industry.',
+            contentPlaceholder: 'Open positions and information about working at Huntr will be displayed here.'
+          },
+          investorRelations: {
+            description: 'Information for investors and about our financial performance.',
+            contentPlaceholder: 'Investor relations information, reports, and news will be displayed here.'
           }
         },
         hero: {
@@ -149,6 +159,10 @@ export const translations = {
         },
         footer: {
           copy: 'Huntr Inc. All rights reserved.',
+          description: 'Huntr is your strategic partner in technology procurement, offering cloud-based solutions for a fast, secure, and streamlined supply chain.',
+          insight: 'Insight',
+          company: 'Company',
+          legal: 'Legal',
         },
       },
       id: {
@@ -165,6 +179,8 @@ export const translations = {
           about: 'Tentang Kami',
           ourCompany: 'Perusahaan Kami',
           ourTeam: 'Tim Kami',
+          careers: 'Karier',
+          investorRelations: 'Hubungan Investor',
           privacyPolicy: 'Kebijakan Privasi',
           contact: 'Kontak',
           openMenu: 'Buka menu',
@@ -181,6 +197,14 @@ export const translations = {
           ourTeam: {
             description: "Temui tim profesional di balik kesuksesan Huntr.",
             contentPlaceholder: 'Informasi tentang tim kami akan ditampilkan di sini.'
+          },
+          careers: {
+            description: 'Bergabunglah dengan tim kami dan bantu kami merevolusi industri pengadaan.',
+            contentPlaceholder: 'Posisi yang tersedia dan informasi tentang bekerja di Huntr akan ditampilkan di sini.'
+          },
+          investorRelations: {
+            description: 'Informasi untuk investor dan tentang kinerja keuangan kami.',
+            contentPlaceholder: 'Informasi hubungan investor, laporan, dan berita akan ditampilkan di sini.'
           }
         },
         hero: {
@@ -301,6 +325,10 @@ export const translations = {
         },
         footer: {
           copy: 'Huntr Inc. Hak cipta dilindungi undang-undang.',
+          description: 'Huntr adalah mitra strategis Anda dalam pengadaan teknologi, menawarkan solusi berbasis cloud untuk rantai pasokan yang cepat, aman, dan efisien.',
+          insight: 'Wawasan',
+          company: 'Perusahaan',
+          legal: 'Hukum',
         },
       },
     };
