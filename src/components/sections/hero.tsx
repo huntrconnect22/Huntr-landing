@@ -17,7 +17,10 @@ export function Hero() {
   return (
     <section 
       className="relative w-full h-screen flex items-center justify-center text-center bg-cover bg-center"
-      style={{ backgroundImage: heroImage ? `url(${heroImage.imageUrl})` : 'none' }}
+      style={{ 
+        backgroundImage: heroImage ? `url(${heroImage.imageUrl})` : 'none',
+        backgroundAttachment: 'fixed'
+      }}
       aria-label={heroImage ? heroImage.description : 'Hero background'}
     >
       <div className="absolute inset-0 bg-black/50" />

@@ -35,7 +35,10 @@ export default function ContactPage() {
 
         <section 
           className="relative py-16 sm:py-24 bg-cover bg-center"
-          style={{ backgroundImage: heroImage ? `url(${heroImage.imageUrl})` : 'none' }}
+          style={{ 
+            backgroundImage: heroImage ? `url(${heroImage.imageUrl})` : 'none',
+            backgroundAttachment: 'fixed'
+          }}
           aria-label={heroImage ? heroImage.description : 'Contact form background'}
         >
           <div className="absolute inset-0 bg-black/50" />

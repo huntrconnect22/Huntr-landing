@@ -95,7 +95,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${lato.variable} ${montserrat.variable} !scroll-smooth`}>
+    <html lang="en" className={`${lato.variable} ${montserrat.variable} scroll-smooth`}>
       <head>
         <StructuredData data={organizationSchema} />
         <StructuredData data={websiteSchema} />

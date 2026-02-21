@@ -81,7 +81,10 @@ export default function UseCasePage() {
         {/* Main Content Section */}
         <section 
           className="relative py-16 sm:py-24 bg-cover bg-center"
-          style={{backgroundImage: "url('/assets/img/section-bg2.webp')"}}
+          style={{
+            backgroundImage: "url('/assets/img/section-bg2.webp')",
+            backgroundAttachment: 'fixed'
+          }}
         >
           <div className="absolute inset-0 bg-black/30" />
           <div className="relative container mx-auto px-4">
