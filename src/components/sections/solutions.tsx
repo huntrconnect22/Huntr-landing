@@ -1,7 +1,7 @@
 'use client';
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Cloud, ShoppingCart, Workflow } from "lucide-react";
+import { Combine, ShoppingCart, Workflow } from "lucide-react";
 import { useContext } from "react";
 import { LanguageContext } from "@/context/language-context";
 import { translations } from "@/lib/translations";
@@ -23,7 +23,7 @@ export function Solutions() {
       description: t.card2Description,
     },
     {
-      icon: <Cloud className="h-8 w-8 text-primary" />,
+      icon: <Combine className="h-8 w-8 text-primary" />,
       title: t.card3Title,
       description: t.card3Description,
     },

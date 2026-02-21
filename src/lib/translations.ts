@@ -54,8 +54,8 @@ export const translations = {
           card1Description: 'Streamline your purchasing process with our intuitive e-procurement platform. Gain control over spending and improve efficiency.',
           card2Title: 'E-Supply Chain Management',
           card2Description: 'Optimize your entire supply chain, from sourcing to delivery, with our integrated, cloud-based management system.',
-          card3Title: 'Cloud-Based Solutions',
-          card3Description: 'Access our powerful tools anytime, anywhere. Our secure cloud infrastructure ensures reliability and scalability for your business.',
+          card3Title: 'Huntr Crowd Buy',
+          card3Description: 'Leverage collective buying power. Join group purchases to get the best prices on technology products from top-tier vendors.',
         },
         features: {
           title: 'Powerful Features for Your Business',
@@ -220,8 +220,8 @@ export const translations = {
           card1Description: 'Sederhanakan proses pembelian Anda dengan platform e-procurement kami yang intuitif. Dapatkan kendali atas pengeluaran dan tingkatkan efisiensi.',
           card2Title: 'Manajemen Rantai Pasokan Elektronik',
           card2Description: 'Optimalkan seluruh rantai pasokan Anda, dari pengadaan hingga pengiriman, dengan sistem manajemen terintegrasi berbasis cloud kami.',
-          card3Title: 'Solusi Berbasis Cloud',
-          card3Description: 'Akses alat canggih kami kapan saja, di mana saja. Infrastruktur cloud kami yang aman memastikan keandalan dan skalabilitas untuk bisnis Anda.',
+          card3Title: 'Huntr Crowd Buy',
+          card3Description: 'Manfaatkan kekuatan pembelian kolektif. Bergabunglah dalam pembelian kelompok untuk mendapatkan harga terbaik untuk produk teknologi dari vendor papan atas.',
         },
         features: {
           title: 'Fitur Andal untuk Bisnis Anda',
