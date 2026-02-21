@@ -78,28 +78,32 @@ export default function UseCasePage() {
         <PageHero title={t.title} subtitle={t.subtitle} />
 
         {/* Main Content Section */}
-        <section className="py-16 sm:py-24">
-          <div className="container mx-auto px-4">
+        <section 
+          className="relative py-16 sm:py-24 bg-cover bg-center bg-fixed"
+          style={{backgroundImage: "url('/assets/img/section-bg2.webp')"}}
+        >
+          <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
+          <div className="relative container mx-auto px-4">
             <Tabs defaultValue="eprocurement" className="w-full">
-              <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 h-auto md:h-10 mb-8">
-                <TabsTrigger value="eprocurement">{t.tab1}</TabsTrigger>
-                <TabsTrigger value="esupplychain">{t.tab2}</TabsTrigger>
-                <TabsTrigger value="huntrpay">{t.tab3}</TabsTrigger>
+              <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 h-auto md:h-10 mb-8 bg-black/20 text-white/70">
+                <TabsTrigger value="eprocurement" className="data-[state=active]:bg-white/20 data-[state=active]:text-white focus-visible:ring-white">{t.tab1}</TabsTrigger>
+                <TabsTrigger value="esupplychain" className="data-[state=active]:bg-white/20 data-[state=active]:text-white focus-visible:ring-white">{t.tab2}</TabsTrigger>
+                <TabsTrigger value="huntrpay" className="data-[state=active]:bg-white/20 data-[state=active]:text-white focus-visible:ring-white">{t.tab3}</TabsTrigger>
               </TabsList>
               
               {useCases.map((useCase) => (
                 <TabsContent value={useCase.value} key={useCase.value}>
-                  <Card>
+                  <Card className="bg-black/20 backdrop-blur-md border-white/10">
                     <CardContent className="p-6">
                       <div className="grid md:grid-cols-2 gap-8 items-center">
                         <div className="space-y-4">
-                          <h3 className="text-2xl font-bold font-headline">{useCase.title}</h3>
-                          <p className="text-muted-foreground">{useCase.description}</p>
+                          <h3 className="text-2xl font-bold font-headline text-white">{useCase.title}</h3>
+                          <p className="text-white/80">{useCase.description}</p>
                           <ul className="space-y-2">
                             {useCase.benefits.map((benefit, i) => (
                               <li key={i} className="flex items-start gap-2">
                                 <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                                <span className="text-muted-foreground">{benefit}</span>
+                                <span className="text-white/80">{benefit}</span>
                               </li>
                             ))}
                           </ul>
