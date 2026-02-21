@@ -23,7 +23,7 @@ export function Solutions() {
     <section id="solutions" className="relative py-16 sm:py-24 bg-cover bg-center bg-fixed" style={{backgroundImage: "url('/assets/img/section-bg1.webp')"}}>
       <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
       <div className="relative container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16 animate-in fade-in zoom-in-95 duration-500">
           <h2 className="text-3xl sm:text-4xl font-headline font-bold text-white">{t.title}</h2>
           <p className="mt-4 text-lg text-white/80">
             {t.subtitle}
@@ -34,7 +34,11 @@ export function Solutions() {
           {t.items.map((solution, index) => {
             const image = solutionImages[solution.id as keyof typeof solutionImages];
             return (
-              <div key={solution.id} className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center animate-in fade-in slide-in-from-bottom-10 duration-700">
+              <div key={solution.id} className={cn(
+                "grid grid-cols-1 md:grid-cols-2 gap-12 items-center",
+                "animate-in fade-in duration-1000",
+                index % 2 === 0 ? "slide-in-from-left-16" : "slide-in-from-right-16"
+              )}>
                 {/* Image Section */}
                 <div className={cn("relative h-80 w-full rounded-lg overflow-hidden shadow-lg", index % 2 !== 0 && "md:order-last")}>
                   {image && (

@@ -13,7 +13,7 @@ export function Cta() {
 
   return (
     <section id="cta" className="py-16 sm:py-24 bg-primary/5">
-      <div className="container mx-auto px-4 text-center">
+      <div className="container mx-auto px-4 text-center animate-in fade-in zoom-in-95 duration-500">
         <h2 className="text-3xl sm:text-4xl font-headline font-bold text-primary">
           {t.title}
         </h2>

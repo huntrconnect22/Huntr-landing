@@ -31,13 +31,13 @@ export function Testimonials() {
     <section id="testimonials" className="relative py-16 sm:py-24 bg-cover bg-center bg-fixed" style={{backgroundImage: "url('/assets/img/section-bg2.webp')"}}>
       <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
       <div className="relative container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-12 animate-in fade-in zoom-in-95 duration-500">
           <h2 className="text-3xl sm:text-4xl font-headline font-bold text-white">{t.title}</h2>
           <p className="mt-4 text-lg text-white/80">{t.subtitle}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="flex flex-col bg-black/20 backdrop-blur-md border-white/10">
+            <Card key={index} className="flex flex-col bg-black/20 backdrop-blur-md border-white/10 animate-in fade-in zoom-in-95 duration-700" style={{ animationDelay: `${index * 100}ms` }}>
               <CardContent className="flex-1 flex flex-col justify-center items-center p-8 text-center">
                 <p className="text-white/80 italic">"{testimonial.quote}"</p>
                 <div className="mt-6 flex items-center gap-4">
