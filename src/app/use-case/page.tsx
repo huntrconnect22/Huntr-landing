@@ -10,8 +10,8 @@ import { translations } from "@/lib/translations";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
+import { PageHero } from "@/components/sections/page-hero";
 
-const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
 const eprocurementImage = PlaceHolderImages.find(p => p.id === 'use-case-eprocurement');
 const esupplychainImage = PlaceHolderImages.find(p => p.id === 'use-case-esupplychain');
 const huntrPayImage = PlaceHolderImages.find(p => p.id === 'use-case-huntrpay');
@@ -69,27 +69,7 @@ export default function UseCasePage() {
     <div className="flex flex-col min-h-dvh bg-background">
       <Header />
       <main className="flex-1 -mt-24">
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-16 sm:pt-40 sm:pb-24">
-          {heroImage && (
-            <Image
-              src={heroImage.imageUrl}
-              alt={heroImage.description}
-              fill
-              className="object-cover"
-              data-ai-hint={heroImage.imageHint}
-            />
-          )}
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="relative z-10 container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold font-headline text-white">
-              {t.title}
-            </h1>
-            <p className="mt-4 max-w-3xl mx-auto text-lg text-white/80">
-              {t.subtitle}
-            </p>
-          </div>
-        </section>
+        <PageHero title={t.title} subtitle={t.subtitle} />
 
         {/* Main Content Section */}
         <section className="py-16 sm:py-24">
