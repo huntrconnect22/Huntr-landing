@@ -14,7 +14,7 @@ import { CheckCircle } from "lucide-react";
 const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
 const eprocurementImage = PlaceHolderImages.find(p => p.id === 'use-case-eprocurement');
 const esupplychainImage = PlaceHolderImages.find(p => p.id === 'use-case-esupplychain');
-const cloudImage = PlaceHolderImages.find(p => p.id === 'use-case-cloud');
+const huntrPayImage = PlaceHolderImages.find(p => p.id === 'use-case-huntrpay');
 
 export default function UseCasePage() {
   const context = useContext(LanguageContext);
@@ -49,17 +49,17 @@ export default function UseCasePage() {
       image: esupplychainImage
     },
     {
-      value: "cloud",
+      value: "huntrpay",
       trigger: t.tab3,
-      title: t.cloudTitle,
-      description: t.cloudDesc,
+      title: t.huntrPayTitle,
+      description: t.huntrPayDesc,
       benefits: [
-        t.cloudBenefit1,
-        t.cloudBenefit2,
-        t.cloudBenefit3,
-        t.cloudBenefit4,
+        t.huntrPayBenefit1,
+        t.huntrPayBenefit2,
+        t.huntrPayBenefit3,
+        t.huntrPayBenefit4,
       ],
-      image: cloudImage
+      image: huntrPayImage
     },
   ];
 
@@ -98,7 +98,7 @@ export default function UseCasePage() {
               <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 mb-8">
                 <TabsTrigger value="eprocurement">{t.tab1}</TabsTrigger>
                 <TabsTrigger value="esupplychain">{t.tab2}</TabsTrigger>
-                <TabsTrigger value="cloud">{t.tab3}</TabsTrigger>
+                <TabsTrigger value="huntrpay">{t.tab3}</TabsTrigger>
               </TabsList>
               
               {useCases.map((useCase) => (

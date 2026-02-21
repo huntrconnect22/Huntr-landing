@@ -31,10 +31,10 @@
       "imageHint": "logistics warehouse"
     },
     {
-      "id": "use-case-cloud",
-      "description": "Abstract representation of cloud computing with interconnected nodes and data streams.",
-      "imageUrl": "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjbG91ZCUyMHNlcnZlcnN8ZW58MHx8fHwxNzIxNDI1OTYwfDA&ixlib=rb-4.0.3&q=80&w=1080",
-      "imageHint": "cloud servers"
+      "id": "use-case-huntrpay",
+      "description": "A secure and seamless online payment process illustrated on a screen.",
+      "imageUrl": "https://images.unsplash.com/photo-1561414927-6d86591d0c4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzZWN1cmUlMjBwYXltZW50JTIwb25saW5lfGVufDB8fHx8MTcyMjEwNzYxMHww&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "secure payment"
     }
   ]
 }
