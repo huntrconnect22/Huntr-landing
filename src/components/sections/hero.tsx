@@ -19,11 +19,10 @@ export function Hero() {
       className="relative w-full h-screen flex items-center justify-center text-center bg-cover bg-center"
       style={{ 
         backgroundImage: heroImage ? `url(${heroImage.imageUrl})` : 'none',
-        backgroundAttachment: 'fixed'
       }}
       aria-label={heroImage ? heroImage.description : 'Hero background'}
     >
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
       <div className="relative z-10 p-4 sm:p-6 text-white max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-1000">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-headline font-black tracking-tight">
           {t.title}

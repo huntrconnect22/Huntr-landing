@@ -83,10 +83,9 @@ export default function UseCasePage() {
           className="relative py-16 sm:py-24 bg-cover bg-center"
           style={{
             backgroundImage: "url('/assets/img/section-bg2.webp')",
-            backgroundAttachment: 'fixed'
           }}
         >
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
           <div className="relative container mx-auto px-4">
             <Tabs defaultValue="eprocurement" className="w-full">
               <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 h-auto md:h-10 mb-8 bg-black/20 text-white/70">
