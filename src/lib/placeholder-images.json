@@ -38,21 +38,21 @@
     },
     {
       "id": "solution-eprocurement",
-      "description": "A dynamic dashboard showing procurement analytics and data visualization.",
-      "imageUrl": "https://images.unsplash.com/photo-1634733488734-9a6ac2978873?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwcm9jdXJlbWVudCUyMGRhc2hib2FyZHxlbnwwfHx8fDE3MjI0Mzg0OTV8MA&ixlib=rb-4.0.3&q=80&w=1080",
-      "imageHint": "procurement dashboard"
+      "description": "Streamlined procurement process.",
+      "imageUrl": "/assets/img/huntr-asset1.jpg",
+      "imageHint": "digital procurement"
     },
     {
       "id": "solution-esupplychain",
-      "description": "Cranes loading shipping containers at a busy port, representing logistics and supply chain.",
-      "imageUrl": "https://images.unsplash.com/photo-1577974582991-2feace26c09a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsb2dpc3RpY3MlMjBjcmFuZXxlbnwwfHx8fDE3MjI0Mzg1MzV8MA&ixlib=rb-4.0.3&q=80&w=1080",
-      "imageHint": "logistics crane"
+      "description": "Efficient supply chain and expedition services.",
+      "imageUrl": "/assets/img/huntr-asset2.jpg",
+      "imageHint": "logistics expedition"
     },
     {
       "id": "solution-crowdbuy",
-      "description": "A diverse group of professionals in a collaborative meeting, symbolizing collective action.",
-      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGdyb3VwJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3MjI0Mzg1Njd8MA&ixlib=rb-4.0.3&q=80&w=1080",
-      "imageHint": "business collaboration"
+      "description": "Collaborative group buying.",
+      "imageUrl": "/assets/img/huntr-asset3.jpg",
+      "imageHint": "team collaboration"
     }
   ]
 }
