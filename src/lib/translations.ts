@@ -49,13 +49,42 @@ export const translations = {
         },
         solutions: {
           title: 'Comprehensive Supply Chain Solutions',
-          subtitle: 'We provide a fast, secure, and well-structured supply chain ecosystem designed for the modern enterprise.',
-          card1Title: 'E-Procurement Systems',
-          card1Description: 'Streamline your purchasing process with our intuitive e-procurement platform. Gain control over spending and improve efficiency.',
-          card2Title: 'E-Supply Chain Management',
-          card2Description: 'Optimize your entire supply chain, from sourcing to delivery, with our integrated, cloud-based management system.',
-          card3Title: 'Huntr Crowd Buy',
-          card3Description: 'Leverage collective buying power. Join group purchases to get the best prices on technology products from top-tier vendors.',
+          subtitle: 'We provide a fast, secure, and well-structured supply chain ecosystem designed for the modern enterprise, enhancing every step from sourcing to delivery.',
+          items: [
+            {
+              id: 'eprocurement',
+              title: 'E-Procurement Systems',
+              description: 'Streamline your purchasing process with our intuitive e-procurement platform. Gain full control over spending, reduce maverick buys, and improve overall efficiency with automated workflows and real-time analytics.',
+              benefits: [
+                'Centralized purchasing control',
+                'Real-time spend visibility',
+                'Automated approval workflows',
+                'Enhanced supplier management'
+              ]
+            },
+            {
+              id: 'esupplychain',
+              title: 'E-Supply Chain Management',
+              description: 'Optimize your entire supply chain, from sourcing and inventory management to logistics and delivery. Our integrated, cloud-based system provides end-to-end visibility, fostering collaboration and resilience.',
+              benefits: [
+                'End-to-end supply chain visibility',
+                'Improved inventory accuracy',
+                'Optimized logistics and delivery routes',
+                'Better supplier collaboration'
+              ]
+            },
+            {
+              id: 'crowdbuy',
+              title: 'Huntr Crowd Buy',
+              description: 'Leverage the power of collective buying. Join forces with other businesses in group purchases to unlock significant discounts on technology products and services from top-tier vendors, maximizing your budget.',
+              benefits: [
+                'Access to volume-based discounts',
+                'Reduced cost on high-quality products',
+                'Simplified group purchasing process',
+                'Expanded network of trusted vendors'
+              ]
+            }
+          ]
         },
         features: {
           title: 'Powerful Features for Your Business',
@@ -215,13 +244,42 @@ export const translations = {
         },
         solutions: {
           title: 'Solusi Rantai Pasokan Komprehensif',
-          subtitle: 'Kami menyediakan ekosistem rantai pasokan yang cepat, aman, dan terstruktur dengan baik yang dirancang untuk perusahaan modern.',
-          card1Title: 'Sistem E-Procurement',
-          card1Description: 'Sederhanakan proses pembelian Anda dengan platform e-procurement kami yang intuitif. Dapatkan kendali atas pengeluaran dan tingkatkan efisiensi.',
-          card2Title: 'Manajemen Rantai Pasokan Elektronik',
-          card2Description: 'Optimalkan seluruh rantai pasokan Anda, dari pengadaan hingga pengiriman, dengan sistem manajemen terintegrasi berbasis cloud kami.',
-          card3Title: 'Huntr Crowd Buy',
-          card3Description: 'Manfaatkan kekuatan pembelian kolektif. Bergabunglah dalam pembelian kelompok untuk mendapatkan harga terbaik untuk produk teknologi dari vendor papan atas.',
+          subtitle: 'Kami menyediakan ekosistem rantai pasokan yang cepat, aman, dan terstruktur dengan baik yang dirancang untuk perusahaan modern, meningkatkan setiap langkah dari pengadaan hingga pengiriman.',
+          items: [
+            {
+              id: 'eprocurement',
+              title: 'Sistem E-Procurement',
+              description: 'Sederhanakan proses pembelian Anda dengan platform e-procurement kami yang intuitif. Dapatkan kontrol penuh atas pengeluaran, kurangi pembelian tak terduga, dan tingkatkan efisiensi secara keseluruhan dengan alur kerja otomatis dan analitik real-time.',
+              benefits: [
+                'Kontrol pembelian terpusat',
+                'Visibilitas pengeluaran real-time',
+                'Alur kerja persetujuan otomatis',
+                'Manajemen pemasok yang ditingkatkan'
+              ]
+            },
+            {
+              id: 'esupplychain',
+              title: 'Manajemen Rantai Pasokan Elektronik',
+              description: 'Optimalkan seluruh rantai pasokan Anda, mulai dari pengadaan dan manajemen inventaris hingga logistik dan pengiriman. Sistem terintegrasi berbasis cloud kami memberikan visibilitas end-to-end, mendorong kolaborasi dan ketahanan.',
+              benefits: [
+                'Visibilitas rantai pasokan end-to-end',
+                'Akurasi inventaris yang lebih baik',
+                'Rute logistik dan pengiriman yang dioptimalkan',
+                'Kolaborasi pemasok yang lebih baik'
+              ]
+            },
+            {
+              id: 'crowdbuy',
+              title: 'Huntr Crowd Buy',
+              description: 'Manfaatkan kekuatan pembelian kolektif. Bergabunglah dengan bisnis lain dalam pembelian kelompok untuk mendapatkan diskon signifikan pada produk dan layanan teknologi dari vendor papan atas, memaksimalkan anggaran Anda.',
+              benefits: [
+                'Akses ke diskon berbasis volume',
+                'Pengurangan biaya pada produk berkualitas tinggi',
+                'Proses pembelian kelompok yang disederhanakan',
+                'Jaringan vendor tepercaya yang diperluas'
+              ]
+            }
+          ]
         },
         features: {
           title: 'Fitur Andal untuk Bisnis Anda',
