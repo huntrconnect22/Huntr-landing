@@ -54,7 +54,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full">
-      <div className="relative mx-auto mt-4 flex h-20 max-w-4xl items-center justify-between rounded-2xl border border-border/10 bg-background/80 px-4 shadow-lg backdrop-blur-md">
+      <div className="relative mx-auto mt-4 flex h-20 max-w-4xl items-center justify-between rounded-2xl border border-white/10 bg-black/50 px-4 shadow-lg backdrop-blur-md">
         
         {/* Left side: Logo & Mobile Menu Trigger */}
         <div className="flex items-center">
@@ -76,7 +76,7 @@ export function Header() {
 
               <div className="flex h-[calc(100%-5rem)] flex-col">
                 <div className="flex flex-col gap-2">
-                  <Link href="/" className={cn("px-2 py-2 font-medium transition-colors hover:text-primary", pathname === "/" ? "text-primary" : "text-foreground/80")}>
+                  <Link href="/" className={cn("px-2 py-2 font-medium transition-colors hover:text-primary", pathname === "/" ? "text-primary" : "text-white/80")}>
                       {t.home}
                   </Link>
                   <Accordion type="single" collapsible className="w-full">
@@ -84,13 +84,13 @@ export function Header() {
                       const isActive = link.items.some((item) => pathname.startsWith(item.href));
                       return (
                         <AccordionItem value={link.title} key={link.title} className="border-b-0">
-                          <AccordionTrigger className={cn("px-2 py-2 font-medium hover:no-underline hover:text-primary", isActive ? "text-primary" : "text-foreground/80")}>
+                          <AccordionTrigger className={cn("px-2 py-2 font-medium hover:no-underline hover:text-primary", isActive ? "text-primary" : "text-white/80")}>
                             {link.title}
                           </AccordionTrigger>
                           <AccordionContent>
                             <div className="flex flex-col gap-4 pl-6 pt-2">
                               {link.items.map((item) => (
-                                <Link key={item.href} href={item.href} className={cn("transition-colors hover:text-primary", pathname.startsWith(item.href) ? "text-primary" : "text-foreground/60")}>
+                                <Link key={item.href} href={item.href} className={cn("transition-colors hover:text-primary", pathname.startsWith(item.href) ? "text-primary" : "text-white/60")}>
                                     {item.title}
                                   </Link>
                               ))}
@@ -100,7 +100,7 @@ export function Header() {
                       )
                     })}
                   </Accordion>
-                  <Link href="/contact" className={cn("px-2 py-2 font-medium transition-colors hover:text-primary", pathname === "/contact" ? "text-primary" : "text-foreground/80")}>
+                  <Link href="/contact" className={cn("px-2 py-2 font-medium transition-colors hover:text-primary", pathname === "/contact" ? "text-primary" : "text-white/80")}>
                     {t.contact}
                   </Link>
                 </div>
@@ -117,7 +117,7 @@ export function Header() {
         <nav className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-6 text-sm md:flex">
           <Link
             href="/"
-            className={cn("font-medium transition-colors hover:text-primary", pathname === "/" ? "text-primary" : "text-foreground/80")}
+            className={cn("font-medium transition-colors hover:text-primary text-white", pathname === "/" ? "text-primary" : "text-white/80")}
           >
             {t.home}
           </Link>
@@ -125,7 +125,7 @@ export function Header() {
             const isActive = link.items.some(item => pathname.startsWith(item.href));
             return (
              <DropdownMenu key={link.title}>
-              <DropdownMenuTrigger className={cn("flex items-center gap-1 font-medium transition-colors hover:text-primary focus:outline-none", isActive ? "text-primary" : "text-foreground/80")}>
+              <DropdownMenuTrigger className={cn("flex items-center gap-1 font-medium transition-colors hover:text-primary focus:outline-none", isActive ? "text-primary" : "text-white/80")}>
                 {link.title}
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
@@ -140,7 +140,7 @@ export function Header() {
           )})}
            <Link
             href="/contact"
-            className={cn("font-medium transition-colors hover:text-primary", pathname === "/contact" ? "text-primary" : "text-foreground/80")}
+            className={cn("font-medium transition-colors hover:text-primary", pathname === "/contact" ? "text-primary" : "text-white/80")}
           >
             {t.contact}
           </Link>
