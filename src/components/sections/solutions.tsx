@@ -60,7 +60,7 @@ export function Solutions() {
                 </div>
 
                 {/* Text Content Section */}
-                <div className="space-y-4">
+                <div className="space-y-4 bg-black/40 p-8 rounded-lg">
                   <h3 className="text-2xl font-bold font-headline text-white">{solution.title}</h3>
                   <p className="text-white/80 lg:text-lg">{solution.description}</p>
                   <ul className="space-y-3 pt-2">
