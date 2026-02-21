@@ -1,6 +1,5 @@
 'use client';
 
-import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
@@ -27,15 +26,11 @@ export function PageHero({ title, subtitle }: PageHeroProps) {
   }
   
   return (
-    <section className="relative pt-40 pb-24 sm:pt-48 sm:pb-32">
-      <Image
-        src={heroImage.imageUrl}
-        alt={heroImage.description}
-        fill
-        className="object-cover"
-        data-ai-hint={heroImage.imageHint}
-        priority
-      />
+    <section 
+      className="relative pt-40 pb-24 sm:pt-48 sm:pb-32 bg-cover bg-center bg-fixed"
+      style={{ backgroundImage: `url(${heroImage.imageUrl})` }}
+      aria-label={heroImage.description}
+    >
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative z-10 container mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-5xl font-bold font-headline text-white">
