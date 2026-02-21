@@ -21,7 +21,7 @@ export function Solutions() {
 
   return (
     <section id="solutions" className="relative py-16 sm:py-24 bg-cover bg-center" style={{backgroundImage: "url('/assets/img/section-bg1.webp')"}}>
-      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-background/50 backdrop-blur-sm" />
       <div className="relative container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl font-headline font-bold">{t.title}</h2>

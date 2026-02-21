@@ -29,7 +29,7 @@ export function Testimonials() {
 
   return (
     <section id="testimonials" className="relative py-16 sm:py-24 bg-cover bg-center" style={{backgroundImage: "url('/assets/img/section-bg2.webp')"}}>
-      <div className="absolute inset-0 bg-secondary/60 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-secondary/20 backdrop-blur-sm" />
       <div className="relative container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl sm:text-4xl font-headline font-bold">{t.title}</h2>
@@ -37,7 +37,7 @@ export function Testimonials() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="flex flex-col bg-background/70">
+            <Card key={index} className="flex flex-col bg-background/40">
               <CardContent className="flex-1 flex flex-col justify-center items-center p-8 text-center">
                 <p className="text-muted-foreground italic">"{testimonial.quote}"</p>
                 <div className="mt-6 flex items-center gap-4">
