@@ -11,6 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
+import { useDynamicSeo } from "@/hooks/use-dynamic-seo";
 
 const eprocurementImage = PlaceHolderImages.find(p => p.id === 'use-case-eprocurement');
 const esupplychainImage = PlaceHolderImages.find(p => p.id === 'use-case-esupplychain');
@@ -20,6 +21,11 @@ export default function UseCasePage() {
   const context = useContext(LanguageContext);
   const lang = context?.language || 'en';
   const t = translations[lang].useCase;
+
+  useDynamicSeo({
+    title: t.title,
+    description: t.subtitle,
+  });
 
   const useCases = [
     {

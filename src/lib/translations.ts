@@ -17,6 +17,20 @@ export const translations = {
           contact: 'Contact',
           openMenu: 'Open menu',
         },
+        pages: {
+          article: {
+            description: 'Explore informative articles and blog posts from Huntr.',
+            contentPlaceholder: 'Informative articles and blog posts will be displayed here.'
+          },
+          news: {
+            description: 'Stay updated with the latest news and announcements from Huntr.',
+            contentPlaceholder: 'Latest news and announcements will be displayed here.'
+          },
+          ourTeam: {
+            description: "Meet the professional team behind Huntr's success.",
+            contentPlaceholder: 'Information about our team will be displayed here.'
+          }
+        },
         hero: {
           title: 'Revolutionizing Technology Procurement',
           subtitle: 'Huntr is your strategic partner in technology procurement, offering cloud-based solutions for a fast, secure, and streamlined supply chain.',
@@ -154,6 +168,20 @@ export const translations = {
           privacyPolicy: 'Kebijakan Privasi',
           contact: 'Kontak',
           openMenu: 'Buka menu',
+        },
+        pages: {
+          article: {
+            description: 'Jelajahi artikel informatif dan postingan blog dari Huntr.',
+            contentPlaceholder: 'Artikel informatif dan postingan blog akan ditampilkan di sini.'
+          },
+          news: {
+            description: 'Tetap update dengan berita dan pengumuman terbaru dari Huntr.',
+            contentPlaceholder: 'Berita dan pengumuman terbaru akan ditampilkan di sini.'
+          },
+          ourTeam: {
+            description: "Temui tim profesional di balik kesuksesan Huntr.",
+            contentPlaceholder: 'Informasi tentang tim kami akan ditampilkan di sini.'
+          }
         },
         hero: {
           title: 'Merevolusi Pengadaan Teknologi',

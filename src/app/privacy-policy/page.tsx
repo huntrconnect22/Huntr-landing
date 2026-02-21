@@ -7,12 +7,18 @@ import { LanguageContext } from "@/context/language-context";
 import { translations } from "@/lib/translations";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PageHero } from "@/components/sections/page-hero";
+import { useDynamicSeo } from "@/hooks/use-dynamic-seo";
 
 export default function PrivacyPolicyPage() {
   const context = useContext(LanguageContext);
   const lang = context?.language || 'en';
   const t = translations[lang].privacyPolicy;
   const [date, setDate] = useState('');
+
+  useDynamicSeo({
+    title: t.title,
+    description: t.subtitle,
+  });
 
   useEffect(() => {
     setDate(new Date().toLocaleDateString(lang === 'id' ? 'id-ID' : 'en-US', {

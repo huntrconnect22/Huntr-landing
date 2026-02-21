@@ -36,6 +36,7 @@ export const metadata: Metadata = {
     url: defaultUrl,
     siteName: 'Huntr',
     locale: 'en_US',
+    alternateLocale: ['id_ID'],
     type: 'website',
   },
   twitter: {

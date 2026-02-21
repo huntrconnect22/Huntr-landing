@@ -11,6 +11,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Eye, Target } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { PageHero } from "@/components/sections/page-hero";
+import { useDynamicSeo } from "@/hooks/use-dynamic-seo";
 
 const mainImage = PlaceHolderImages.find(p => p.id === 'our-company-main');
 
@@ -18,6 +19,11 @@ export default function OurCompanyPage() {
   const context = useContext(LanguageContext);
   const lang = context?.language || 'en';
   const t = translations[lang].ourCompany;
+
+  useDynamicSeo({
+    title: t.title,
+    description: t.subtitle,
+  });
 
   // If translations are not ready, render a loading state or nothing
   if (!t) {

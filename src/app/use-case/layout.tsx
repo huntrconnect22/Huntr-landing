@@ -1,11 +1,4 @@
-import type { Metadata } from 'next';
-import { translations } from '@/lib/translations';
 import { StructuredData } from '@/components/seo/structured-data';
-
-export const metadata: Metadata = {
-  title: translations.en.useCase.title,
-  description: translations.en.useCase.subtitle,
-};
 
 const serviceSchema = {
   "@context": "https://schema.org",

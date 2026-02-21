@@ -11,11 +11,17 @@ import { useContext } from "react";
 import { LanguageContext } from "@/context/language-context";
 import { translations } from "@/lib/translations";
 import { PageHero } from "@/components/sections/page-hero";
+import { useDynamicSeo } from "@/hooks/use-dynamic-seo";
 
 export default function ContactPage() {
   const context = useContext(LanguageContext);
   const lang = context?.language || 'en';
   const t = translations[lang].contact;
+
+  useDynamicSeo({
+    title: t.title,
+    description: t.description,
+  });
 
   return (
     <div className="flex flex-col min-h-dvh bg-background">
