@@ -20,12 +20,12 @@ export function Solutions() {
   };
 
   return (
-    <section id="solutions" className="relative py-16 sm:py-24 bg-cover bg-center" style={{backgroundImage: "url('/assets/img/section-bg1.webp')"}}>
-      <div className="absolute inset-0 bg-background/50 backdrop-blur-sm" />
+    <section id="solutions" className="relative py-16 sm:py-24 bg-cover bg-center bg-fixed" style={{backgroundImage: "url('/assets/img/section-bg1.webp')"}}>
+      <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
       <div className="relative container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl font-headline font-bold">{t.title}</h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <h2 className="text-3xl sm:text-4xl font-headline font-bold text-white">{t.title}</h2>
+          <p className="mt-4 text-lg text-white/80">
             {t.subtitle}
           </p>
         </div>
@@ -50,13 +50,13 @@ export function Solutions() {
 
                 {/* Text Content Section */}
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-bold font-headline">{solution.title}</h3>
-                  <p className="text-muted-foreground lg:text-lg">{solution.description}</p>
+                  <h3 className="text-2xl font-bold font-headline text-white">{solution.title}</h3>
+                  <p className="text-white/80 lg:text-lg">{solution.description}</p>
                   <ul className="space-y-3 pt-2">
                     {solution.benefits.map((benefit, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <CheckCircle className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground">{benefit}</span>
+                        <span className="text-white/80">{benefit}</span>
                       </li>
                     ))}
                   </ul>
