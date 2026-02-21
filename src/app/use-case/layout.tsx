@@ -6,17 +6,17 @@ const serviceSchema = {
   "serviceType": "B2B Procurement Solutions",
   "provider": {
     "@type": "Organization",
-    "name": "Huntr"
+    "name": "HUNTR"
   },
   "areaServed": {
     "@type": "Country",
     "name": "ID"
   },
-  "description": "Huntr provides integrated B2B solutions including E-Procurement, E-Supply Chain management, and secure B2B payments through HUNTR Pay.",
-  "name": "Huntr Integrated Business Platform",
+  "description": "HUNTR provides integrated B2B solutions including E-Procurement, E-Supply Chain management, and secure B2B payments through HUNTR Pay.",
+  "name": "HUNTR Integrated Business Platform",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Huntr Services",
+    "name": "HUNTR Services",
     "itemListElement": [
       {
         "@type": "Offer",

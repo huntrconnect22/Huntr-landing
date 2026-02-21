@@ -1,7 +1,7 @@
 export const translations = {
       en: {
         metadata: {
-            title: 'Huntr Integrated Business Platform',
+            title: 'HUNTR Integrated Business Platform',
             description: 'A comprehensive technology procurement platform offering e-procurement, e-supply chain, spend analysis, and secure payment solutions.',
         },
         header: {
@@ -21,20 +21,20 @@ export const translations = {
         },
         pages: {
           article: {
-            description: 'Explore informative articles and blog posts from Huntr.',
+            description: 'Explore informative articles and blog posts from HUNTR.',
             contentPlaceholder: 'Informative articles and blog posts will be displayed here.'
           },
           news: {
-            description: 'Stay updated with the latest news and announcements from Huntr.',
+            description: 'Stay updated with the latest news and announcements from HUNTR.',
             contentPlaceholder: 'Latest news and announcements will be displayed here.'
           },
           ourTeam: {
-            description: "Meet the professional team behind Huntr's success.",
+            description: "Meet the professional team behind HUNTR's success.",
             contentPlaceholder: 'Information about our team will be displayed here.'
           },
           careers: {
             description: 'Join our team and help us revolutionize the procurement industry.',
-            contentPlaceholder: 'Open positions and information about working at Huntr will be displayed here.'
+            contentPlaceholder: 'Open positions and information about working at HUNTR will be displayed here.'
           },
           investorRelations: {
             description: 'Information for investors and about our financial performance.',
@@ -43,7 +43,7 @@ export const translations = {
         },
         hero: {
           title: 'Revolutionizing Technology Procurement',
-          subtitle: 'Huntr is your strategic partner in technology procurement, offering cloud-based solutions for a fast, secure, and streamlined supply chain.',
+          subtitle: 'HUNTR is your strategic partner in technology procurement, offering cloud-based solutions for a fast, secure, and streamlined supply chain.',
           getStarted: 'Get Started',
           learnMore: 'Learn More',
         },
@@ -75,7 +75,7 @@ export const translations = {
             },
             {
               id: 'crowdbuy',
-              title: 'Huntr Crowd Buy',
+              title: 'HUNTR Crowd Buy',
               description: 'Leverage the power of collective buying. Join forces with other businesses in group purchases to unlock significant discounts on technology products and services from top-tier vendors, maximizing your budget.',
               benefits: [
                 'Access to volume-based discounts',
@@ -100,8 +100,8 @@ export const translations = {
         },
         testimonials: {
           title: 'Trusted by Industry Leaders',
-          subtitle: 'Hear what our clients have to say about their success with Huntr.',
-          testimonial1: 'Huntr has completely transformed our procurement process. The efficiency and cost savings are beyond anything we expected. The spend analysis tools are a game-changer.',
+          subtitle: 'Hear what our clients have to say about their success with HUNTR.',
+          testimonial1: 'HUNTR has completely transformed our procurement process. The efficiency and cost savings are beyond anything we expected. The spend analysis tools are a game-changer.',
           client1Name: 'Jane Doe',
           client1Title: 'CFO, TechCorp',
           testimonial2: 'The e-supply chain management system is incredibly robust and easy to use. Our team was able to onboard quickly, and we saw immediate improvements in our logistics and vendor communication.',
@@ -110,24 +110,24 @@ export const translations = {
         },
         faq: {
           title: 'Frequently Asked Questions',
-          subtitle: 'Find answers to the most common questions about Huntr.',
-          q1: 'What is Huntr?',
-          a1: 'Huntr is a comprehensive technology procurement platform that simplifies the entire supply chain process, from e-procurement and spend analysis to secure payments and vendor management.',
-          q2: 'Who is Huntr for?',
-          a2: 'Huntr is designed for modern enterprises of all sizes looking to streamline their technology procurement, gain control over spending, and improve supply chain efficiency.',
-          q3: 'Is my data secure with Huntr?',
+          subtitle: 'Find answers to the most common questions about HUNTR.',
+          q1: 'What is HUNTR?',
+          a1: 'HUNTR is a comprehensive technology procurement platform that simplifies the entire supply chain process, from e-procurement and spend analysis to secure payments and vendor management.',
+          q2: 'Who is HUNTR for?',
+          a2: 'HUNTR is designed for modern enterprises of all sizes looking to streamline their technology procurement, gain control over spending, and improve supply chain efficiency.',
+          q3: 'Is my data secure with HUNTR?',
           a3: 'Absolutely. We prioritize data security with a secure cloud infrastructure and robust security measures to protect your information at every stage.',
           q4: 'How does HUNTR Pay work?',
           a4: 'HUNTR Pay is our flexible and secure payment system that partners with multiple banks. It streamlines transaction processing, providing reliability and peace of mind for all your procurement payments.',
         },
         cta: {
           title: 'Ready to Revolutionize Your Procurement?',
-          subtitle: 'Join the growing number of businesses transforming their supply chain with Huntr. Request a demo today to see our platform in action.',
+          subtitle: 'Join the growing number of businesses transforming their supply chain with HUNTR. Request a demo today to see our platform in action.',
           button: 'Request a Demo',
         },
         contact: {
           title: 'Request a Demo',
-          description: 'Interested in how Huntr can transform your business? Fill out the form below.',
+          description: 'Interested in how HUNTR can transform your business? Fill out the form below.',
           nameLabel: 'Name',
           namePlaceholder: 'Your Name',
           emailLabel: 'Email',
@@ -140,14 +140,14 @@ export const translations = {
         },
         ourCompany: {
           title: 'Pioneering the Future of Procurement',
-          subtitle: 'Huntr was founded on a simple yet powerful idea: to revolutionize the complex world of technology procurement through innovation, clarity, and unwavering partnership.',
+          subtitle: 'HUNTR was founded on a simple yet powerful idea: to revolutionize the complex world of technology procurement through innovation, clarity, and unwavering partnership.',
           visionMissionTitle: 'Our Vision & Mission',
           visionTitle: 'Our Vision',
           visionText: 'To become the world\'s most trusted and intelligent integrated business platform, creating a seamless ecosystem for global commerce.',
           missionTitle: 'Our Mission',
           missionText: 'To empower enterprises with streamlined, secure, and data-driven procurement solutions that unlock strategic value and foster sustainable growth.',
           historyTitle: 'Our Journey',
-          historyText1: 'From our beginnings as a small team of industry experts frustrated with inefficient procurement processes, Huntr has grown into a comprehensive platform serving businesses worldwide. We saw the need for a unified solution that combines e-procurement, supply chain management, and secure payments.',
+          historyText1: 'From our beginnings as a small team of industry experts frustrated with inefficient procurement processes, HUNTR has grown into a comprehensive platform serving businesses worldwide. We saw the need for a unified solution that combines e-procurement, supply chain management, and secure payments.',
           historyText2: 'Every milestone, from the launch of our first module to the integration of HUNTR Pay, has been driven by our commitment to solving real-world challenges for our clients. Our journey is a testament to the power of a clear vision and relentless innovation.'
         },
         privacyPolicy: {
@@ -155,7 +155,7 @@ export const translations = {
           subtitle: "Your privacy is important to us. This policy explains what information we collect and how we use it.",
           lastUpdated: "Last Updated: [Date]",
           introductionTitle: "Introduction",
-          introductionText: "Welcome to Huntr. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy, or our practices with regards to your personal information, please contact us.",
+          introductionText: "Welcome to HUNTR. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy, or our practices with regards to your personal information, please contact us.",
           informationCollectionTitle: "Information We Collect",
           informationCollectionText: "We collect personal information that you voluntarily provide to us when you register on the website, express an interest in obtaining information about us or our products and services, when you participate in activities on the website or otherwise when you contact us.",
           howWeUseTitle: "How We Use Your Information",
@@ -163,18 +163,18 @@ export const translations = {
         },
         useCase: {
           title: "Real-World Applications",
-          subtitle: "Discover how Huntr's integrated solutions drive efficiency and growth across various business functions.",
+          subtitle: "Discover how HUNTR's integrated solutions drive efficiency and growth across various business functions.",
           tab1: "E-Procurement",
           tab2: "E-Supply Chain",
           tab3: "HUNTR Pay",
           procurementTitle: "Streamlining Procurement for a Manufacturing Giant",
-          procurementDesc: "A leading automotive manufacturer struggled with decentralized purchasing, leading to maverick spending and a lack of visibility. By implementing Huntr's E-Procurement system, they centralized their procurement process, gaining full control over their supply chain.",
+          procurementDesc: "A leading automotive manufacturer struggled with decentralized purchasing, leading to maverick spending and a lack of visibility. By implementing HUNTR's E-Procurement system, they centralized their procurement process, gaining full control over their supply chain.",
           procurementBenefit1: "Reduced maverick spending by 30%",
           procurementBenefit2: "Increased operational efficiency by 45%",
           procurementBenefit3: "Gained real-time visibility into company-wide spend",
           procurementBenefit4: "Automated approval workflows, saving hundreds of man-hours",
           supplyChainTitle: "Optimizing Logistics for a Retail Conglomerate",
-          supplyChainDesc: "A major retail chain faced challenges with inventory management and supplier coordination, resulting in stockouts and delays. Huntr's E-Supply Chain solution provided a unified platform to manage vendors, track shipments, and automate inventory replenishment.",
+          supplyChainDesc: "A major retail chain faced challenges with inventory management and supplier coordination, resulting in stockouts and delays. HUNTR's E-Supply Chain solution provided a unified platform to manage vendors, track shipments, and automate inventory replenishment.",
           supplyChainBenefit1: "Improved inventory accuracy to 99.8%",
           supplyChainBenefit2: "Reduced stockouts by 60%",
           supplyChainBenefit3: "Enhanced supplier collaboration and performance tracking",
@@ -187,8 +187,8 @@ export const translations = {
           huntrPayBenefit4: "Improved supplier satisfaction with on-time, transparent payments"
         },
         footer: {
-          copy: 'Huntr Inc. All rights reserved.',
-          description: 'Huntr is your strategic partner in technology procurement, offering cloud-based solutions for a fast, secure, and streamlined supply chain.',
+          copy: 'HUNTR Inc. All rights reserved.',
+          description: 'HUNTR is your strategic partner in technology procurement, offering cloud-based solutions for a fast, secure, and streamlined supply chain.',
           insight: 'Insight',
           company: 'Company',
           legal: 'Legal',
@@ -196,7 +196,7 @@ export const translations = {
       },
       id: {
         metadata: {
-            title: 'Platform Bisnis Terpadu Huntr',
+            title: 'Platform Bisnis Terpadu HUNTR',
             description: 'Platform pengadaan teknologi komprehensif yang menawarkan e-procurement, e-supply chain, analisis pengeluaran, dan solusi pembayaran yang aman.',
         },
         header: {
@@ -216,20 +216,20 @@ export const translations = {
         },
         pages: {
           article: {
-            description: 'Jelajahi artikel informatif dan postingan blog dari Huntr.',
+            description: 'Jelajahi artikel informatif dan postingan blog dari HUNTR.',
             contentPlaceholder: 'Artikel informatif dan postingan blog akan ditampilkan di sini.'
           },
           news: {
-            description: 'Tetap update dengan berita dan pengumuman terbaru dari Huntr.',
+            description: 'Tetap update dengan berita dan pengumuman terbaru dari HUNTR.',
             contentPlaceholder: 'Berita dan pengumuman terbaru akan ditampilkan di sini.'
           },
           ourTeam: {
-            description: "Temui tim profesional di balik kesuksesan Huntr.",
+            description: "Temui tim profesional di balik kesuksesan HUNTR.",
             contentPlaceholder: 'Informasi tentang tim kami akan ditampilkan di sini.'
           },
           careers: {
             description: 'Bergabunglah dengan tim kami dan bantu kami merevolusi industri pengadaan.',
-            contentPlaceholder: 'Posisi yang tersedia dan informasi tentang bekerja di Huntr akan ditampilkan di sini.'
+            contentPlaceholder: 'Posisi yang tersedia dan informasi tentang bekerja di HUNTR akan ditampilkan di sini.'
           },
           investorRelations: {
             description: 'Informasi untuk investor dan tentang kinerja keuangan kami.',
@@ -238,7 +238,7 @@ export const translations = {
         },
         hero: {
           title: 'Merevolusi Pengadaan Teknologi',
-          subtitle: 'Huntr adalah mitra strategis Anda dalam pengadaan teknologi, menawarkan solusi berbasis cloud untuk rantai pasokan yang cepat, aman, dan efisien.',
+          subtitle: 'HUNTR adalah mitra strategis Anda dalam pengadaan teknologi, menawarkan solusi berbasis cloud untuk rantai pasokan yang cepat, aman, dan efisien.',
           getStarted: 'Mulai',
           learnMore: 'Pelajari Lebih Lanjut',
         },
@@ -270,7 +270,7 @@ export const translations = {
             },
             {
               id: 'crowdbuy',
-              title: 'Huntr Crowd Buy',
+              title: 'HUNTR Crowd Buy',
               description: 'Manfaatkan kekuatan pembelian kolektif. Bergabunglah dengan bisnis lain dalam pembelian kelompok untuk mendapatkan diskon signifikan pada produk dan layanan teknologi dari vendor papan atas, memaksimalkan anggaran Anda.',
               benefits: [
                 'Akses ke diskon berbasis volume',
@@ -295,8 +295,8 @@ export const translations = {
         },
         testimonials: {
           title: 'Dipercaya oleh Pemimpin Industri',
-          subtitle: 'Dengarkan apa yang klien kami katakan tentang kesuksesan mereka bersama Huntr.',
-          testimonial1: 'Huntr telah sepenuhnya mengubah proses pengadaan kami. Efisiensi dan penghematan biaya melampaui semua yang kami harapkan. Alat analisis pengeluaran adalah pengubah permainan.',
+          subtitle: 'Dengarkan apa yang klien kami katakan tentang kesuksesan mereka bersama HUNTR.',
+          testimonial1: 'HUNTR telah sepenuhnya mengubah proses pengadaan kami. Efisiensi dan penghematan biaya melampaui semua yang kami harapkan. Alat analisis pengeluaran adalah pengubah permainan.',
           client1Name: 'Jane Doe',
           client1Title: 'CFO, TechCorp',
           testimonial2: 'Sistem manajemen e-supply chain sangat kuat dan mudah digunakan. Tim kami dapat beradaptasi dengan cepat, dan kami melihat peningkatan langsung dalam logistik dan komunikasi vendor kami.',
@@ -305,24 +305,24 @@ export const translations = {
         },
         faq: {
           title: 'Pertanyaan yang Sering Diajukan',
-          subtitle: 'Temukan jawaban untuk pertanyaan paling umum tentang Huntr.',
-          q1: 'Apa itu Huntr?',
-          a1: 'Huntr adalah platform pengadaan teknologi komprehensif yang menyederhanakan seluruh proses rantai pasokan, mulai dari e-procurement dan analisis pengeluaran hingga pembayaran yang aman dan manajemen vendor.',
-          q2: 'Untuk siapa Huntr?',
-          a2: 'Huntr dirancang untuk perusahaan modern dari semua ukuran yang ingin menyederhanakan pengadaan teknologi mereka, mendapatkan kontrol atas pengeluaran, dan meningkatkan efisiensi rantai pasokan.',
-          q3: 'Apakah data saya aman dengan Huntr?',
+          subtitle: 'Temukan jawaban untuk pertanyaan paling umum tentang HUNTR.',
+          q1: 'Apa itu HUNTR?',
+          a1: 'HUNTR adalah platform pengadaan teknologi komprehensif yang menyederhanakan seluruh proses rantai pasokan, mulai dari e-procurement dan analisis pengeluaran hingga pembayaran yang aman dan manajemen vendor.',
+          q2: 'Untuk siapa HUNTR?',
+          a2: 'HUNTR dirancang untuk perusahaan modern dari semua ukuran yang ingin menyederhanakan pengadaan teknologi mereka, mendapatkan kontrol atas pengeluaran, dan meningkatkan efisiensi rantai pasokan.',
+          q3: 'Apakah data saya aman dengan HUNTR?',
           a3: 'Tentu saja. Kami memprioritaskan keamanan data dengan infrastruktur cloud yang aman dan langkah-langkah keamanan yang kuat untuk melindungi informasi Anda di setiap tahap.',
           q4: 'Bagaimana cara kerja HUNTR Pay?',
           a4: 'HUNTR Pay adalah sistem pembayaran kami yang fleksibel dan aman yang bermitra dengan banyak bank. Ini menyederhanakan pemrosesan transaksi, memberikan keandalan dan ketenangan pikiran untuk semua pembayaran pengadaan Anda.',
         },
         cta: {
           title: 'Siap Merevolusi Pengadaan Anda?',
-          subtitle: 'Bergabunglah dengan semakin banyak bisnis yang mengubah rantai pasokan mereka dengan Huntr. Minta demo hari ini untuk melihat platform kami beraksi.',
+          subtitle: 'Bergabunglah dengan semakin banyak bisnis yang mengubah rantai pasokan mereka dengan HUNTR. Minta demo hari ini untuk melihat platform kami beraksi.',
           button: 'Minta Demo',
         },
         contact: {
           title: 'Minta Demo',
-          description: 'Tertarik bagaimana Huntr dapat mengubah bisnis Anda? Isi formulir di bawah ini.',
+          description: 'Tertarik bagaimana HUNTR dapat mengubah bisnis Anda? Isi formulir di bawah ini.',
           nameLabel: 'Nama',
           namePlaceholder: 'Nama Anda',
           emailLabel: 'Email',
@@ -335,14 +335,14 @@ export const translations = {
         },
         ourCompany: {
           title: 'Merintis Masa Depan Pengadaan',
-          subtitle: 'Huntr didirikan berdasarkan ide sederhana namun kuat: merevolusi dunia pengadaan teknologi yang kompleks melalui inovasi, kejelasan, dan kemitraan yang tak tergoyahkan.',
+          subtitle: 'HUNTR didirikan berdasarkan ide sederhana namun kuat: merevolusi dunia pengadaan teknologi yang kompleks melalui inovasi, kejelasan, dan kemitraan yang tak tergoyahkan.',
           visionMissionTitle: 'Visi & Misi Kami',
           visionTitle: 'Visi Kami',
           visionText: 'Menjadi platform bisnis terintegrasi yang paling tepercaya dan cerdas di dunia, menciptakan ekosistem yang mulus untuk perdagangan global.',
           missionTitle: 'Misi Kami',
           missionText: 'Memberdayakan perusahaan dengan solusi pengadaan yang efisien, aman, dan berbasis data yang membuka nilai strategis dan mendorong pertumbuhan berkelanjutan.',
           historyTitle: 'Perjalanan Kami',
-          historyText1: 'Dari awal kami sebagai tim kecil ahli industri yang frustrasi dengan proses pengadaan yang tidak efisien, Huntr telah berkembang menjadi platform komprehensif yang melayani bisnis di seluruh dunia. Kami melihat perlunya solusi terpadu yang menggabungkan e-procurement, manajemen rantai pasokan, dan pembayaran yang aman.',
+          historyText1: 'Dari awal kami sebagai tim kecil ahli industri yang frustrasi dengan proses pengadaan yang tidak efisien, HUNTR telah berkembang menjadi platform komprehensif yang melayani bisnis di seluruh dunia. Kami melihat perlunya solusi terpadu yang menggabungkan e-procurement, manajemen rantai pasokan, dan pembayaran yang aman.',
           historyText2: 'Setiap tonggak sejarah, mulai dari peluncuran modul pertama kami hingga integrasi HUNTR Pay, telah didorong oleh komitmen kami untuk memecahkan tantangan dunia nyata bagi klien kami. Perjalanan kami adalah bukti kekuatan visi yang jelas dan inovasi tanpa henti.'
         },
         privacyPolicy: {
@@ -350,7 +350,7 @@ export const translations = {
             subtitle: "Privasi Anda penting bagi kami. Kebijakan ini menjelaskan informasi apa yang kami kumpulkan dan bagaimana kami menggunakannya.",
             lastUpdated: "Terakhir Diperbarui: [Date]",
             introductionTitle: "Pendahuluan",
-            introductionText: "Selamat datang di Huntr. Kami berkomitmen untuk melindungi informasi pribadi Anda dan hak privasi Anda. Jika Anda memiliki pertanyaan atau kekhawatiran tentang kebijakan kami, atau praktik kami sehubungan dengan informasi pribadi Anda, silakan hubungi kami.",
+            introductionText: "Selamat datang di HUNTR. Kami berkomitmen untuk melindungi informasi pribadi Anda dan hak privasi Anda. Jika Anda memiliki pertanyaan atau kekhawatiran tentang kebijakan kami, atau praktik kami sehubungan dengan informasi pribadi Anda, silakan hubungi kami.",
             informationCollectionTitle: "Informasi yang Kami Kumpulkan",
             informationCollectionText: "Kami mengumpulkan informasi pribadi yang Anda berikan secara sukarela kepada kami saat Anda mendaftar di situs web, menyatakan minat untuk memperoleh informasi tentang kami atau produk dan layanan kami, saat Anda berpartisipasi dalam aktivitas di situs web atau saat Anda menghubungi kami.",
             howWeUseTitle: "Bagaimana Kami Menggunakan Informasi Anda",
@@ -358,18 +358,18 @@ export const translations = {
         },
         useCase: {
           title: "Aplikasi di Dunia Nyata",
-          subtitle: "Temukan bagaimana solusi terintegrasi Huntr mendorong efisiensi dan pertumbuhan di berbagai fungsi bisnis.",
+          subtitle: "Temukan bagaimana solusi terintegrasi HUNTR mendorong efisiensi dan pertumbuhan di berbagai fungsi bisnis.",
           tab1: "E-Procurement",
           tab2: "E-Supply Chain",
           tab3: "HUNTR Pay",
           procurementTitle: "Merampingkan Pengadaan untuk Raksasa Manufaktur",
-          procurementDesc: "Produsen otomotif terkemuka berjuang dengan pembelian yang tidak terpusat, yang menyebabkan pengeluaran tak terkendali dan kurangnya visibilitas. Dengan menerapkan sistem E-Procurement Huntr, mereka memusatkan proses pengadaan mereka, mendapatkan kontrol penuh atas rantai pasokan mereka.",
+          procurementDesc: "Produsen otomotif terkemuka berjuang dengan pembelian yang tidak terpusat, yang menyebabkan pengeluaran tak terkendali dan kurangnya visibilitas. Dengan menerapkan sistem E-Procurement HUNTR, mereka memusatkan proses pengadaan mereka, mendapatkan kontrol penuh atas rantai pasokan mereka.",
           procurementBenefit1: "Mengurangi pengeluaran tak terkendali sebesar 30%",
           procurementBenefit2: "Meningkatkan efisiensi operasional sebesar 45%",
           procurementBenefit3: "Mendapatkan visibilitas real-time ke dalam pengeluaran seluruh perusahaan",
           procurementBenefit4: "Mengotomatiskan alur kerja persetujuan, menghemat ratusan jam kerja",
           supplyChainTitle: "Mengoptimalkan Logistik untuk Konglomerat Ritel",
-          supplyChainDesc: "Jaringan ritel besar menghadapi tantangan dengan manajemen inventaris dan koordinasi pemasok, yang mengakibatkan kehabisan stok dan keterlambatan. Solusi E-Supply Chain Huntr menyediakan platform terpadu untuk mengelola vendor, melacak pengiriman, dan mengotomatiskan pengisian ulang inventaris.",
+          supplyChainDesc: "Jaringan ritel besar menghadapi tantangan dengan manajemen inventaris dan koordinasi pemasok, yang mengakibatkan kehabisan stok dan keterlambatan. Solusi E-Supply Chain HUNTR menyediakan platform terpadu untuk mengelola vendor, melacak pengiriman, dan mengotomatiskan pengisian ulang inventaris.",
           supplyChainBenefit1: "Meningkatkan akurasi inventaris hingga 99,8%",
           supplyChainBenefit2: "Mengurangi kehabisan stok sebesar 60%",
           supplyChainBenefit3: "Meningkatkan kolaborasi dan pelacakan kinerja pemasok",
@@ -382,8 +382,8 @@ export const translations = {
           huntrPayBenefit4: "Meningkatkan kepuasan pemasok dengan pembayaran yang tepat waktu dan transparan"
         },
         footer: {
-          copy: 'Huntr Inc. Hak cipta dilindungi undang-undang.',
-          description: 'Huntr adalah mitra strategis Anda dalam pengadaan teknologi, menawarkan solusi berbasis cloud untuk rantai pasokan yang cepat, aman, dan efisien.',
+          copy: 'HUNTR Inc. Hak cipta dilindungi undang-undang.',
+          description: 'HUNTR adalah mitra strategis Anda dalam pengadaan teknologi, menawarkan solusi berbasis cloud untuk rantai pasokan yang cepat, aman, dan efisien.',
           insight: 'Wawasan',
           company: 'Perusahaan',
           legal: 'Hukum',

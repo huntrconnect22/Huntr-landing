@@ -68,7 +68,7 @@ export function Header() {
             <SheetContent side="left" className="w-full max-w-sm">
                <div className="flex items-center justify-between">
                 <Link href="/" className="flex items-center space-x-2">
-                  <Image src="/assets/img/logo-dark.png" alt="Huntr Logo" width={120} height={30} />
+                  <Image src="/assets/img/logo-dark.png" alt="HUNTR Logo" width={120} height={30} />
                 </Link>
                 <LanguageToggle />
               </div>
@@ -109,7 +109,7 @@ export function Header() {
           </Sheet>
           
           <Link href="/" className="flex items-center space-x-2">
-            <Image src="/assets/img/logo-dark.png" alt="Huntr Logo" width={120} height={30} priority />
+            <Image src="/assets/img/logo-dark.png" alt="HUNTR Logo" width={120} height={30} priority />
           </Link>
         </div>
 

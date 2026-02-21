@@ -23,18 +23,18 @@ export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
   title: {
     default: translations.en.metadata.title,
-    template: `%s | Huntr`,
+    template: `%s | HUNTR`,
   },
   description: translations.en.metadata.description,
   keywords: ['e-procurement', 'e-supply chain', 'spend analysis', 'huntr pay', 'b2b procurement', 'platform pengadaan', 'rantai pasok digital', 'huntr.id'],
   openGraph: {
     title: {
       default: translations.en.metadata.title,
-      template: `%s | Huntr`,
+      template: `%s | HUNTR`,
     },
     description: translations.en.metadata.description,
     url: defaultUrl,
-    siteName: 'Huntr',
+    siteName: 'HUNTR',
     locale: 'en_US',
     alternateLocale: ['id_ID'],
     type: 'website',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: {
       default: translations.en.metadata.title,
-      template: `%s | Huntr`,
+      template: `%s | HUNTR`,
     },
     description: translations.en.metadata.description,
   },
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Huntr",
+  "name": "HUNTR",
   "url": "https://huntr.id",
   "logo": "https://huntr.id/huntr-logo.png",
   "contactPoint": {

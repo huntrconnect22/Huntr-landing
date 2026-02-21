@@ -43,7 +43,7 @@ export function Footer() {
           {/* Left Section */}
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4">
-              <Image src="/assets/img/logo-dark.png" alt="Huntr Logo" width={120} height={30} />
+              <Image src="/assets/img/logo-dark.png" alt="HUNTR Logo" width={120} height={30} />
             </Link>
             <p className="text-muted-foreground max-w-sm mb-6">
               {t.description}

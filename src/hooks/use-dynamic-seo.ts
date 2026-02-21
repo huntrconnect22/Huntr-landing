@@ -17,7 +17,7 @@ export const useDynamicSeo = (meta: MetaContent) => {
   useEffect(() => {
     if (!meta || !meta.title || !meta.description) return;
 
-    const fullTitle = `${meta.title} | Huntr`;
+    const fullTitle = `${meta.title} | HUNTR`;
 
     document.title = fullTitle;
     
