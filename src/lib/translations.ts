@@ -42,8 +42,11 @@ export const translations = {
           }
         },
         hero: {
-          title: 'Revolutionizing Technology Procurement',
-          subtitle: 'HUNTR is your strategic partner in technology procurement, offering cloud-based solutions for a fast, secure, and streamlined supply chain.',
+          titlePart1: 'HUNTR',
+          titlePart2: ': Your ',
+          titlePart3: 'Integrated Business',
+          titlePart4: ' Solution',
+          subtitle: 'Connecting Market, Empowering Growth',
           getStarted: 'Get Started',
           learnMore: 'Learn More',
         },
@@ -237,8 +240,11 @@ export const translations = {
           }
         },
         hero: {
-          title: 'Merevolusi Pengadaan Teknologi',
-          subtitle: 'HUNTR adalah mitra strategis Anda dalam pengadaan teknologi, menawarkan solusi berbasis cloud untuk rantai pasokan yang cepat, aman, dan efisien.',
+          titlePart1: 'HUNTR',
+          titlePart2: ': Solusi ',
+          titlePart3: 'Bisnis Terintegrasi',
+          titlePart4: ' Anda',
+          subtitle: 'Menghubungkan Pasar, Memberdayakan Pertumbuhan',
           getStarted: 'Mulai',
           learnMore: 'Pelajari Lebih Lanjut',
         },
