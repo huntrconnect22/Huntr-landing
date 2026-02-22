@@ -73,13 +73,13 @@ export function Header() {
                 <Link href="/" className="flex items-center space-x-2">
                   <Image src="/assets/img/logo-dark.png" alt="HUNTR Logo" width={120} height={30} />
                 </Link>
-                <LanguageToggle />
+                <LanguageToggle className="text-white hover:text-white/80" />
               </div>
               <Separator className="my-4"/>
 
               <div className="flex h-[calc(100%-5rem)] flex-col">
                 <div className="flex flex-col gap-2">
-                  <Link href="/" className={cn("px-2 py-2 font-medium transition-colors hover:text-primary", pathname === "/" ? "text-primary" : "text-foreground/80")}>
+                  <Link href="/" className={cn("px-2 py-2 font-medium transition-colors hover:text-primary", pathname === "/" ? "text-primary" : "text-white/80")}>
                       {t.home}
                   </Link>
                   <Accordion type="single" collapsible className="w-full">
@@ -87,13 +87,13 @@ export function Header() {
                       const isActive = link.items.some((item) => pathname.startsWith(item.href));
                       return (
                         <AccordionItem value={link.title} key={link.title} className="border-b-0">
-                          <AccordionTrigger className={cn("px-2 py-2 font-medium hover:no-underline hover:text-primary", isActive ? "text-primary" : "text-foreground/80")}>
+                          <AccordionTrigger className={cn("px-2 py-2 font-medium hover:no-underline hover:text-primary", isActive ? "text-primary" : "text-white/80")}>
                             {link.title}
                           </AccordionTrigger>
                           <AccordionContent>
                             <div className="flex flex-col gap-4 pl-6 pt-2">
                               {link.items.map((item) => (
-                                <Link key={item.href} href={item.href} className={cn("transition-colors hover:text-primary", pathname.startsWith(item.href) ? "text-primary" : "text-foreground/60")}>
+                                <Link key={item.href} href={item.href} className={cn("transition-colors hover:text-primary", pathname.startsWith(item.href) ? "text-primary" : "text-white/60")}>
                                     {item.title}
                                   </Link>
                               ))}
@@ -103,7 +103,7 @@ export function Header() {
                       )
                     })}
                   </Accordion>
-                  <Link href="/contact" className={cn("px-2 py-2 font-medium transition-colors hover:text-primary", pathname === "/contact" ? "text-primary" : "text-foreground/80")}>
+                  <Link href="/contact" className={cn("px-2 py-2 font-medium transition-colors hover:text-primary", pathname === "/contact" ? "text-primary" : "text-white/80")}>
                     {t.contact}
                   </Link>
                 </div>

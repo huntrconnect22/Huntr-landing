@@ -10,8 +10,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { LanguageContext } from '@/context/language-context';
 import { Globe } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
-export function LanguageToggle() {
+export function LanguageToggle({ className }: { className?: string }) {
   const context = useContext(LanguageContext);
 
   if (!context) {
@@ -24,7 +25,7 @@ export function LanguageToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" className="text-foreground hover:bg-black/5 hover:text-foreground">
+        <Button variant="ghost" size="icon" className={cn("text-foreground hover:bg-black/5 hover:text-foreground", className)}>
           <Globe className="h-[1.2rem] w-[1.2rem]" />
           <span className="sr-only">Toggle language</span>
         </Button>
