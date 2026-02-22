@@ -2,15 +2,15 @@
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import Image from "next/image";
 import { useContext } from "react";
 import { LanguageContext } from "@/context/language-context";
 import { translations } from "@/lib/translations";
 import { useDynamicSeo } from "@/hooks/use-dynamic-seo";
 import { PageHero } from "@/components/sections/page-hero";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardTitle } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -53,27 +53,34 @@ export default function OurTeamPage() {
         <PageHero title={headerT.ourTeam} subtitle={pageT.description} />
         <section className="py-16 sm:py-24">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 gap-8 md:gap-12 max-w-5xl mx-auto">
               {teamMembers.map((member, index) => {
                 const avatarImage = PlaceHolderImages.find(p => p.id === member.avatarId);
                 return (
-                  <AnimateOnScroll key={member.id} className="h-full fade-in zoom-in-95 duration-700" style={{ animationDelay: `${index * 100}ms` }}>
-                    <Card className="h-full flex flex-col">
-                      <CardHeader className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+                  <AnimateOnScroll key={member.id} className="fade-in zoom-in-95 duration-700" style={{ animationDelay: `${index * 100}ms` }}>
+                    <Card className="flex flex-col md:flex-row overflow-hidden">
+                      
+                      {/* Image */}
+                      <div className="relative w-full md:w-64 flex-shrink-0 h-80 md:h-auto">
                         {avatarImage && (
-                          <Avatar className="h-24 w-24">
-                            <AvatarImage src={avatarImage.imageUrl} alt={member.name} data-ai-hint={avatarImage.imageHint} />
-                            <AvatarFallback>{member.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
-                          </Avatar>
+                          <Image
+                            src={avatarImage.imageUrl}
+                            alt={member.name}
+                            fill
+                            className="object-cover"
+                            data-ai-hint={avatarImage.imageHint}
+                          />
                         )}
-                        <div>
+                      </div>
+
+                      {/* Content */}
+                      <div className="flex flex-1 flex-col p-6 sm:p-8">
+                        <div className="flex-1">
                           <CardTitle className="font-headline text-2xl">{member.name}</CardTitle>
-                          <p className="text-primary font-medium">{member.title}</p>
+                          <p className="text-primary font-medium mt-1">{member.title}</p>
+                          <p className="mt-4 text-muted-foreground">{member.description}</p>
                         </div>
-                      </CardHeader>
-                      <CardContent className="flex-1 flex flex-col text-center sm:text-left">
-                        <p className="text-muted-foreground">{member.description}</p>
-                        <div className="mt-auto pt-6 flex items-center justify-center sm:justify-start gap-2">
+                        <div className="mt-6 pt-6 border-t border-border/50 flex items-center gap-2">
                            <Button variant="outline" size="sm" asChild>
                             <a href={`mailto:${member.email}`}>
                               <Mail className="mr-2 h-4 w-4" /> Email
@@ -85,7 +92,8 @@ export default function OurTeamPage() {
                             </a>
                           </Button>
                         </div>
-                      </CardContent>
+                      </div>
+
                     </Card>
                   </AnimateOnScroll>
                 )
