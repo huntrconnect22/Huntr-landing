@@ -3,6 +3,7 @@
 import { Toaster } from "@/components/ui/toaster";
 import { LanguageProvider, LanguageContext } from '@/context/language-context';
 import { useContext, useEffect } from 'react';
+import { CookieConsent } from "./cookie-consent";
 
 const MainContent = ({ children }: { children: React.ReactNode }) => {
   const context = useContext(LanguageContext);
@@ -21,6 +22,7 @@ export function ClientProviders({ children }: { children: React.ReactNode }) {
     <LanguageProvider>
       <MainContent>{children}</MainContent>
       <Toaster />
+      <CookieConsent />
     </LanguageProvider>
   );
 }

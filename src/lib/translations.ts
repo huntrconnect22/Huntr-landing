@@ -193,6 +193,11 @@ export const translations = {
           huntrPayBenefit3: "Enhanced security with multi-layered fraud protection",
           huntrPayBenefit4: "Improved supplier satisfaction with on-time, transparent payments"
         },
+        cookie: {
+          message: 'We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept", you consent to our use of cookies.',
+          accept: 'Accept',
+          decline: 'Decline',
+        },
         footer: {
           copy: 'HUNTR Inc. All rights reserved.',
           description: 'HUNTR is your strategic partner in technology procurement, offering cloud-based solutions for a fast, secure, and streamlined supply chain.',
@@ -248,7 +253,7 @@ export const translations = {
           titlePart2: ': Solusi ',
           titlePart3: 'Bisnis Terintegrasi',
           titlePart4: ' Anda',
-          subtitle: 'Menghubungkan Pasar, Memberdayakan Pertumbuhan',
+          subtitle: 'Connecting Market, Empowering Growth',
           getStarted: 'Mulai',
           learnMore: 'Pelajari Lebih Lanjut',
         },
@@ -394,6 +399,11 @@ export const translations = {
           huntrPayBenefit2: "Mempercepat rekonsiliasi pembayaran dari beberapa minggu menjadi beberapa jam",
           huntrPayBenefit3: "Keamanan yang ditingkatkan dengan perlindungan penipuan berlapis",
           huntrPayBenefit4: "Meningkatkan kepuasan pemasok dengan pembayaran yang tepat waktu dan transparan"
+        },
+        cookie: {
+          message: 'Kami menggunakan cookie untuk meningkatkan pengalaman menjelajah Anda, menyajikan iklan atau konten yang dipersonalisasi, dan menganalisis lalu lintas kami. Dengan mengeklik "Terima", Anda menyetujui penggunaan cookie kami.',
+          accept: 'Terima',
+          decline: 'Tolak',
         },
         footer: {
           copy: 'HUNTR Inc. Hak cipta dilindungi undang-undang.',
