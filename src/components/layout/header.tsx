@@ -54,7 +54,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full">
-      <div className="relative mx-auto mt-4 flex h-20 max-w-4xl items-center justify-between rounded-2xl border border-white/10 bg-black/20 px-4 shadow-lg">
+      <div className="relative mx-auto mt-4 flex h-20 max-w-4xl items-center justify-between rounded-2xl border border-white/10 bg-black/50 backdrop-blur-md px-4 shadow-lg">
         
         {/* Left side: Logo & Mobile Menu Trigger */}
         <div className="flex items-center">
