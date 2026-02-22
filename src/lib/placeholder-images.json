@@ -20,20 +20,20 @@
     },
     {
       "id": "use-case-eprocurement",
-      "description": "A person analyzes procurement data on a laptop, showing charts and graphs.",
-      "imageUrl": "https://images.unsplash.com/photo-1556740758-90de374c12ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9jdXJlbWVudHxlbnwwfHx8fDE3MjE0MjU4ODd8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "description": "Streamlined procurement process.",
+      "imageUrl": "/assets/img/huntr-asset1.webp",
       "imageHint": "digital procurement"
     },
     {
       "id": "use-case-esupplychain",
-      "description": "A modern warehouse with automated logistics and inventory management.",
-      "imageUrl": "https://images.unsplash.com/photo-1569982175971-d92b01cf8694?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsb2dpc3RpY3N8ZW58MHx8fHwxNzIxNDI1OTI5fDA&ixlib=rb-4.0.3&q=80&w=1080",
-      "imageHint": "logistics warehouse"
+      "description": "Efficient supply chain and expedition services.",
+      "imageUrl": "/assets/img/huntr-asset2.webp",
+      "imageHint": "logistics expedition"
     },
     {
       "id": "use-case-huntrpay",
-      "description": "A secure and seamless online payment process illustrated on a screen.",
-      "imageUrl": "https://images.unsplash.com/photo-1561414927-6d86591d0c4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzZWN1cmUlMjBwYXltZW50JTIwb25saW5lfGVufDB8fHx8MTcyMjEwNzYxMHww&ixlib=rb-4.0.3&q=80&w=1080",
+      "description": "Secure and seamless B2B payment solution.",
+      "imageUrl": "/assets/img/huntr-asset3.webp",
       "imageHint": "secure payment"
     },
     {
