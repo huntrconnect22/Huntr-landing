@@ -212,7 +212,7 @@ export const translations = {
           ourCompany: 'Perusahaan Kami',
           ourTeam: 'Tim Kami',
           careers: 'Karier',
-          investorRelations: 'Hubungan Investor',
+          hubInvestor: 'Hubungan Investor',
           privacyPolicy: 'Kebijakan Privasi',
           contact: 'Kontak',
           openMenu: 'Buka menu',
