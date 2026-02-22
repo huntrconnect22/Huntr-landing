@@ -35,6 +35,10 @@ export function Faq() {
       question: t.q4,
       answer: t.a4,
     },
+    {
+      question: t.q5,
+      answer: t.a5,
+    },
   ];
 
   return (
