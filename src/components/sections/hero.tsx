@@ -29,7 +29,7 @@ export function Hero() {
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-headline tracking-tight">
           <span className="font-black">{t.titlePart1}</span>
           <span className="font-bold">{t.titlePart2}</span>
-          <span className="font-black">{t.titlePart3}</span>
+          <span className="font-black text-primary">{t.titlePart3}</span>
           <span className="font-bold">{t.titlePart4}</span>
         </h1>
         <TypingEffect text={t.subtitle} />
