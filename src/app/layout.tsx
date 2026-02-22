@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: `%s | HUNTR`,
   },
   description: translations.en.metadata.description,
-  keywords: ['e-procurement', 'e-supply chain', 'spend analysis', 'huntr pay', 'b2b procurement', 'platform pengadaan', 'rantai pasok digital', 'huntr.id'],
+  keywords: translations.en.metadata.keywords,
   openGraph: {
     title: {
       default: translations.en.metadata.title,
@@ -77,6 +77,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "HUNTR",
+  "alternateName": "huntr.id",
+  "description": translations.en.metadata.description,
   "url": "https://huntr.id",
   "logo": "https://huntr.id/huntr-logo.png",
   "contactPoint": {

@@ -3,6 +3,7 @@ export const translations = {
         metadata: {
             title: 'HUNTR Integrated Business Platform',
             description: 'A comprehensive technology procurement platform offering e-procurement, e-supply chain, spend analysis, and secure payment solutions.',
+            keywords: 'huntr, huntr.id, huntr platform, huntr.com, huntr.io, huntr.co, huntr integrated business, b2b procurement, e-procurement, e-supply chain, spend analysis, huntr pay, platform pengadaan, rantai pasok digital, strategic sourcing',
         },
         header: {
           home: 'Home',
@@ -210,6 +211,7 @@ export const translations = {
         metadata: {
             title: 'Platform Bisnis Terpadu HUNTR',
             description: 'Platform pengadaan teknologi komprehensif yang menawarkan e-procurement, e-supply chain, analisis pengeluaran, dan solusi pembayaran yang aman.',
+            keywords: 'huntr, huntr.id, platform huntr, huntr.com, huntr.io, huntr.co, bisnis terintegrasi huntr, pengadaan b2b, e-procurement, e-supply chain, analisis pengeluaran, huntr pay, platform pengadaan, rantai pasok digital, sumber strategis',
         },
         header: {
           home: 'Beranda',
