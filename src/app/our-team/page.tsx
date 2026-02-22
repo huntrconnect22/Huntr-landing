@@ -57,7 +57,7 @@ export default function OurTeamPage() {
               {teamMembers.map((member, index) => {
                 const avatarImage = PlaceHolderImages.find(p => p.id === member.avatarId);
                 return (
-                  <AnimateOnScroll key={member.id} className="fade-in zoom-in-95 duration-700" style={{ animationDelay: `${index * 100}ms` }}>
+                  <AnimateOnScroll key={member.id} className="h-full fade-in zoom-in-95 duration-700" style={{ animationDelay: `${index * 100}ms` }}>
                     <Card className="h-full flex flex-col">
                       <CardHeader className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
                         {avatarImage && (
