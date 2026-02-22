@@ -22,9 +22,6 @@ const ogImageUrl = 'https://images.unsplash.com/photo-1497366811353-6870744d04b2
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
-  icons: {
-    icon: '/favicon.ico',
-  },
   title: {
     default: translations.en.metadata.title,
     template: `%s | HUNTR`,
