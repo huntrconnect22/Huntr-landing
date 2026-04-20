@@ -57,13 +57,15 @@
     {
       "id": "avatar-deny",
       "description": "Avatar for Deny Esa Saputra",
-      "imageUrl": "/assets/img/team/ceo.jpeg",
+      "imageUrl": "/assets/img/team/deny-esa-saputra-ceo.jpeg",
+      "imageAlt": "Deny Esa Saputra, Founder & CEO of HUNTR",
       "imageHint": "male portrait"
     },
     {
       "id": "avatar-wildan",
       "description": "Avatar for Muhamad A. Wildan M.",
       "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzIyMzk4MzkzfDA&ixlib=rb-4.0.3&q=80&w=400",
+      "imageAlt": "Muhamad A. Wildan M., Co-Founder & CTO of HUNTR",
       "imageHint": "male portrait"
     }
   ]

@@ -11,6 +11,7 @@ import { PageHero } from "@/components/sections/page-hero";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { Card, CardTitle } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { StructuredData } from "@/components/seo/structured-data";
 import { Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -35,6 +36,29 @@ const teamMembers = [
   }
 ];
 
+const siteUrl = 'https://huntr.id';
+
+const teamStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": teamMembers.map((member, index) => {
+    const avatarImage = PlaceHolderImages.find(p => p.id === member.avatarId);
+    return {
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Person",
+        "name": member.name,
+        "jobTitle": member.title,
+        "image": avatarImage ? `${siteUrl}${avatarImage.imageUrl}` : `${siteUrl}/assets/img/team/${member.avatarId}.jpeg`,
+        "sameAs": [member.linkedin],
+        "email": member.email,
+        "description": member.description
+      }
+    };
+  })
+};
+
 export default function OurTeamPage() {
   const context = useContext(LanguageContext);
   const lang = context?.language || 'en';
@@ -49,6 +73,7 @@ export default function OurTeamPage() {
   return (
     <div className="flex flex-col min-h-dvh bg-background">
       <Header />
+      <StructuredData data={teamStructuredData} />
       <main className="flex-1 -mt-24">
         <PageHero title={headerT.ourTeam} subtitle={pageT.description} />
         <section className="py-16 sm:py-24 relative overflow-hidden">
@@ -68,7 +93,8 @@ export default function OurTeamPage() {
                         {avatarImage && (
                           <Image
                             src={avatarImage.imageUrl}
-                            alt={member.name}
+                            alt={avatarImage.imageAlt || `${member.name}, ${member.title} at HUNTR`}
+                            title={avatarImage.imageAlt || `${member.name}, ${member.title} at HUNTR`}
                             fill
                             className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                             data-ai-hint={avatarImage.imageHint}
