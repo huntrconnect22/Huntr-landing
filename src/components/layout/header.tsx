@@ -65,15 +65,17 @@ export function Header() {
                 <span className="sr-only">{t.openMenu}</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="w-full max-w-sm">
+            <SheetContent
+              side="left"
+              className="w-full max-w-sm border-black/10 bg-white/95 text-foreground backdrop-blur-xl"
+            >
               <SheetHeader>
                 <SheetTitle className="sr-only">{t.openMenu}</SheetTitle>
               </SheetHeader>
-              <div className="flex items-center justify-between">
+              <div className="flex items-center">
                 <Link href="/" className="flex items-center space-x-2">
                   <Image src="/assets/img/logo-dark.png" alt="HUNTR Logo" width={120} height={30} />
                 </Link>
-                <LanguageToggle className="text-foreground hover:text-foreground/80" />
               </div>
               <Separator className="my-4"/>
 
@@ -81,6 +83,9 @@ export function Header() {
                 <div className="flex flex-col gap-2">
                   <Link href="/" className={cn("px-2 py-2 font-medium transition-colors hover:text-primary", pathname === "/" ? "text-primary" : "text-foreground/80")}>
                       {t.home}
+                  </Link>
+                  <Link href="/pricing" className={cn("px-2 py-2 font-medium transition-colors hover:text-primary", pathname === "/pricing" ? "text-primary" : "text-foreground/80")}>
+                    {t.pricing}
                   </Link>
                   <Accordion type="single" collapsible className="w-full">
                     {navLinks.map((link) => {
@@ -124,6 +129,12 @@ export function Header() {
           >
             {t.home}
           </Link>
+          <Link
+            href="/pricing"
+            className={cn("font-medium transition-colors hover:text-primary", pathname === "/pricing" ? "text-primary" : "text-foreground/80")}
+          >
+            {t.pricing}
+          </Link>
           {navLinks.map((link) => {
             const isActive = link.items.some(item => pathname.startsWith(item.href));
             return (
@@ -151,6 +162,9 @@ export function Header() {
 
         {/* Right Side: Actions */}
         <div className="flex items-center justify-end gap-2">
+          <div className="md:hidden">
+            <LanguageToggle />
+          </div>
           <div className="hidden md:flex items-center gap-2">
              <LanguageToggle />
           </div>

@@ -6,6 +6,7 @@ import { LanguageContext } from '@/context/language-context';
 type MetaContent = {
   title: string;
   description: string;
+  keywords?: string;
 };
 
 // This hook updates the page's title and meta description tag
@@ -30,6 +31,17 @@ export const useDynamicSeo = (meta: MetaContent) => {
       document.head.appendChild(descriptionTag);
     }
     descriptionTag.setAttribute('content', meta.description);
+
+    // Update meta keywords
+    if (meta.keywords) {
+      let keywordsTag = document.querySelector('meta[name="keywords"]');
+      if (!keywordsTag) {
+        keywordsTag = document.createElement('meta');
+        keywordsTag.setAttribute('name', 'keywords');
+        document.head.appendChild(keywordsTag);
+      }
+      keywordsTag.setAttribute('content', meta.keywords);
+    }
 
     // Add/Update Canonical Link
     let canonicalLink = document.querySelector('link[rel="canonical"]');

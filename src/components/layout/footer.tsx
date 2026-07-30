@@ -48,6 +48,15 @@ export function Footer() {
             <p className="text-muted-foreground max-w-sm mb-6">
               {t.description}
             </p>
+            <div className="mb-6">
+              <p className="text-sm font-medium text-foreground">{t.emailLabel}</p>
+              <Link
+                href="mailto:support@huntr.id"
+                className="text-muted-foreground transition-colors hover:text-primary"
+              >
+                support@huntr.id
+              </Link>
+            </div>
             <div className="flex gap-2">
               <Button variant="ghost" size="icon" asChild>
                 <Link href="#" aria-label="Twitter">
