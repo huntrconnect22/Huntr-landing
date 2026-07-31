@@ -1,6 +1,6 @@
 import type {NextConfig} from 'next';
 
-// Allow self-signed TLS certs when calling local backend in development
+// Allow self-signed TLS certs when calling local backend in development only
 if (process.env.NODE_ENV !== 'production') {
   process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 }
