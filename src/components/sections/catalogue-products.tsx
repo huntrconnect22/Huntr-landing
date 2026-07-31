@@ -3,7 +3,7 @@
 import { useEffect, useState, useContext } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Package, ArrowRight, Tag, Ruler, Loader2 } from 'lucide-react';
+import { Package, ArrowRight, Tag, Ruler, Loader2, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -26,77 +26,10 @@ interface CatalogueItem {
 }
 
 async function fetchCatalogues(): Promise<CatalogueItem[]> {
-  // Fetch via Next.js Route Handler (proxy) to avoid CORS issues
   const res = await fetch('/api/catalogues?per_page=10&page=1');
   if (!res.ok) throw new Error('Failed to fetch catalogues');
   const json = await res.json();
-  // API returns either { data: [...] } paginated or a plain array
   return Array.isArray(json) ? json.slice(0, 10) : (json.data ?? []).slice(0, 10);
-}
-
-function ProductCardSkeleton() {
-  return (
-    <div className="rounded-2xl border bg-card overflow-hidden flex flex-col">
-      <Skeleton className="h-44 w-full rounded-none" />
-      <div className="p-4 flex flex-col gap-2 flex-1">
-        <Skeleton className="h-4 w-3/4" />
-        <Skeleton className="h-3 w-1/2" />
-        <Skeleton className="h-3 w-1/3 mt-auto" />
-      </div>
-    </div>
-  );
-}
-
-function ProductCard({ item, t }: { item: CatalogueItem; t: ReturnType<typeof translations['en']['catalogue'] extends infer U ? () => U : never> extends never ? typeof translations['en']['catalogue'] : typeof translations['en']['catalogue'] }) {
-  return (
-    <div className="group rounded-2xl border bg-card overflow-hidden flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
-      {/* Image */}
-      <div className="relative h-44 bg-muted flex items-center justify-center overflow-hidden flex-shrink-0">
-        {item.image_url ? (
-          <Image
-            src={item.image_url}
-            alt={item.name}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-            className="object-contain group-hover:scale-105 transition-transform duration-300"
-          />
-        ) : (
-          <div className="flex flex-col items-center gap-2 text-muted-foreground">
-            <Package className="h-10 w-10 opacity-40" />
-            <span className="text-xs">{t.noImage}</span>
-          </div>
-        )}
-      </div>
-
-      {/* Content */}
-      <div className="p-4 flex flex-col gap-2 flex-1">
-        <h3 className="font-semibold text-sm leading-snug line-clamp-2 text-foreground">
-          {item.name}
-        </h3>
-
-        <div className="flex flex-wrap gap-1.5 mt-1">
-          {item.category && (
-            <Badge variant="secondary" className="text-xs gap-1">
-              <Tag className="h-3 w-3" />
-              {item.category}
-            </Badge>
-          )}
-          {item.uom && (
-            <Badge variant="outline" className="text-xs gap-1">
-              <Ruler className="h-3 w-3" />
-              {item.uom}
-            </Badge>
-          )}
-        </div>
-
-        {item.brand && (
-          <p className="text-xs text-muted-foreground mt-1">
-            <span className="font-medium">{t.brand}:</span> {item.brand}
-          </p>
-        )}
-      </div>
-    </div>
-  );
 }
 
 /** Checks whether the user has an active session on app.huntr.id */
@@ -110,6 +43,110 @@ async function checkAuth(): Promise<boolean> {
   }
 }
 
+function ProductCardSkeleton() {
+  return (
+    <div className="rounded-2xl border bg-card overflow-hidden flex flex-col">
+      <Skeleton className="h-36 sm:h-44 w-full rounded-none" />
+      <div className="p-3 sm:p-4 flex flex-col gap-2 flex-1">
+        <Skeleton className="h-4 w-3/4" />
+        <Skeleton className="h-3 w-1/2" />
+        <Skeleton className="h-8 w-full mt-auto rounded-lg" />
+      </div>
+    </div>
+  );
+}
+
+type CatT = typeof translations['en']['catalogue'];
+
+function CardRequestButton({ label }: { label: string }) {
+  const [checking, setChecking] = useState(false);
+
+  const handleClick = async () => {
+    setChecking(true);
+    try {
+      const loggedIn = await checkAuth();
+      const target = loggedIn ? `${APP_URL}/cart` : `${APP_URL}/register`;
+      window.open(target, '_blank', 'noopener,noreferrer');
+    } finally {
+      setChecking(false);
+    }
+  };
+
+  return (
+    <Button
+      size="sm"
+      variant="default"
+      className="w-full mt-auto text-xs font-semibold gap-1.5"
+      onClick={handleClick}
+      disabled={checking}
+    >
+      {checking ? (
+        <Loader2 className="h-3.5 w-3.5 animate-spin" />
+      ) : (
+        <ShoppingCart className="h-3.5 w-3.5" />
+      )}
+      {label}
+    </Button>
+  );
+}
+
+function ProductCard({ item, t }: { item: CatalogueItem; t: CatT }) {
+  return (
+    <div className="group rounded-2xl border bg-card overflow-hidden flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
+      {/* Image */}
+      <div className="relative h-36 sm:h-44 bg-muted flex items-center justify-center overflow-hidden flex-shrink-0">
+        {item.image_url ? (
+          <Image
+            src={item.image_url}
+            alt={item.name}
+            fill
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+            className="object-contain group-hover:scale-105 transition-transform duration-300"
+          />
+        ) : (
+          <div className="flex flex-col items-center gap-2 text-muted-foreground">
+            <Package className="h-8 w-8 sm:h-10 sm:w-10 opacity-40" />
+            <span className="text-xs">{t.noImage}</span>
+          </div>
+        )}
+      </div>
+
+      {/* Content */}
+      <div className="p-3 sm:p-4 flex flex-col gap-2 flex-1">
+        <h3 className="font-semibold text-xs sm:text-sm leading-snug line-clamp-2 text-foreground">
+          {item.name}
+        </h3>
+
+        <div className="flex flex-wrap gap-1 sm:gap-1.5 mt-1">
+          {item.category && (
+            <Badge variant="secondary" className="text-[10px] sm:text-xs gap-1 px-1.5">
+              <Tag className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
+              {item.category}
+            </Badge>
+          )}
+          {item.uom && (
+            <Badge variant="outline" className="text-[10px] sm:text-xs gap-1 px-1.5">
+              <Ruler className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
+              {item.uom}
+            </Badge>
+          )}
+        </div>
+
+        {item.brand && (
+          <p className="text-[10px] sm:text-xs text-muted-foreground mt-1">
+            <span className="font-medium">{t.brand}:</span> {item.brand}
+          </p>
+        )}
+
+        {/* Per-card request button */}
+        <div className="mt-auto pt-3">
+          <CardRequestButton label={t.requestBtn} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function CreateRequestButton({ label }: { label: string }) {
   const [checking, setChecking] = useState(false);
 
@@ -117,9 +154,7 @@ function CreateRequestButton({ label }: { label: string }) {
     setChecking(true);
     try {
       const loggedIn = await checkAuth();
-      const target = loggedIn
-        ? `${APP_URL}/catalogue`
-        : `${APP_URL}/register`;
+      const target = loggedIn ? `${APP_URL}/catalogue` : `${APP_URL}/register`;
       window.open(target, '_blank', 'noopener,noreferrer');
     } finally {
       setChecking(false);
@@ -176,9 +211,9 @@ export function CatalogueProducts() {
             <p className="text-center text-muted-foreground">{t.loadingError}</p>
           )}
 
-          {/* Grid */}
+          {/* Grid — 2 cols on mobile, 3 on md, 5 on lg */}
           {!error && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-5">
               {loading
                 ? Array.from({ length: 10 }).map((_, i) => (
                     <ProductCardSkeleton key={i} />
