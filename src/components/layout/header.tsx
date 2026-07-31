@@ -112,6 +112,15 @@ export function Header() {
                     {t.contact}
                   </Link>
                 </div>
+                <div className="mt-6 flex flex-col gap-3">
+                  <Separator />
+                  <a href="https://app.huntr.id/login" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" className="w-full">{t.login}</Button>
+                  </a>
+                  <a href="https://app.huntr.id/register" target="_blank" rel="noopener noreferrer">
+                    <Button className="w-full">{t.register}</Button>
+                  </a>
+                </div>
               </div>
             </SheetContent>
           </Sheet>
@@ -167,6 +176,12 @@ export function Header() {
           </div>
           <div className="hidden md:flex items-center gap-2">
              <LanguageToggle />
+             <a href="https://app.huntr.id/login" target="_blank" rel="noopener noreferrer">
+               <Button variant="outline" size="sm">{t.login}</Button>
+             </a>
+             <a href="https://app.huntr.id/register" target="_blank" rel="noopener noreferrer">
+               <Button size="sm">{t.register}</Button>
+             </a>
           </div>
         </div>
       </div>

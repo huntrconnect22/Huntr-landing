@@ -20,6 +20,8 @@ export const translations = {
           privacyPolicy: 'Privacy Policy',
           contact: 'Contact',
           openMenu: 'Open menu',
+          login: 'Login',
+          register: 'Register',
         },
         pages: {
           article: {
@@ -276,6 +278,8 @@ export const translations = {
           privacyPolicy: 'Kebijakan Privasi',
           contact: 'Kontak',
           openMenu: 'Buka menu',
+          login: 'Masuk',
+          register: 'Daftar',
         },
         pages: {
           article: {
