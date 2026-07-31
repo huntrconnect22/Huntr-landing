@@ -58,14 +58,26 @@ function ProductCardSkeleton() {
 
 type CatT = typeof translations['en']['catalogue'];
 
-function CardRequestButton({ label }: { label: string }) {
+function CardRequestButton({ item, label }: { item: CatalogueItem; label: string }) {
   const [checking, setChecking] = useState(false);
 
   const handleClick = async () => {
     setChecking(true);
     try {
+      // Build cart deep-link with item data as query params
+      const cartParams = new URLSearchParams({
+        add: item.id,
+        name: item.name,
+        ...(item.uom ? { uom: item.uom } : {}),
+        ...(item.category ? { category: item.category } : {}),
+        ...(item.image_url ? { image: item.image_url } : {}),
+      });
+      const cartUrl = `${APP_URL}/cart?${cartParams.toString()}`;
+
       const loggedIn = await checkAuth();
-      const target = loggedIn ? `${APP_URL}/cart` : `${APP_URL}/register`;
+      const target = loggedIn
+        ? cartUrl
+        : `${APP_URL}/register?returnTo=${encodeURIComponent(`/cart?${cartParams.toString()}`)}`;
       window.open(target, '_blank', 'noopener,noreferrer');
     } finally {
       setChecking(false);
@@ -140,7 +152,7 @@ function ProductCard({ item, t }: { item: CatalogueItem; t: CatT }) {
 
         {/* Per-card request button */}
         <div className="mt-auto pt-3">
-          <CardRequestButton label={t.requestBtn} />
+          <CardRequestButton item={item} label={t.requestBtn} />
         </div>
       </div>
     </div>
