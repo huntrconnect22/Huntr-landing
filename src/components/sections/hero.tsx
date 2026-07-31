@@ -35,7 +35,7 @@ export function Hero() {
         <TypingEffect text={t.subtitle} />
         <div className="mt-8 flex justify-center gap-4">
           <Button size="lg" asChild>
-            <Link href="/contact">{t.getStarted}</Link>
+            <Link href="https://app.huntr.id/" target="_blank">{t.getStarted}</Link>
           </Button>
           <Button size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-black" asChild>
             <Link href="/#solutions">{t.learnMore}</Link>
