@@ -129,6 +129,20 @@ export const translations = {
           q5: "What do you mean by 'accessible anywhere, anytime'?",
           a5: "It means HUNTR is mobile-ready. You don't need to be in front of an office computer to approve procurement or check supply status. As long as you have an internet connection, you can manage your entire business through a smartphone or tablet in real-time."
         },
+        catalogue: {
+          title: 'Products on the HUNTR Marketplace',
+          subtitle: 'Discover a wide range of products listed by verified vendors on our platform. Find what your business needs — all in one place.',
+          ctaTitle: 'Ready to Place a Request?',
+          ctaSubtitle: 'Tell us what you need and our team will match you with the right vendors instantly.',
+          ctaButton: 'Create a Request Now',
+          viewAll: 'View All Products',
+          noImage: 'No Image',
+          category: 'Category',
+          brand: 'Brand',
+          uom: 'UoM',
+          by: 'by',
+          loadingError: 'Failed to load products. Please try again later.',
+        },
         cta: {
           title: 'Ready to Revolutionize Your Procurement?',
           subtitle: 'Join the growing number of businesses transforming their supply chain with HUNTR. Request a demo today to see our platform in action.',
@@ -386,6 +400,20 @@ export const translations = {
           a4: 'Tentu. Arsitektur cloud kami bersifat highly scalable. Artinya, platform HUNTR dirancang untuk tumbuh bersama bisnis Anda, baik Anda mengelola puluhan maupun ribuan vendor. Kami memastikan performa tetap cepat dan stabil berapa pun volume transaksi yang Anda miliki.',
           q5: "Apa maksudnya 'diakses di mana saja dan kapan saja'?",
           a5: "Artinya HUNTR bersifat mobile-ready. Anda tidak perlu duduk di depan komputer kantor untuk menyetujui pengadaan atau mengecek status suplai. Selama Anda memiliki koneksi internet, Anda bisa mengelola seluruh bisnis Anda melalui smartphone atau tablet secara real-time."
+        },
+        catalogue: {
+          title: 'Produk di Marketplace HUNTR',
+          subtitle: 'Temukan berbagai produk yang tersedia dari vendor terverifikasi di platform kami. Cari apa yang bisnis Anda butuhkan — semua di satu tempat.',
+          ctaTitle: 'Siap Membuat Permintaan?',
+          ctaSubtitle: 'Beritahu kami apa yang Anda butuhkan dan tim kami akan mencocokkan Anda dengan vendor yang tepat.',
+          ctaButton: 'Buat Permintaan Sekarang',
+          viewAll: 'Lihat Semua Produk',
+          noImage: 'Tidak Ada Gambar',
+          category: 'Kategori',
+          brand: 'Merek',
+          uom: 'Satuan',
+          by: 'oleh',
+          loadingError: 'Gagal memuat produk. Silakan coba lagi nanti.',
         },
         cta: {
           title: 'Siap Merevolusi Pengadaan Anda?',

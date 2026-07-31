@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Hero } from "@/components/sections/hero";
 import { Solutions } from "@/components/sections/solutions";
 import { Features } from "@/components/sections/features";
+import { CatalogueProducts } from "@/components/sections/catalogue-products";
 import { Footer } from "@/components/layout/footer";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Cta } from "@/components/sections/cta";
@@ -29,6 +30,7 @@ export default function Home() {
         <Hero />
         <Solutions />
         <Features />
+        <CatalogueProducts />
         <Testimonials />
         <Faq />
         <Cta />
