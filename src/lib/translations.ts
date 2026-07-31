@@ -149,6 +149,9 @@ export const translations = {
           button: 'Request a Demo',
         },
         contact: {
+          seoTitle: 'Contact HUNTR — Request a Demo',
+          seoDescription: 'Get in touch with HUNTR to request a demo or learn how our integrated B2B procurement platform can transform your business operations.',
+          seoKeywords: 'contact huntr, request demo huntr, huntr demo, huntr support, b2b procurement demo indonesia',
           title: 'Request a Demo',
           description: 'Interested in how HUNTR can transform your business? Fill out the form below.',
           directEmailNote: 'Your message will open directly in your email app and be sent to support@huntr.id.',
@@ -207,6 +210,9 @@ export const translations = {
           noteBody: 'These terms summarize the current pricing structure for HUNTR customers and are intended to make fee calculations transparent from the start.',
         },
         ourCompany: {
+          seoTitle: 'About HUNTR — Our Company, Vision & Mission',
+          seoDescription: 'Learn about HUNTR, the integrated business platform revolutionizing B2B procurement in Indonesia. Discover our vision, mission, and company story.',
+          seoKeywords: 'about huntr, huntr company, huntr vision mission, b2b procurement company indonesia, integrated business platform, huntr history',
           title: 'Pioneering the Future of Procurement',
           subtitle: 'HUNTR was founded on a simple yet powerful idea: to revolutionize the complex world of technology procurement through innovation, clarity, and unwavering partnership.',
           aboutTitle: 'What is HUNTR?',
@@ -221,6 +227,9 @@ export const translations = {
           historyText2: 'Every milestone, from the launch of our first module to the integration of HUNTR Pay, has been driven by our commitment to solving real-world challenges for our clients. Our journey is a testament to the power of a clear vision and relentless innovation.'
         },
         privacyPolicy: {
+          seoTitle: 'Privacy Policy — HUNTR',
+          seoDescription: 'Read the HUNTR privacy policy to understand how we collect, use, and protect your personal information on our B2B procurement platform.',
+          seoKeywords: 'huntr privacy policy, data protection huntr, personal information huntr, huntr gdpr, kebijakan privasi huntr',
           title: "Privacy Policy",
           subtitle: "Your privacy is important to us. This policy explains what information we collect and how we use it.",
           lastUpdated: "Last Updated: [Date]",
@@ -232,6 +241,9 @@ export const translations = {
           howWeUseText: "We use personal information collected via our website for a variety of business purposes described below. We process your personal information for these purposes in reliance on our legitimate business interests, in order to enter into or perform a contract with you, with your consent, and/or for compliance with our legal obligations."
         },
         useCase: {
+          seoTitle: 'Use Cases — E-Procurement, Supply Chain & HUNTR Pay',
+          seoDescription: 'Explore real-world use cases of HUNTR platform: streamlining procurement for manufacturers, optimizing logistics for retail, and simplifying B2B payments.',
+          seoKeywords: 'huntr use case, e-procurement use case, supply chain management example, huntr pay use case, b2b procurement case study, pengadaan b2b indonesia',
           title: "Real-World Applications",
           subtitle: "Discover how HUNTR's integrated solutions drive efficiency and growth across various business functions.",
           tab1: "E-Procurement",
@@ -255,6 +267,16 @@ export const translations = {
           huntrPayBenefit2: "Accelerated payment reconciliation from weeks to hours",
           huntrPayBenefit3: "Enhanced security with multi-layered fraud protection",
           huntrPayBenefit4: "Improved supplier satisfaction with on-time, transparent payments"
+        },
+        careers: {
+          seoTitle: 'Careers at HUNTR — Join Our Team',
+          seoDescription: 'Explore career opportunities at HUNTR. Join a team building the future of B2B procurement and supply chain technology in Indonesia.',
+          seoKeywords: 'huntr careers, jobs at huntr, work at huntr, huntr hiring, lowongan kerja huntr, karir huntr',
+        },
+        investorRelations: {
+          seoTitle: 'Investor Relations — HUNTR',
+          seoDescription: 'Access investor relations information, financial reports, and company updates from HUNTR, Indonesia\'s leading integrated B2B procurement platform.',
+          seoKeywords: 'huntr investor relations, huntr investment, huntr financial report, huntr company update, relasi investor huntr',
         },
         cookie: {
           message: 'We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept", you consent to our use of cookies.',
@@ -421,6 +443,9 @@ export const translations = {
           button: 'Minta Demo',
         },
         contact: {
+          seoTitle: 'Hubungi HUNTR — Minta Demo',
+          seoDescription: 'Hubungi HUNTR untuk meminta demo atau pelajari bagaimana platform pengadaan B2B terpadu kami dapat mengubah operasional bisnis Anda.',
+          seoKeywords: 'kontak huntr, minta demo huntr, demo huntr, dukungan huntr, demo pengadaan b2b indonesia',
           title: 'Minta Demo',
           description: 'Tertarik bagaimana HUNTR dapat mengubah bisnis Anda? Isi formulir di bawah ini.',
           directEmailNote: 'Pesan Anda akan langsung dibuka di aplikasi email dan dikirim ke support@huntr.id.',
@@ -479,6 +504,9 @@ export const translations = {
           noteBody: 'Ringkasan ini dibuat untuk memudahkan Pelanggan memahami skema biaya HUNTR secara transparan sejak awal penggunaan platform.',
         },
         ourCompany: {
+          seoTitle: 'Tentang HUNTR — Perusahaan, Visi & Misi',
+          seoDescription: 'Pelajari tentang HUNTR, platform bisnis terpadu yang merevolusi pengadaan B2B di Indonesia. Temukan visi, misi, dan kisah perusahaan kami.',
+          seoKeywords: 'tentang huntr, perusahaan huntr, visi misi huntr, platform pengadaan b2b indonesia, bisnis terintegrasi, sejarah huntr',
           title: 'Merintis Masa Depan Pengadaan',
           subtitle: 'HUNTR didirikan berdasarkan ide sederhana namun kuat: merevolusi dunia pengadaan teknologi yang kompleks melalui inovasi, kejelasan, dan kemitraan yang tak tergoyahkan.',
           aboutTitle: 'Tentang HUNTR',
@@ -493,6 +521,9 @@ export const translations = {
           historyText2: 'Setiap tonggak sejarah, mulai dari peluncuran modul pertama kami hingga integrasi HUNTR Pay, telah didorong oleh komitmen kami untuk memecahkan tantangan dunia nyata bagi klien kami. Perjalanan kami adalah bukti kekuatan visi yang jelas dan inovasi tanpa henti.'
         },
         privacyPolicy: {
+            seoTitle: 'Kebijakan Privasi — HUNTR',
+            seoDescription: 'Baca kebijakan privasi HUNTR untuk memahami bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda di platform pengadaan B2B kami.',
+            seoKeywords: 'kebijakan privasi huntr, perlindungan data huntr, informasi pribadi huntr, privasi pengguna huntr',
             title: "Kebijakan Privasi",
             subtitle: "Privasi Anda penting bagi kami. Kebijakan ini menjelaskan informasi apa yang kami kumpulkan dan bagaimana kami menggunakannya.",
             lastUpdated: "Terakhir Diperbarui: [Date]",
@@ -504,6 +535,9 @@ export const translations = {
             howWeUseText: "Kami menggunakan informasi pribadi yang dikumpulkan melalui situs web kami untuk berbagai tujuan bisnis yang dijelaskan di bawah ini. Kami memproses informasi pribadi Anda untuk tujuan ini dengan mengandalkan kepentingan bisnis kami yang sah, untuk masuk ke dalam atau melaksanakan kontrak dengan Anda, dengan persetujuan Anda, dan/atau untuk kepatuhan terhadap kewajiban hukum kami."
         },
         useCase: {
+          seoTitle: 'Studi Kasus — E-Procurement, Supply Chain & HUNTR Pay',
+          seoDescription: 'Jelajahi studi kasus nyata platform HUNTR: merampingkan pengadaan untuk manufaktur, mengoptimalkan logistik ritel, dan menyederhanakan pembayaran B2B.',
+          seoKeywords: 'studi kasus huntr, contoh e-procurement, manajemen supply chain, huntr pay, pengadaan b2b indonesia, use case huntr',
           title: "Aplikasi di Dunia Nyata",
           subtitle: "Temukan bagaimana solusi terintegrasi HUNTR mendorong efisiensi dan pertumbuhan di berbagai fungsi bisnis.",
           tab1: "E-Procurement",
@@ -527,6 +561,16 @@ export const translations = {
           huntrPayBenefit2: "Mempercepat rekonsiliasi pembayaran dari beberapa minggu menjadi beberapa jam",
           huntrPayBenefit3: "Keamanan yang ditingkatkan dengan perlindungan penipuan berlapis",
           huntrPayBenefit4: "Meningkatkan kepuasan pemasok dengan pembayaran yang tepat waktu dan transparan"
+        },
+        careers: {
+          seoTitle: 'Karier di HUNTR — Bergabung dengan Tim Kami',
+          seoDescription: 'Jelajahi peluang karier di HUNTR. Bergabunglah dengan tim yang membangun masa depan teknologi pengadaan B2B dan rantai pasokan di Indonesia.',
+          seoKeywords: 'karir huntr, lowongan kerja huntr, bekerja di huntr, huntr hiring, huntr careers indonesia',
+        },
+        investorRelations: {
+          seoTitle: 'Hubungan Investor — HUNTR',
+          seoDescription: 'Akses informasi hubungan investor, laporan keuangan, dan pembaruan perusahaan dari HUNTR, platform pengadaan B2B terpadu terkemuka di Indonesia.',
+          seoKeywords: 'hubungan investor huntr, investasi huntr, laporan keuangan huntr, pembaruan perusahaan huntr, investor relations huntr',
         },
         cookie: {
           message: 'Kami menggunakan cookie untuk meningkatkan pengalaman menjelajah Anda, menyajikan iklan atau konten yang dipersonalisasi, dan menganalisis lalu lintas kami. Dengan mengeklik "Terima", Anda menyetujui penggunaan cookie kami.',

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Lato, Montserrat } from 'next/font/google';
 import './globals.css';
 import { ClientProviders } from '@/components/client-providers';
@@ -18,7 +18,17 @@ const montserrat = Montserrat({
 });
 
 const defaultUrl = 'https://huntr.id';
-const ogImageUrl = 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2V8ZW58MHx8fHwxNzY5NTUxNDUzfDA&ixlib=rb-4.1.0&q=80&w=1200&h=630';
+// Self-hosted OG image — place a 1200×630 file at /public/og-image.jpg
+const ogImageUrl = '/og-image.jpg';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
@@ -28,6 +38,16 @@ export const metadata: Metadata = {
   },
   description: translations.en.metadata.description,
   keywords: translations.en.metadata.keywords,
+  authors: [{ name: 'HUNTR', url: defaultUrl }],
+  creator: 'HUNTR',
+  publisher: 'HUNTR',
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/',
+      'id-ID': '/',
+    },
+  },
   openGraph: {
     title: {
       default: translations.en.metadata.title,
@@ -41,7 +61,7 @@ export const metadata: Metadata = {
         url: ogImageUrl,
         width: 1200,
         height: 630,
-        alt: 'HUNTR Integrated Business Platform',
+        alt: 'HUNTR — Integrated Business Platform',
       },
     ],
     locale: 'en_US',
@@ -50,6 +70,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@huntr_id',
+    creator: '@huntr_id',
     title: {
       default: translations.en.metadata.title,
       template: `%s | HUNTR`,
@@ -68,38 +90,100 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  verification: {
+    // google: 'your-google-search-console-token',
+    // yandex: 'your-yandex-token',
+  },
 };
 
+// ── JSON-LD Schemas ──────────────────────────────────────────────────────────
+
 const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "HUNTR",
-  "alternateName": "huntr.id",
-  "description": translations.en.metadata.description,
-  "url": "https://huntr.id",
-  "logo": "https://huntr.id/huntr-logo.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+62-21-555-0123",
-    "contactType": "Customer Service",
-    "areaServed": "ID",
-    "availableLanguage": ["English", "Indonesian"]
-  }
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${defaultUrl}/#organization`,
+  name: 'HUNTR',
+  alternateName: ['huntr.id', 'HUNTR Platform', 'PT Huntr'],
+  description: translations.en.metadata.description,
+  url: defaultUrl,
+  logo: {
+    '@type': 'ImageObject',
+    url: `${defaultUrl}/huntr-logo.png`,
+    width: 200,
+    height: 60,
+  },
+  sameAs: [
+    'https://www.linkedin.com/company/huntr-id',
+    'https://www.instagram.com/huntr.id',
+  ],
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      email: 'support@huntr.id',
+      contactType: 'customer support',
+      areaServed: 'ID',
+      availableLanguage: ['English', 'Indonesian'],
+    },
+  ],
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'ID',
+  },
 };
 
 const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "url": "https://huntr.id/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://huntr.id/search?q={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
-    }
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${defaultUrl}/#website`,
+  url: `${defaultUrl}/`,
+  name: 'HUNTR',
+  description: translations.en.metadata.description,
+  publisher: {
+    '@id': `${defaultUrl}/#organization`,
+  },
+  inLanguage: ['en-US', 'id-ID'],
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${defaultUrl}/search?q={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
 };
+
+const softwareAppSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'HUNTR',
+  operatingSystem: 'Web',
+  applicationCategory: 'BusinessApplication',
+  description:
+    'A comprehensive B2B procurement platform offering e-procurement, e-supply chain, spend analysis, and secure payment solutions for enterprises in Indonesia.',
+  url: `${defaultUrl}/`,
+  publisher: {
+    '@id': `${defaultUrl}/#organization`,
+  },
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'IDR',
+    description: 'Free trial for 14 days, then transaction-based platform fee.',
+  },
+  featureList: [
+    'E-Procurement System',
+    'E-Supply Chain Management',
+    'Spend Analysis & Reporting',
+    'HUNTR Pay — Secure B2B Payments',
+    'Vendor Management',
+    'Contract Management',
+    'HUNTR Crowd Buy',
+  ],
+  applicationSubCategory: 'E-Procurement',
+  inLanguage: ['en-US', 'id-ID'],
+};
+
+// ────────────────────────────────────────────────────────────────────────────
 
 export default function RootLayout({
   children,
@@ -107,15 +191,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${lato.variable} ${montserrat.variable} scroll-smooth`}>
+    <html
+      lang="en"
+      className={`${lato.variable} ${montserrat.variable} scroll-smooth`}
+    >
       <head>
         <StructuredData data={organizationSchema} />
         <StructuredData data={websiteSchema} />
+        <StructuredData data={softwareAppSchema} />
       </head>
       <body className="font-body antialiased">
-        <ClientProviders>
-          {children}
-        </ClientProviders>
+        <ClientProviders>{children}</ClientProviders>
       </body>
     </html>
   );

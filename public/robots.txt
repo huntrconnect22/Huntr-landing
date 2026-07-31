@@ -1,4 +1,14 @@
 User-agent: *
 Allow: /
 
+# Block internal / non-public paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /dashboard/
+
+# Polite crawl rate (optional — respected by supporting bots)
+Crawl-delay: 10
+
+# Sitemaps
 Sitemap: https://huntr.id/sitemap.xml
