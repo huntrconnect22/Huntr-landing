@@ -9,6 +9,7 @@ import { Footer } from "@/components/layout/footer";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Cta } from "@/components/sections/cta";
 import { Faq } from "@/components/sections/faq";
+import { Clients } from "@/components/sections/clients";
 import { useDynamicSeo } from "@/hooks/use-dynamic-seo";
 import { useContext } from "react";
 import { LanguageContext } from "@/context/language-context";
@@ -31,6 +32,7 @@ export function HomeClient() {
         <Solutions />
         <Features />
         <CatalogueProducts />
+        <Clients />
         <Testimonials />
         <Faq />
         <Cta />

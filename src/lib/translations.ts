@@ -105,6 +105,15 @@ export const translations = {
           feature4Title: 'Contract Management',
           feature4Description: 'Centralize contract storage, track key milestones, and ensure compliance across all your agreements.',
         },
+        clients: {
+          title: 'Trusted by Leading Companies',
+          subtitle: 'These industry-leading companies rely on HUNTR to power their procurement and supply chain operations.',
+          altHutama: 'Hutama Bore Pile logo',
+          altJayatama: 'Jayatama Bore Pile logo',
+          altJowoland: 'Jowoland Bore Pile logo',
+          altMitrabawang: 'Mitrabawang.id logo',
+          altSipadv: 'Sinar Indah Padma (SIPADV) logo',
+        },
         testimonials: {
           title: 'Trusted by Industry Leaders',
           subtitle: 'Hear what our clients have to say about their success with HUNTR.',
@@ -399,6 +408,15 @@ export const translations = {
           feature3Description: 'Kelola vendor Anda secara efektif untuk memastikan rantai pasokan yang aman dan andal dengan tingkat layanan yang ditentukan dengan jelas.',
           feature4Title: 'Manajemen Kontrak',
           feature4Description: 'Pusatkan penyimpanan kontrak, lacak tonggak penting, dan pastikan kepatuhan di semua perjanjian Anda.',
+        },
+        clients: {
+          title: 'Dipercaya oleh Perusahaan Terkemuka',
+          subtitle: 'Perusahaan-perusahaan industri terkemuka ini mengandalkan HUNTR untuk mengoptimalkan pengadaan dan operasional rantai pasokan mereka.',
+          altHutama: 'Logo Hutama Bore Pile',
+          altJayatama: 'Logo Jayatama Bore Pile',
+          altJowoland: 'Logo Jowoland Bore Pile',
+          altMitrabawang: 'Logo Mitrabawang.id',
+          altSipadv: 'Logo Sinar Indah Padma (SIPADV)',
         },
         testimonials: {
           title: 'Dipercaya oleh Pemimpin Industri',
