@@ -4,7 +4,7 @@ const baseUrl = 'https://huntr.id';
 
 // Use a stable build date so sitemap is deterministic and cache-friendly.
 // Update this date whenever you do a meaningful content release.
-const LAST_MODIFIED = new Date('2025-07-31');
+const LAST_MODIFIED = new Date('2026-08-07');
 
 interface RouteConfig {
   path: string;

@@ -1,19 +1,19 @@
 /**
  * Server component — renders JSON-LD schemas specific to the home page.
- * Rendered inside the root layout so it applies only via <HomeJsonLd /> usage
- * inside src/app/(home)/layout.tsx or directly in the root if needed.
  */
 import { StructuredData } from './structured-data';
+import { DEMO_URL } from '@/lib/api-config';
+import { translations } from '@/lib/translations';
 
 const baseUrl = 'https://huntr.id';
+const meta = translations.en.metadata;
 
 const homeWebPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': `${baseUrl}/#webpage`,
-  name: 'HUNTR — Integrated Business Platform',
-  description:
-    'A comprehensive B2B procurement platform offering e-procurement, e-supply chain, spend analysis, and HUNTR Pay for enterprises in Indonesia.',
+  name: meta.title,
+  description: meta.description,
   url: `${baseUrl}/`,
   inLanguage: ['en-US', 'id-ID'],
   isPartOf: { '@type': 'WebSite', '@id': `${baseUrl}/#website` },
@@ -30,12 +30,50 @@ const homeWebPageSchema = {
       },
     ],
   },
+  potentialAction: [
+    {
+      '@type': 'RegisterAction',
+      '@id': `${baseUrl}/#create-demo-account`,
+      name: meta.demoTitle,
+      description: meta.demoDescription,
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: DEMO_URL,
+        actionPlatform: [
+          'http://schema.org/DesktopWebPlatform',
+          'http://schema.org/MobileWebPlatform',
+        ],
+      },
+    },
+  ],
+};
+
+const demoOfferSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Offer',
+  '@id': `${baseUrl}/#demo-offer`,
+  name: meta.demoTitle,
+  description: meta.demoDescription,
+  url: DEMO_URL,
+  price: '0',
+  priceCurrency: 'IDR',
+  availability: 'https://schema.org/InStock',
+  eligibleCustomerType: 'Business',
+  offeredBy: { '@type': 'Organization', '@id': `${baseUrl}/#organization` },
 };
 
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How do I create a free HUNTR demo account?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Visit demo.huntr.id and click Create Demo Account. You get instant access to explore e-procurement, supply chain, and spend analytics — no credit card required.',
+      },
+    },
     {
       '@type': 'Question',
       name: 'How secure is our data on HUNTR?',
@@ -83,6 +121,7 @@ export function HomeJsonLd() {
   return (
     <>
       <StructuredData data={homeWebPageSchema} />
+      <StructuredData data={demoOfferSchema} />
       <StructuredData data={faqSchema} />
     </>
   );

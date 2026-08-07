@@ -4,6 +4,7 @@ import './globals.css';
 import { ClientProviders } from '@/components/client-providers';
 import { StructuredData } from '@/components/seo/structured-data';
 import { translations } from '@/lib/translations';
+import { DEMO_URL } from '@/lib/api-config';
 
 const lato = Lato({
   subsets: ['latin'],
@@ -142,14 +143,24 @@ const websiteSchema = {
     '@id': `${defaultUrl}/#organization`,
   },
   inLanguage: ['en-US', 'id-ID'],
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: `${defaultUrl}/search?q={search_term_string}`,
+  potentialAction: [
+    {
+      '@type': 'RegisterAction',
+      name: translations.en.metadata.demoTitle,
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: DEMO_URL,
+      },
     },
-    'query-input': 'required name=search_term_string',
-  },
+    {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${defaultUrl}/search?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  ],
 };
 
 const softwareAppSchema = {
@@ -161,6 +172,7 @@ const softwareAppSchema = {
   description:
     'A comprehensive B2B procurement platform offering e-procurement, e-supply chain, spend analysis, and secure payment solutions for enterprises in Indonesia.',
   url: `${defaultUrl}/`,
+  downloadUrl: DEMO_URL,
   publisher: {
     '@id': `${defaultUrl}/#organization`,
   },
@@ -168,7 +180,8 @@ const softwareAppSchema = {
     '@type': 'Offer',
     price: '0',
     priceCurrency: 'IDR',
-    description: 'Free trial for 14 days, then transaction-based platform fee.',
+    url: DEMO_URL,
+    description: 'Free demo account at demo.huntr.id — 14-day trial, then transaction-based platform fee.',
   },
   featureList: [
     'E-Procurement System',

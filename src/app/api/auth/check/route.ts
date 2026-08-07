@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-
-const BACKEND_URL = process.env.API_URL ?? 'https://localhost:8443';
+import { BACKEND_URL } from '@/lib/api-config';
 
 export async function GET(request: NextRequest) {
   try {

@@ -2,6 +2,7 @@
 
 import { Header } from "@/components/layout/header";
 import { Hero } from "@/components/sections/hero";
+import { DemoBanner } from "@/components/sections/demo-banner";
 import { Solutions } from "@/components/sections/solutions";
 import { Features } from "@/components/sections/features";
 import { CatalogueProducts } from "@/components/sections/catalogue-products";
@@ -21,7 +22,8 @@ export function HomeClient() {
   
   useDynamicSeo({
     title: translations[lang].metadata.title,
-    description: translations[lang].metadata.description
+    description: translations[lang].metadata.description,
+    keywords: translations[lang].metadata.keywords,
   });
 
   return (
@@ -29,6 +31,7 @@ export function HomeClient() {
       <Header />
       <main className="flex-1 -mt-24">
         <Hero />
+        <DemoBanner />
         <Solutions />
         <Features />
         <CatalogueProducts />

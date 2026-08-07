@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-
-const BACKEND_URL = process.env.API_URL ?? 'https://localhost:8443';
+import { BACKEND_URL } from '@/lib/api-config';
 
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
@@ -17,19 +16,13 @@ export async function GET(request: NextRequest) {
 
     if (!res.ok) {
       console.error(`[/api/catalogues] backend returned ${res.status} for ${targetUrl}`);
-      return NextResponse.json(
-        { error: 'Failed to fetch catalogues from backend' },
-        { status: res.status }
-      );
+      return NextResponse.json({ data: [] });
     }
 
     const data = await res.json();
     return NextResponse.json(data);
   } catch (err) {
     console.error(`[/api/catalogues] fetch error → ${targetUrl}:`, err);
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    );
+    return NextResponse.json({ data: [] });
   }
 }

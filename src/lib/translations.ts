@@ -2,8 +2,11 @@ export const translations = {
       en: {
         metadata: {
             title: 'HUNTR Integrated Business Platform',
-            description: 'A comprehensive technology procurement platform offering e-procurement, e-supply chain, spend analysis, and secure payment solutions.',
-            keywords: 'huntr, huntr.id, huntr platform, huntr.com, huntr.io, huntr.co, huntr integrated business, b2b procurement, e-procurement, e-supply chain, spend analysis, huntr pay, platform pengadaan, rantai pasok digital, strategic sourcing',
+            description: 'HUNTR is a B2B procurement platform for e-procurement, supply chain, spend analysis, and HUNTR Pay. Create your free demo account at demo.huntr.id — instant access, no credit card required.',
+            keywords: 'huntr, huntr.id, huntr platform, huntr demo, create demo account huntr, demo huntr id, free demo procurement, demo.huntr.id, b2b procurement, e-procurement, e-supply chain, spend analysis, huntr pay, platform pengadaan, rantai pasok digital, strategic sourcing',
+            demoTitle: 'Create Free Demo Account — HUNTR',
+            demoDescription: 'Start your free HUNTR demo at demo.huntr.id. Explore e-procurement, supply chain management, and spend analytics instantly — no credit card required.',
+            demoKeywords: 'create demo account huntr, huntr demo account, free demo huntr, demo.huntr.id, try huntr free, huntr sandbox, b2b procurement demo',
         },
         header: {
           home: 'Home',
@@ -54,14 +57,40 @@ export const translations = {
           getStarted: 'Get Started',
           learnMore: 'Learn More',
         },
+        demoBanner: {
+          ariaLabel: 'Try HUNTR demo',
+          badge: 'Free Demo Access',
+          ctaButton: 'Create Demo Account Now',
+          ctaNote: 'No credit card required · Instant access',
+          goToSlide: 'Go to slide',
+          slides: [
+            {
+              title: 'Experience HUNTR Live',
+              description:
+                'Explore our full procurement platform with real demo data — see e-procurement, supply chain, and analytics in action.',
+            },
+            {
+              title: 'Try Before You Commit',
+              description:
+                'Create your free demo account in seconds and test every feature hands-on with a guided sandbox environment.',
+            },
+            {
+              title: 'Built for Your Team',
+              description:
+                'Invite colleagues, simulate workflows, and discover how HUNTR streamlines purchasing for modern enterprises.',
+            },
+          ],
+        },
         solutions: {
+          eyebrow: 'Solutions',
           title: 'Comprehensive Supply Chain Solutions',
-          subtitle: 'We provide a fast, secure, and well-structured supply chain ecosystem designed for the modern enterprise, enhancing every step from sourcing to delivery.',
+          subtitle: 'One connected ecosystem — from sourcing to delivery, built for modern enterprises.',
           items: [
             {
               id: 'eprocurement',
               title: 'E-Procurement Systems',
-              description: 'Streamline your purchasing process with our intuitive e-procurement platform. Gain full control over spending, reduce maverick buys, and improve overall efficiency with automated workflows and real-time analytics.',
+              highlight: 'Buy smarter, spend clearer.',
+              description: 'Streamline purchasing with automated workflows, real-time analytics, and full spend control.',
               benefits: [
                 'Centralized purchasing control',
                 'Real-time spend visibility',
@@ -72,7 +101,8 @@ export const translations = {
             {
               id: 'esupplychain',
               title: 'E-Supply Chain Management',
-              description: 'Optimize your entire supply chain, from sourcing and inventory management to logistics and delivery. Our integrated, cloud-based system provides end-to-end visibility, fostering collaboration and resilience.',
+              highlight: 'See every link in your chain.',
+              description: 'Optimize sourcing, inventory, logistics, and delivery with end-to-end cloud visibility.',
               benefits: [
                 'End-to-end supply chain visibility',
                 'Improved inventory accuracy',
@@ -83,7 +113,8 @@ export const translations = {
             {
               id: 'crowdbuy',
               title: 'HUNTR Crowd Buy',
-              description: 'Leverage the power of collective buying. Join forces with other businesses in group purchases to unlock significant discounts on technology products and services from top-tier vendors, maximizing your budget.',
+              highlight: 'Stronger together, smarter savings.',
+              description: 'Join group purchases with other businesses to unlock volume discounts from top-tier vendors.',
               benefits: [
                 'Access to volume-based discounts',
                 'Reduced cost on high-quality products',
@@ -306,8 +337,11 @@ export const translations = {
       id: {
         metadata: {
             title: 'Platform Bisnis Terpadu HUNTR',
-            description: 'Platform pengadaan teknologi komprehensif yang menawarkan e-procurement, e-supply chain, analisis pengeluaran, dan solusi pembayaran yang aman.',
-            keywords: 'huntr, huntr.id, platform huntr, huntr.com, huntr.io, huntr.co, bisnis terintegrasi huntr, pengadaan b2b, e-procurement, e-supply chain, analisis pengeluaran, huntr pay, platform pengadaan, rantai pasok digital, sumber strategis',
+            description: 'HUNTR adalah platform pengadaan B2B untuk e-procurement, supply chain, analisis pengeluaran, dan HUNTR Pay. Buat akun demo gratis di demo.huntr.id — akses instan, tanpa kartu kredit.',
+            keywords: 'huntr, huntr.id, platform huntr, demo huntr, buat akun demo huntr, akun demo huntr gratis, demo.huntr.id, pengadaan b2b, e-procurement, e-supply chain, analisis pengeluaran, huntr pay, platform pengadaan, rantai pasok digital, sumber strategis',
+            demoTitle: 'Buat Akun Demo Gratis — HUNTR',
+            demoDescription: 'Mulai demo HUNTR gratis di demo.huntr.id. Jelajahi e-procurement, manajemen supply chain, dan analitik pengeluaran secara instan — tanpa kartu kredit.',
+            demoKeywords: 'buat akun demo huntr, akun demo huntr, demo gratis huntr, demo.huntr.id, coba huntr gratis, sandbox huntr, demo pengadaan b2b',
         },
         header: {
           home: 'Beranda',
@@ -359,14 +393,40 @@ export const translations = {
           getStarted: 'Mulai',
           learnMore: 'Pelajari Lebih Lanjut',
         },
+        demoBanner: {
+          ariaLabel: 'Coba demo HUNTR',
+          badge: 'Akses Demo Gratis',
+          ctaButton: 'Buat Akun Demo Sekarang',
+          ctaNote: 'Tanpa kartu kredit · Akses instan',
+          goToSlide: 'Ke slide',
+          slides: [
+            {
+              title: 'Rasakan HUNTR Secara Langsung',
+              description:
+                'Jelajahi platform pengadaan lengkap dengan data demo nyata — lihat e-procurement, supply chain, dan analitik beraksi.',
+            },
+            {
+              title: 'Coba Sebelum Memutuskan',
+              description:
+                'Buat akun demo gratis dalam hitungan detik dan uji setiap fitur secara langsung di lingkungan sandbox.',
+            },
+            {
+              title: 'Dibuat untuk Tim Anda',
+              description:
+                'Undang rekan kerja, simulasikan alur kerja, dan temukan bagaimana HUNTR menyederhanakan pengadaan perusahaan modern.',
+            },
+          ],
+        },
         solutions: {
+          eyebrow: 'Solusi',
           title: 'Solusi Rantai Pasokan Komprehensif',
-          subtitle: 'Kami menyediakan ekosistem rantai pasokan yang cepat, aman, dan terstruktur dengan baik yang dirancang untuk perusahaan modern, meningkatkan setiap langkah dari pengadaan hingga pengiriman.',
+          subtitle: 'Satu ekosistem terhubung — dari pengadaan hingga pengiriman, dirancang untuk perusahaan modern.',
           items: [
             {
               id: 'eprocurement',
               title: 'Sistem E-Procurement',
-              description: 'Sederhanakan proses pembelian Anda dengan platform e-procurement kami yang intuitif. Dapatkan kontrol penuh atas pengeluaran, kurangi pembelian tak terduga, dan tingkatkan efisiensi secara keseluruhan dengan alur kerja otomatis dan analitik real-time.',
+              highlight: 'Beli lebih cerdas, pengeluaran lebih jelas.',
+              description: 'Sederhanakan pembelian dengan alur kerja otomatis, analitik real-time, dan kontrol pengeluaran penuh.',
               benefits: [
                 'Kontrol pembelian terpusat',
                 'Visibilitas pengeluaran real-time',
@@ -377,7 +437,8 @@ export const translations = {
             {
               id: 'esupplychain',
               title: 'Manajemen Rantai Pasokan Elektronik',
-              description: 'Optimalkan seluruh rantai pasokan Anda, mulai dari pengadaan dan manajemen inventaris hingga logistik dan pengiriman. Sistem terintegrasi berbasis cloud kami memberikan visibilitas end-to-end, mendorong kolaborasi dan ketahanan.',
+              highlight: 'Pantau setiap titik rantai pasok.',
+              description: 'Optimalkan pengadaan, inventaris, logistik, dan pengiriman dengan visibilitas cloud end-to-end.',
               benefits: [
                 'Visibilitas rantai pasokan end-to-end',
                 'Akurasi inventaris yang lebih baik',
@@ -388,7 +449,8 @@ export const translations = {
             {
               id: 'crowdbuy',
               title: 'HUNTR Crowd Buy',
-              description: 'Manfaatkan kekuatan pembelian kolektif. Bergabunglah dengan bisnis lain dalam pembelian kelompok untuk mendapatkan diskon signifikan pada produk dan layanan teknologi dari vendor papan atas, memaksimalkan anggaran Anda.',
+              highlight: 'Lebih kuat bersama, lebih hemat.',
+              description: 'Gabung pembelian kelompok dengan bisnis lain untuk diskon volume dari vendor terpercaya.',
               benefits: [
                 'Akses ke diskon berbasis volume',
                 'Pengurangan biaya pada produk berkualitas tinggi',
