@@ -32,6 +32,11 @@ const clients = [
     logo: "/assets/img/client-logo/sipdv.png",
     altKey: "altSipadv" as const,
   },
+  {
+    name: "PajakExpress",
+    logo: "/assets/img/client-logo/PajakExpress.png",
+    altKey: "altPajakExpress" as const,
+  },
 ];
 
 export function Clients() {

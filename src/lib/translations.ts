@@ -113,6 +113,7 @@ export const translations = {
           altJowoland: 'Jowoland Bore Pile logo',
           altMitrabawang: 'Mitrabawang.id logo',
           altSipadv: 'Sinar Indah Padma (SIPADV) logo',
+          altPajakExpress: 'PajakExpress logo',
         },
         testimonials: {
           title: 'Trusted by Industry Leaders',
@@ -417,6 +418,7 @@ export const translations = {
           altJowoland: 'Logo Jowoland Bore Pile',
           altMitrabawang: 'Logo Mitrabawang.id',
           altSipadv: 'Logo Sinar Indah Padma (SIPADV)',
+          altPajakExpress: 'Logo PajakExpress',
         },
         testimonials: {
           title: 'Dipercaya oleh Pemimpin Industri',
