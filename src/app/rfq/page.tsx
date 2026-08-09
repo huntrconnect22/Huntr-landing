@@ -23,9 +23,11 @@ import {
 
 const STATUS_CONFIG: Record<string, { label: string; color: string; dot: string }> = {
   open:             { label: 'Open',             color: 'bg-emerald-500/10 text-emerald-600 border-emerald-500/20',  dot: 'bg-emerald-500' },
+  active:           { label: 'Open',             color: 'bg-emerald-500/10 text-emerald-600 border-emerald-500/20',  dot: 'bg-emerald-500' },
   pending_approval: { label: 'Menunggu Approval', color: 'bg-amber-500/10 text-amber-600 border-amber-500/20',       dot: 'bg-amber-500' },
   draft:            { label: 'Draft',             color: 'bg-slate-500/10 text-slate-600 border-slate-500/20',       dot: 'bg-slate-400' },
   awarded:          { label: 'Awarded',           color: 'bg-blue-500/10 text-blue-600 border-blue-500/20',          dot: 'bg-blue-500' },
+  rejected:         { label: 'Ditolak',           color: 'bg-rose-500/10 text-rose-600 border-rose-500/20',          dot: 'bg-rose-500' },
   closed:           { label: 'Closed',            color: 'bg-rose-500/10 text-rose-600 border-rose-500/20',          dot: 'bg-rose-500' },
 };
 

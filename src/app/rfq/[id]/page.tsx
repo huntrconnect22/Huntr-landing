@@ -196,6 +196,30 @@ export default function RfqDetailPage({ params }: { params: Promise<{ id: string
                   </p>
                 </div>
 
+                {/* Attached Document (Only if uploaded) */}
+                {rfq.document_path && (
+                  <div className="rounded-2xl border border-amber-500/20 bg-amber-500/5 p-6 shadow-sm flex items-center justify-between gap-4">
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/10 text-amber-600">
+                        <FileText className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <h3 className="text-sm font-semibold text-foreground">Dokumen Pendukung / Lampiran</h3>
+                        <p className="text-xs text-muted-foreground">Dokumen teknis / spesifikasi tambahan yang diunggah buyer</p>
+                      </div>
+                    </div>
+                    <a
+                      href={rfq.document_path.startsWith('http') ? rfq.document_path : `https://api.huntr.id/storage/${rfq.document_path.replace(/^\//, '')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-xl bg-amber-500 px-4 py-2 text-xs font-semibold text-white shadow-sm hover:bg-amber-600 transition-all shrink-0"
+                    >
+                      Lihat Dokumen
+                      <ExternalLink className="h-3.5 w-3.5" />
+                    </a>
+                  </div>
+                )}
+
                 {/* Items Required */}
                 <div className="rounded-2xl border border-border/60 bg-card p-6 shadow-sm">
                   <div className="flex items-center justify-between mb-4">
