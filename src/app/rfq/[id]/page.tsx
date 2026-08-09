@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { AnimateOnScroll } from '@/components/animate-on-scroll';
+import { StructuredData } from '@/components/seo/structured-data';
 import { MOCK_RFQS, type Rfq } from '@/lib/rfq-mock-data';
 import {
   ArrowLeft,
@@ -123,9 +124,68 @@ export default function RfqDetailPage({ params }: { params: Promise<{ id: string
 
   const status = STATUS_CONFIG[rfq.status] ?? STATUS_CONFIG['open'];
 
+  // Dynamic JSON-LD Schema for this specific RFQ
+  const pageUrl = `https://huntr.id/rfq/${rfq.id}`;
+  const validUntil = rfq.duration_days
+    ? new Date(new Date(rfq.created_at).getTime() + rfq.duration_days * 86400000).toISOString()
+    : undefined;
+
+  const rfqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Demand',
+    '@id': `${pageUrl}#demand`,
+    name: rfq.title,
+    description: rfq.description || `Permintaan pengadaan RFQ #${rfq.id} di platform Huntr.`,
+    url: pageUrl,
+    datePosted: rfq.created_at,
+    validThrough: validUntil,
+    buyer: rfq.company ? {
+      '@type': 'Organization',
+      name: rfq.company.name,
+      address: rfq.company.address || rfq.delivery_point,
+    } : undefined,
+    itemOffered: rfq.items && rfq.items.length > 0 ? {
+      '@type': 'ItemList',
+      numberOfItems: rfq.items.length,
+      itemListElement: rfq.items.map((item, idx) => ({
+        '@type': 'ListItem',
+        position: idx + 1,
+        name: item.catalogue?.name || `Item #${idx + 1}`,
+        description: item.note || item.catalogue?.specifications,
+      })),
+    } : undefined,
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Beranda',
+        item: 'https://huntr.id/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Daftar RFQ',
+        item: 'https://huntr.id/rfq',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: rfq.title,
+        item: pageUrl,
+      },
+    ],
+  };
+
   return (
     <div className="flex min-h-dvh flex-col bg-background">
       <Header />
+      <StructuredData data={rfqSchema} />
+      <StructuredData data={breadcrumbSchema} />
 
       <main className="flex-1 -mt-24">
         {/* Top bar & Header section */}
