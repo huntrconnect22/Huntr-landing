@@ -11,6 +11,7 @@ export const translations = {
         header: {
           home: 'Home',
           pricing: 'Pricing',
+          api: 'Tender',
           insight: 'Insight',
           useCase: 'Use Case',
           news: 'News',
@@ -346,6 +347,7 @@ export const translations = {
         header: {
           home: 'Beranda',
           pricing: 'Pricing',
+          api: 'Tender',
           insight: 'Wawasan',
           useCase: 'Studi Kasus',
           news: 'Berita',

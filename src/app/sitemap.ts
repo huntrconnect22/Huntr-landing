@@ -33,6 +33,12 @@ const routes: RouteConfig[] = [
     lastModified: LAST_MODIFIED,
   },
   {
+    path: '/rfq',
+    changeFrequency: 'daily',
+    priority: 0.8,
+    lastModified: LAST_MODIFIED,
+  },
+  {
     path: '/our-company',
     changeFrequency: 'monthly',
     priority: 0.8,

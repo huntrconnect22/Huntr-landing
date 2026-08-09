@@ -54,7 +54,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full">
-      <div className="relative mx-auto mt-4 flex h-20 max-w-4xl items-center justify-between rounded-2xl border border-black/10 bg-white px-4 shadow-lg">
+      <div className="relative mx-auto mt-4 flex h-20 max-w-6xl items-center justify-between rounded-2xl border border-black/10 bg-white px-6 shadow-lg">
         
         {/* Left side: Logo & Mobile Menu Trigger */}
         <div className="flex items-center">
@@ -86,6 +86,9 @@ export function Header() {
                   </Link>
                   <Link href="/pricing" className={cn("px-2 py-2 font-medium transition-colors hover:text-primary", pathname === "/pricing" ? "text-primary" : "text-foreground/80")}>
                     {t.pricing}
+                  </Link>
+                  <Link href="/rfq" className={cn("px-2 py-2 font-medium transition-colors hover:text-primary", pathname === "/rfq" ? "text-primary" : "text-foreground/80")}>
+                    {t.api}
                   </Link>
                   <Accordion type="single" collapsible className="w-full">
                     {navLinks.map((link) => {
@@ -143,6 +146,12 @@ export function Header() {
             className={cn("font-medium transition-colors hover:text-primary", pathname === "/pricing" ? "text-primary" : "text-foreground/80")}
           >
             {t.pricing}
+          </Link>
+          <Link
+            href="/rfq"
+            className={cn("font-medium transition-colors hover:text-primary", pathname === "/rfq" ? "text-primary" : "text-foreground/80")}
+          >
+            {t.api}
           </Link>
           {navLinks.map((link) => {
             const isActive = link.items.some(item => pathname.startsWith(item.href));
