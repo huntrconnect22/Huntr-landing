@@ -122,6 +122,18 @@ export const translations = {
                 'Simplified group purchasing process',
                 'Expanded network of trusted vendors'
               ]
+            },
+            {
+              id: 'agentic',
+              title: 'Agentic Procurement',
+              highlight: 'Autonomous AI for next-gen sourcing.',
+              description: 'Deploy intelligent autonomous AI agents that handle supplier discovery, quotation comparison, RFQ negotiations, and purchase matching hands-free.',
+              benefits: [
+                'Autonomous RFQ generation & vendor matching',
+                'AI-driven quotation & price benchmarking',
+                'Automated contract & SLA compliance check',
+                '24/7 intelligent negotiation & workflow execution'
+              ]
             }
           ]
         },
@@ -136,15 +148,16 @@ export const translations = {
           feature3Description: 'Manage your vendors effectively to ensure a secure and reliable supply chain with clearly defined service levels.',
           feature4Title: 'Contract Management',
           feature4Description: 'Centralize contract storage, track key milestones, and ensure compliance across all your agreements.',
+          feature5Title: 'Agentic AI Procurement',
+          feature5Description: 'Autonomous AI agents that automate sourcing, match vendors, evaluate quotes, and accelerate purchasing decisions seamlessly.',
         },
         clients: {
           title: 'Trusted by Leading Companies',
           subtitle: 'These industry-leading companies rely on HUNTR to power their procurement and supply chain operations.',
-          altHutama: 'Hutama Bore Pile logo',
-          altJayatama: 'Jayatama Bore Pile logo',
-          altJowoland: 'Jowoland Bore Pile logo',
-          altMitrabawang: 'Mitrabawang.id logo',
-          altSipadv: 'Sinar Indah Padma (SIPADV) logo',
+          altAngkasindo: 'PT Angkasindo Dunia logo',
+          altBenderang: 'PT Benderang Hidup Indonesia logo',
+          altBestolindo: 'PT Bestoolindo Multi Teknik logo',
+          altJayaSentral: 'PT Jaya Sentral Cemerlang logo',
           altPajakExpress: 'PajakExpress logo',
         },
         testimonials: {
@@ -169,7 +182,9 @@ export const translations = {
           q4: 'Can HUNTR handle high transaction volumes if our company grows rapidly?',
           a4: 'Absolutely. Our cloud architecture is highly scalable. This means the HUNTR platform is designed to grow with your business, whether you manage tens or thousands of vendors. We ensure performance remains fast and stable, no matter your transaction volume.',
           q5: "What do you mean by 'accessible anywhere, anytime'?",
-          a5: "It means HUNTR is mobile-ready. You don't need to be in front of an office computer to approve procurement or check supply status. As long as you have an internet connection, you can manage your entire business through a smartphone or tablet in real-time."
+          a5: "It means HUNTR is mobile-ready. You don't need to be in front of an office computer to approve procurement or check supply status. As long as you have an internet connection, you can manage your entire business through a smartphone or tablet in real-time.",
+          q6: 'What is Agentic Procurement and how does it benefit my company?',
+          a6: 'Agentic Procurement uses intelligent, autonomous AI agents to manage repetitive and complex sourcing processes. Unlike traditional software that only records data, AI agents can proactively discover verified suppliers, draft and match RFQs, compare quotations against market benchmarks, evaluate contract terms, and recommend optimal purchasing decisions—saving up to 70% of sourcing cycle time.'
         },
         catalogue: {
           title: 'Products on the HUNTR Marketplace',
@@ -459,6 +474,18 @@ export const translations = {
                 'Proses pembelian kelompok yang disederhanakan',
                 'Jaringan vendor tepercaya yang diperluas'
               ]
+            },
+            {
+              id: 'agentic',
+              title: 'Pengadaan Cerdas Berbasis Agen (Agentic Procurement)',
+              highlight: 'AI Otonom untuk pengadaan masa depan.',
+              description: 'Gunakan agen AI otonom cerdas untuk mencari pemasok, membandingkan penawaran harga, negosiasi RFQ, hingga pencocokan pembelian secara otomatis dan presisi.',
+              benefits: [
+                'Pembuatan RFQ otomatis & pencocokan vendor cerdas',
+                'Benchmarking harga & analisis penawaran bertenaga AI',
+                'Pemeriksaan kepatuhan kontrak & SLA instan',
+                'Eksekusi alur kerja & bantuan negosiasi pintar 24/7'
+              ]
             }
           ]
         },
@@ -473,15 +500,16 @@ export const translations = {
           feature3Description: 'Kelola vendor Anda secara efektif untuk memastikan rantai pasokan yang aman dan andal dengan tingkat layanan yang ditentukan dengan jelas.',
           feature4Title: 'Manajemen Kontrak',
           feature4Description: 'Pusatkan penyimpanan kontrak, lacak tonggak penting, dan pastikan kepatuhan di semua perjanjian Anda.',
+          feature5Title: 'Agentic AI Procurement',
+          feature5Description: 'Agen AI otonom yang mengotomatiskan pencarian vendor, mengevaluasi penawaran harga, dan mempercepat keputusan pengadaan tanpa hambatan.',
         },
         clients: {
           title: 'Dipercaya oleh Perusahaan Terkemuka',
           subtitle: 'Perusahaan-perusahaan industri terkemuka ini mengandalkan HUNTR untuk mengoptimalkan pengadaan dan operasional rantai pasokan mereka.',
-          altHutama: 'Logo Hutama Bore Pile',
-          altJayatama: 'Logo Jayatama Bore Pile',
-          altJowoland: 'Logo Jowoland Bore Pile',
-          altMitrabawang: 'Logo Mitrabawang.id',
-          altSipadv: 'Logo Sinar Indah Padma (SIPADV)',
+          altAngkasindo: 'Logo PT Angkasindo Dunia',
+          altBenderang: 'Logo PT Benderang Hidup Indonesia',
+          altBestolindo: 'Logo PT Bestoolindo Multi Teknik',
+          altJayaSentral: 'Logo PT Jaya Sentral Cemerlang',
           altPajakExpress: 'Logo PajakExpress',
         },
         testimonials: {
@@ -506,7 +534,9 @@ export const translations = {
           q4: 'Apakah HUNTR bisa menangani volume transaksi yang besar jika perusahaan kami berkembang pesat?',
           a4: 'Tentu. Arsitektur cloud kami bersifat highly scalable. Artinya, platform HUNTR dirancang untuk tumbuh bersama bisnis Anda, baik Anda mengelola puluhan maupun ribuan vendor. Kami memastikan performa tetap cepat dan stabil berapa pun volume transaksi yang Anda miliki.',
           q5: "Apa maksudnya 'diakses di mana saja dan kapan saja'?",
-          a5: "Artinya HUNTR bersifat mobile-ready. Anda tidak perlu duduk di depan komputer kantor untuk menyetujui pengadaan atau mengecek status suplai. Selama Anda memiliki koneksi internet, Anda bisa mengelola seluruh bisnis Anda melalui smartphone atau tablet secara real-time."
+          a5: "Artinya HUNTR bersifat mobile-ready. Anda tidak perlu duduk di depan komputer kantor untuk menyetujui pengadaan atau mengecek status suplai. Selama Anda memiliki koneksi internet, Anda bisa mengelola seluruh bisnis Anda melalui smartphone atau tablet secara real-time.",
+          q6: 'Apa itu Agentic Procurement dan bagaimana keuntungannya bagi perusahaan kami?',
+          a6: 'Agentic Procurement memanfaatkan agen AI otonom cerdas untuk menangani proses pengadaan yang berulang maupun kompleks. Berbeda dari sistem konvensional yang pasif, agen AI secara proaktif mencari vendor terverifikasi, membuat dan mencocokkan RFQ, membandingkan penawaran harga dengan benchmark pasar, memeriksa kepatuhan kontrak, serta merekomendasikan keputusan pembelian terbaik—menghemat hingga 70% waktu siklus pengadaan.'
         },
         catalogue: {
           title: 'Produk di Marketplace HUNTR',

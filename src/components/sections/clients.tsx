@@ -8,29 +8,24 @@ import { AnimateOnScroll } from "../animate-on-scroll";
 
 const clients = [
   {
-    name: "Hutama Bore Pile",
-    logo: "/assets/img/client-logo/hutama.webp",
-    altKey: "altHutama" as const,
+    name: "PT Angkasindo Dunia (Niagara)",
+    logo: "/assets/img/client-logo/angkasindo-dunia.webp",
+    altKey: "altAngkasindo" as const,
   },
   {
-    name: "Jayatama Bore Pile",
-    logo: "/assets/img/client-logo/jayatama.png",
-    altKey: "altJayatama" as const,
+    name: "PT Benderang Hidup Indonesia",
+    logo: "/assets/img/client-logo/benderang-hidup-indonesia.png",
+    altKey: "altBenderang" as const,
   },
   {
-    name: "Jowoland Bore Pile",
-    logo: "/assets/img/client-logo/jowoland.jpeg",
-    altKey: "altJowoland" as const,
+    name: "PT Bestoolindo Multi Teknik",
+    logo: "/assets/img/client-logo/bestolindo.webp",
+    altKey: "altBestolindo" as const,
   },
   {
-    name: "Mitrabawang.id",
-    logo: "/assets/img/client-logo/mitrabawang.webp",
-    altKey: "altMitrabawang" as const,
-  },
-  {
-    name: "Sinar Indah Padma (SIPADV)",
-    logo: "/assets/img/client-logo/sipdv.png",
-    altKey: "altSipadv" as const,
+    name: "PT Jaya Sentral Cemerlang",
+    logo: "/assets/img/client-logo/jaya-sentral-cemerlang.jpeg",
+    altKey: "altJayaSentral" as const,
   },
   {
     name: "PajakExpress",

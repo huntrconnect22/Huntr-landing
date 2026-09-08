@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useContext, useState } from 'react';
-import { ArrowRight, Check, Route, ShoppingBag, UsersRound } from 'lucide-react';
+import { ArrowRight, Bot, Check, Route, ShoppingBag, UsersRound } from 'lucide-react';
 import { LanguageContext } from '@/context/language-context';
 import { translations } from '@/lib/translations';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -13,6 +13,7 @@ const solutionImages = {
   eprocurement: PlaceHolderImages.find((p) => p.id === 'solution-eprocurement'),
   esupplychain: PlaceHolderImages.find((p) => p.id === 'solution-esupplychain'),
   crowdbuy: PlaceHolderImages.find((p) => p.id === 'solution-crowdbuy'),
+  agentic: PlaceHolderImages.find((p) => p.id === 'solution-agentic'),
 } as const;
 
 const solutionMeta = {
@@ -36,6 +37,13 @@ const solutionMeta = {
     ring: 'ring-amber-400/25',
     iconBg: 'bg-amber-400/15 text-amber-600',
     dot: 'bg-amber-500',
+  },
+  agentic: {
+    icon: Bot,
+    accent: 'from-purple-500/20 to-indigo-500/5',
+    ring: 'ring-purple-500/25',
+    iconBg: 'bg-purple-500/15 text-purple-600 dark:text-purple-400',
+    dot: 'bg-purple-500',
   },
 } as const;
 

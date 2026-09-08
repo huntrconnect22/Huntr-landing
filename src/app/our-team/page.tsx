@@ -25,15 +25,15 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/deny-esa-saputra-cscp-3586042a",
     avatarId: "avatar-deny"
   },
-  {
-    id: "muhamad-a-wildan-m",
-    name: "Muhamad A. Wildan M.",
-    title: "Co-Founder & CTO",
-    description: "Fullstack Engineer & System Architect and as Developer since 2016 using VB. Net and Transformation to UI/UX Developer Since 2022-2023, and back to dev position as Fullstack Engineer Since 2024 - Now",
-    email: "wildan@huntr.id",
-    linkedin: "https://www.linkedin.com/in/asepwildan",
-    avatarId: "avatar-wildan"
-  }
+  // {
+  //   id: "muhamad-a-wildan-m",
+  //   name: "Muhamad A. Wildan M.",
+  //   title: "Co-Founder & CTO",
+  //   description: "Fullstack Engineer & System Architect and as Developer since 2016 using VB. Net and Transformation to UI/UX Developer Since 2022-2023, and back to dev position as Fullstack Engineer Since 2024 - Now",
+  //   email: "wildan@huntr.id",
+  //   linkedin: "https://www.linkedin.com/in/asepwildan",
+  //   avatarId: "avatar-wildan"
+  // }
 ];
 
 const siteUrl = 'https://huntr.id';
@@ -87,7 +87,7 @@ export default function OurTeamPage() {
                 return (
                   <AnimateOnScroll key={member.id} className="fade-in zoom-in-95 duration-700">
                     <Card className="flex flex-col md:flex-row overflow-hidden group hover:shadow-2xl transition-all duration-500 border-border/50 hover:border-primary/30 bg-card/80 backdrop-blur-sm relative">
-                      
+
                       {/* Image Container (Left) */}
                       <div className="relative w-full md:w-[320px] shrink-0 h-[360px] md:h-auto overflow-hidden bg-muted">
                         {avatarImage && (
@@ -108,18 +108,18 @@ export default function OurTeamPage() {
                       <div className="p-8 md:p-10 flex flex-col flex-1 relative bg-card justify-center">
                         <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-3/4 bg-gradient-to-b from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 hidden md:block" />
                         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 md:hidden" />
-                        
+
                         <div className="text-left mb-5">
                           <CardTitle className="font-headline text-2xl md:text-3xl font-bold mb-3 group-hover:text-primary transition-colors">{member.name}</CardTitle>
                           <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-semibold text-sm">
                             {member.title}
                           </span>
                         </div>
-                        
+
                         <div className="text-muted-foreground text-left leading-relaxed text-sm md:text-base mb-8 flex-1">
                           {member.description}
                         </div>
-                        
+
                         <div className="flex items-center justify-start gap-4 mt-auto pt-6 border-t border-border/50">
                           <Button variant="outline" className="rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
                             <a href={`mailto:${member.email}`} aria-label={`Email ${member.name}`}>

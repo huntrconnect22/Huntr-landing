@@ -55,6 +55,12 @@
       "imageHint": "team collaboration"
     },
     {
+      "id": "solution-agentic",
+      "description": "Autonomous AI Agent for intelligent procurement.",
+      "imageUrl": "/assets/img/huntr-asset4.webp",
+      "imageHint": "agentic ai procurement automation"
+    },
+    {
       "id": "avatar-deny",
       "description": "Avatar for Deny Esa Saputra",
       "imageUrl": "/assets/img/team/deny-esa-saputra-ceo.jpeg",

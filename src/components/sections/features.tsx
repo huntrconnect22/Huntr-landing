@@ -1,6 +1,6 @@
 'use client';
 
-import { BarChart3, CreditCard, FileText, Users } from "lucide-react";
+import { BarChart3, Bot, CreditCard, FileText, Users } from "lucide-react";
 import { useContext } from "react";
 import { LanguageContext } from "@/context/language-context";
 import { translations } from "@/lib/translations";
@@ -12,6 +12,11 @@ export function Features() {
   const t = translations[lang].features;
 
   const features = [
+    {
+      icon: <Bot className="h-10 w-10 text-primary" />,
+      title: t.feature5Title,
+      description: t.feature5Description,
+    },
     {
       icon: <BarChart3 className="h-10 w-10 text-primary" />,
       title: t.feature1Title,
