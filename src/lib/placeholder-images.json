@@ -73,6 +73,20 @@
       "imageUrl": "/assets/img/team/wildan-cto.jpeg",
       "imageAlt": "Muhamad A. Wildan M., Co-Founder & CTO of HUNTR",
       "imageHint": "male portrait"
+    },
+    {
+      "id": "avatar-son-adjie",
+      "description": "Avatar for Son Adjie, CEO SIPADV - HUNTR client testimonial",
+      "imageUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=professional%20indonesian%20businessman%20portrait%20ceo%20formal%20attire%20confident%20smile%20corporate%20headshot&image_size=square_hd",
+      "imageAlt": "Son Adjie, CEO of SIPADV",
+      "imageHint": "male ceo portrait"
+    },
+    {
+      "id": "avatar-andie-setiyawan",
+      "description": "Avatar for Andie Setiyawan, General Manager - HUNTR client testimonial",
+      "imageUrl": "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=indonesian%20man%2040s%20short%20black%20hair%20light%20grey%20striped%20shirt%20dark%20collar%20red%20lanyard%20jakarta%20city%20skyline%20background%20golden%20hour%20arms%20crossed%20professional%20portrait&image_size=square_hd",
+      "imageAlt": "Andie Setiyawan, General Manager",
+      "imageHint": "male general manager portrait cityscape"
     }
   ]
 }

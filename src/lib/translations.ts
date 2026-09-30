@@ -166,9 +166,9 @@ export const translations = {
           testimonial1: 'HUNTR has completely transformed our procurement process. The efficiency and cost savings are beyond anything we expected. The spend analysis tools are a game-changer.',
           client1Name: 'Son Adjie',
           client1Title: 'CEO, SIPADV',
-          testimonial2: 'The e-supply chain management system is incredibly robust and easy to use. Our team was able to onboard quickly, and we saw immediate improvements in our logistics and vendor communication.',
+          testimonial2: 'Dulu tantangan terbesar kami adalah mencari supplier suku cadang yang tepat waktu dan menawarkan spesifikasi presisi. HUNTR.id memangkas semua kerumitan itu. Hanya dalam satu platform, kami bisa membandingkan penawaran vendor secara objektif, transparan, dan terpercaya. Sangat membantu operasional lapangan kami.',
           client2Name: 'Andie Setiyawan',
-          client2Title: 'General Manager',
+          client2Title: 'General Manager, PT Kokoh Inti Cemerlang',
         },
         faq: {
           title: 'Frequently Asked Questions',

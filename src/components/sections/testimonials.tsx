@@ -8,23 +8,26 @@ import { LanguageContext } from "@/context/language-context";
 import { translations } from "@/lib/translations";
 import { AnimateOnScroll } from "../animate-on-scroll";
 
-const avatarImage = PlaceHolderImages.find(p => p.id === 'success-story-avatar');
-
 export function Testimonials() {
   const context = useContext(LanguageContext);
   const lang = context?.language || 'en';
   const t = translations[lang].testimonials;
-  
+
+  const avatarSonAdjie = PlaceHolderImages.find(p => p.id === 'avatar-son-adjie');
+  const avatarAndieSetiyawan = PlaceHolderImages.find(p => p.id === 'avatar-andie-setiyawan');
+
   const testimonials = [
     {
       quote: t.testimonial1,
       name: t.client1Name,
       title: t.client1Title,
+      avatar: avatarSonAdjie,
     },
     {
       quote: t.testimonial2,
       name: t.client2Name,
       title: t.client2Title,
+      avatar: avatarAndieSetiyawan,
     },
   ];
 
@@ -51,6 +54,13 @@ export function Testimonials() {
                   <p className="text-white/80 italic">"{testimonial.quote}"</p>
                   <div className="mt-6 flex items-center gap-4">
                     <Avatar>
+                      {testimonial.avatar && (
+                        <AvatarImage
+                          src={testimonial.avatar.imageUrl}
+                          alt={testimonial.avatar.imageAlt || `${testimonial.name}, ${testimonial.title}`}
+                          title={testimonial.avatar.imageAlt || `${testimonial.name}, ${testimonial.title}`}
+                        />
+                      )}
                       <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                     </Avatar>
                     <div>
