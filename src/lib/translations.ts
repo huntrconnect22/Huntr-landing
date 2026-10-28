@@ -14,6 +14,17 @@ export interface FaqItem {
   a: string;
 }
 
+export interface PricingPackage {
+  id: string;
+  name: string;
+  price: string;
+  period: string;
+  popular?: boolean;
+  popularBadge?: string;
+  features: string[];
+  cta: string;
+}
+
 export interface PricingRow {
   tier: string;
   fee: string;
@@ -120,6 +131,7 @@ export const translations = {
       filterOpen: 'Open',
       filterClosed: 'Closed',
       postedRecent: 'Posted recently',
+      readMore: 'Read more →',
       viewOpportunity: 'View opportunity ↗',
       opportunityClosed: 'Opportunity closed',
       joinVendor: 'Join as a vendor',
@@ -257,30 +269,62 @@ export const translations = {
       cta: 'Introduce your business',
     },
     pricing: {
-      eyebrow: 'Clear pricing',
-      title: 'A simple way to get started.',
-      lead: 'Start with a 14-day free trial. After that, service fees apply only to successful transactions, based on the transaction value. Review the details below and contact our team if you have questions.',
-      h1Title: '14-day free trial',
-      h1Desc: 'Try the platform before service fees apply.',
-      h2Title: 'Fees on successful transactions',
-      h2Desc: 'Fees are tied to declared successful transactions.',
-      h3Title: 'No transaction, no fee',
-      h3Desc: 'No service fee when there is no transaction.',
-      trialTitle: 'Free trial period',
-      trialBadge: 'FREE TRIAL',
-      trialHighlight: '14 calendar days from successful account registration',
-      trialDesc: 'The free trial applies for 14 calendar days from completed account registration. Service fees may apply after the trial period.',
-      tierTitle: 'Service fee by transaction value',
-      tierDesc: 'Illustrative fee tiers based on the supplied pricing reference.',
-      tableThValue: 'Transaction value',
-      tableThFee: 'Service fee',
-      tableThDetails: 'Details',
-      tableRows: [
-        { tier: 'Up to Rp100,000,000', fee: '5%', details: 'Successful transactions in the first tier.' },
-        { tier: 'Rp100,000,001 to Rp250,000,000', fee: '3%', details: 'Transaction value in the middle tier.' },
-        { tier: 'Above Rp250,000,000', fee: '2%', details: 'Successful transactions above the highest threshold.' },
-      ] as PricingRow[],
-      approvalNote: 'Pricing details are based on the supplied visual reference and must be checked with HUNTR before publication.',
+      eyebrow: 'Pricing plans',
+      title: 'Choose the right plan for your business.',
+      lead: 'Transparent enterprise procurement packages designed to scale with your organization.',
+      packages: [
+        {
+          id: 'starter',
+          name: 'Enterprise Starter',
+          price: 'Rp25.000.000',
+          period: '/ year',
+          features: [
+            '15 users',
+            '1 company',
+            '1 warehouse',
+            '1,000 e-Faktur/year',
+            '500 AI/month',
+            'Business Hours support',
+          ],
+          cta: 'Choose Starter',
+        },
+        {
+          id: 'growth',
+          name: 'Enterprise Growth',
+          popular: true,
+          popularBadge: 'Most Popular',
+          price: 'Rp48.947.368',
+          period: '/ year',
+          features: [
+            '35 users',
+            '4 companies',
+            '2 warehouses',
+            '3,000 e-Faktur/year',
+            '2,000 AI/month',
+            'Budget Procurement Plan',
+            'Priority support',
+          ],
+          cta: 'Choose Growth',
+        },
+        {
+          id: 'pro',
+          name: 'Enterprise Pro',
+          price: 'Rp75.000.000',
+          period: '/ year',
+          features: [
+            '200 users',
+            '10 companies',
+            '100 warehouses',
+            '5,000 e-Faktur/year',
+            '10,000 AI/month',
+            'CRM Enterprise',
+            'Budget Procurement Plan',
+            'Priority support',
+          ],
+          cta: 'Choose Pro',
+        },
+      ] as PricingPackage[],
+      approvalNote: 'Annual pricing packages for enterprise procurement. Contact HUNTR for custom requirements or enterprise onboarding assistance.',
     },
     about: {
       eyebrow: 'About HUNTR',
@@ -452,6 +496,7 @@ export const translations = {
       filterOpen: 'Terbuka',
       filterClosed: 'Ditutup',
       postedRecent: 'Baru dipublikasikan',
+      readMore: 'Selengkapnya →',
       viewOpportunity: 'Lihat peluang ↗',
       opportunityClosed: 'Tender ditutup',
       joinVendor: 'Daftar sebagai vendor',
@@ -589,30 +634,62 @@ export const translations = {
       cta: 'Perkenalkan bisnis Anda',
     },
     pricing: {
-      eyebrow: 'Harga',
-      title: 'Ketahui skema biaya sebelum memulai.',
-      lead: 'Mulai dengan uji coba gratis selama 14 hari. Setelah itu, biaya layanan hanya dikenakan untuk transaksi yang berhasil, sesuai nilai transaksi. Lihat rinciannya di bawah dan hubungi tim kami jika ada pertanyaan.',
-      h1Title: 'Uji coba gratis 14 hari',
-      h1Desc: 'Coba platform sebelum biaya layanan berlaku.',
-      h2Title: 'Biaya untuk transaksi berhasil',
-      h2Desc: 'Biaya dikenakan pada transaksi yang dinyatakan berhasil.',
-      h3Title: 'Tidak ada transaksi, tidak ada biaya',
-      h3Desc: 'Tidak ada biaya layanan jika tidak ada transaksi.',
-      trialTitle: 'Masa uji coba gratis',
-      trialBadge: 'UJI COBA GRATIS',
-      trialHighlight: '14 hari kalender sejak pendaftaran akun berhasil',
-      trialDesc: 'Masa uji coba berlaku selama 14 hari kalender sejak pendaftaran akun selesai. Biaya layanan dapat berlaku setelah masa uji coba berakhir.',
-      tierTitle: 'Biaya layanan berdasarkan nilai transaksi',
-      tierDesc: 'Contoh tingkat biaya berdasarkan referensi harga yang diberikan.',
-      tableThValue: 'Nilai transaksi',
-      tableThFee: 'Biaya layanan',
-      tableThDetails: 'Keterangan',
-      tableRows: [
-        { tier: 'Hingga Rp100.000.000', fee: '5%', details: 'Transaksi berhasil pada tingkat pertama.' },
-        { tier: 'Rp100.000.001 hingga Rp250.000.000', fee: '3%', details: 'Nilai transaksi pada tingkat menengah.' },
-        { tier: 'Di atas Rp250.000.000', fee: '2%', details: 'Transaksi berhasil di atas batas tertinggi.' },
-      ] as PricingRow[],
-      approvalNote: 'Informasi harga mengacu pada referensi visual yang diberikan dan harus dikonfirmasi kepada HUNTR sebelum dipublikasikan.',
+      eyebrow: 'Paket Harga',
+      title: 'Pilih paket yang tepat untuk bisnis Anda.',
+      lead: 'Paket pengadaan tahunan transparan yang dirancang untuk mendukung kebutuhan perusahaan Anda.',
+      packages: [
+        {
+          id: 'starter',
+          name: 'Enterprise Starter',
+          price: 'Rp25.000.000',
+          period: '/ tahun',
+          features: [
+            '15 pengguna',
+            '1 perusahaan',
+            '1 warehouse',
+            '1.000 e-Faktur/tahun',
+            '500 AI/bulan',
+            'Business Hours',
+          ],
+          cta: 'Pilih Starter',
+        },
+        {
+          id: 'growth',
+          name: 'Enterprise Growth',
+          popular: true,
+          popularBadge: 'Paling Populer',
+          price: 'Rp48.947.368',
+          period: '/ tahun',
+          features: [
+            '35 pengguna',
+            '4 perusahaan',
+            '2 warehouse',
+            '3.000 e-Faktur/tahun',
+            '2.000 AI/bulan',
+            'Budget Procurement Plan',
+            'Priority',
+          ],
+          cta: 'Pilih Growth',
+        },
+        {
+          id: 'pro',
+          name: 'Enterprise Pro',
+          price: 'Rp75.000.000',
+          period: '/ tahun',
+          features: [
+            '200 pengguna',
+            '10 perusahaan',
+            '100 warehouse',
+            '5.000 e-Faktur/tahun',
+            '10.000 AI/bulan',
+            'CRM Enterprise',
+            'Budget Procurement Plan',
+            'Priority',
+          ],
+          cta: 'Pilih Pro',
+        },
+      ] as PricingPackage[],
+      approvalNote: 'Paket harga tahunan pengadaan enterprise. Hubungi tim HUNTR untuk kebutuhan kustom atau pendampingan orientasi bisnis Anda.',
     },
     about: {
       eyebrow: 'Tentang HUNTR',

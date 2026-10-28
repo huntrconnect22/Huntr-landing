@@ -5,6 +5,13 @@ import { useModal } from '@/context/modal-context';
 import { useContext } from 'react';
 import { LanguageContext } from '@/context/language-context';
 import { translations } from '@/lib/translations';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 
 export function TalkModal() {
   const { isOpen, kind, productContext, closeModal } = useModal();
@@ -28,10 +35,17 @@ export function TalkModal() {
     }
 
     if (productContext) {
+      const isPackage =
+        productContext.toLowerCase().includes('paket') ||
+        productContext.toLowerCase().includes('enterprise');
       setMessage(
         lang === 'id'
-          ? `Saya tertarik dengan produk: ${productContext}`
-          : `I am interested in product: ${productContext}`
+          ? isPackage
+            ? `Saya tertarik berlangganan ${productContext}`
+            : `Saya tertarik dengan produk: ${productContext}`
+          : isPackage
+            ? `I am interested in subscribing to ${productContext}`
+            : `I am interested in product: ${productContext}`
       );
     } else {
       setMessage('');
@@ -82,8 +96,8 @@ export function TalkModal() {
         if (e.target === e.currentTarget) closeModal();
       }}
     >
-      <div className="modalbox">
-        <button className="close" aria-label="Close" onClick={closeModal}>
+      <div className="modalbox" onClick={(e) => e.stopPropagation()}>
+        <button className="close" aria-label="Close" onClick={closeModal} type="button">
           ×
         </button>
         <h2 id="modalTitle">{modalTitle}</h2>
@@ -115,15 +129,45 @@ export function TalkModal() {
 
           <div className="field">
             <label htmlFor="modal-interest">{t.interestLabel}</label>
-            <select
-              id="modal-interest"
+            <Select
               value={interest}
-              onChange={(e) => setInterest(e.target.value as 'buyer' | 'vendor' | 'learn')}
+              onValueChange={(val) => setInterest(val as 'buyer' | 'vendor' | 'learn')}
             >
-              <option value="buyer">{t.interestBuyer}</option>
-              <option value="vendor">{t.interestVendor}</option>
-              <option value="learn">{t.interestLearn}</option>
-            </select>
+              <SelectTrigger
+                id="modal-interest"
+                className="w-full h-auto py-3 px-3.5 bg-white border border-[var(--line)] rounded-lg text-sm font-normal text-[var(--ink)] focus:outline-none focus:ring-1 focus:ring-[var(--orange)] focus:border-[var(--orange)] shadow-none flex justify-between items-center"
+              >
+                <SelectValue placeholder={t.interestLabel} />
+              </SelectTrigger>
+              <SelectContent
+                className="z-[9999] bg-white border border-[var(--line)] shadow-xl rounded-lg text-[var(--ink)]"
+                position="popper"
+                sideOffset={4}
+              >
+                <SelectItem
+                  value="buyer"
+                  hideIndicator
+                  className="text-sm py-2.5 px-3 cursor-pointer text-[var(--ink)] focus:bg-[#fff0e4] focus:text-[#b94408] data-[state=checked]:font-semibold rounded-md transition-colors"
+                >
+                  {t.interestBuyer}
+                </SelectItem>
+                <SelectItem
+                  value="vendor"
+                  hideIndicator
+                  className="text-sm py-2.5 px-3 cursor-pointer text-[var(--ink)] focus:bg-[#fff0e4] focus:text-[#b94408] data-[state=checked]:font-semibold rounded-md transition-colors"
+                >
+                  {t.interestVendor}
+                </SelectItem>
+                <SelectItem
+                  value="learn"
+                  hideIndicator
+                  className="text-sm py-2.5 px-3 cursor-pointer text-[var(--ink)] focus:bg-[#fff0e4] focus:text-[#b94408] data-[state=checked]:font-semibold rounded-md transition-colors"
+                >
+                  {t.interestLearn}
+                </SelectItem>
+              </SelectContent>
+            </Select>
+            <input type="hidden" name="interest" value={interest} />
           </div>
 
           <div className="field">
@@ -152,4 +196,3 @@ export function TalkModal() {
     </div>
   );
 }
-

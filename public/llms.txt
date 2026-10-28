@@ -23,13 +23,10 @@ HUNTR (https://huntr.id) simplifies enterprise and business procurement by centr
 - B2B Marketplace: https://app.huntr.id/marketplace
 - Registration / Free Trial: https://app.huntr.id/register
 
-## Commercial Model & Pricing
-- 14-day free trial from completed account registration.
-- Success-based transaction fee tiers:
-  - Up to Rp 100,000,000: 5% service fee
-  - Rp 100,000,001 to Rp 250,000,000: 3% service fee
-  - Above Rp 250,000,000: 2% service fee
-  - No transaction, no fee.
+## Commercial Model & Pricing Packages
+- **Enterprise Starter**: Rp 25.000.000 / year (15 users, 1 company, 1 warehouse, 1,000 e-Faktur/year, 500 AI/month, Business Hours support)
+- **Enterprise Growth**: Rp 48.947.368 / year (35 users, 4 companies, 2 warehouses, 3,000 e-Faktur/year, 2,000 AI/month, Budget Procurement Plan, Priority support)
+- **Enterprise Pro**: Rp 75.000.000 / year (200 users, 10 companies, 100 warehouses, 5,000 e-Faktur/year, 10,000 AI/month, CRM Enterprise, Budget Procurement Plan, Priority support)
 
 ## Contact Information
 - Inquiries & Support: support@huntr.id

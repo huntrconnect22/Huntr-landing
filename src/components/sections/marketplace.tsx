@@ -88,25 +88,36 @@ export function Marketplace() {
                     )}
                   </div>
                   <div className="product-body">
-                    <h3>{item.name}</h3>
-                    <div>
+                    <div className="product-tags">
                       {item.category && (
                         <span className="product-tag">{item.category}</span>
                       )}
                       {item.uom && <span className="product-tag">{item.uom}</span>}
                     </div>
-                    <p>
-                      {item.company?.name
-                        ? `Offered by ${item.company.name}`
-                        : 'Verified commercial product listing from HUNTR vendor.'}
-                    </p>
-                    <button
-                      type="button"
-                      className="btn primary"
-                      onClick={() => openModal('buyer', item.name)}
-                    >
-                      {t.requestDetails}
-                    </button>
+
+                    <div className="product-header">
+                      <h3 className="product-title" title={item.name}>
+                        {item.name}
+                      </h3>
+                    </div>
+
+                    <div className="product-desc-wrap">
+                      <p className="product-desc">
+                        {item.company?.name
+                          ? `Offered by ${item.company.name}`
+                          : 'Verified commercial product listing from HUNTR vendor.'}
+                      </p>
+                    </div>
+
+                    <div className="product-action">
+                      <button
+                        type="button"
+                        className="btn primary"
+                        onClick={() => openModal('buyer', item.name)}
+                      >
+                        {t.requestDetails}
+                      </button>
+                    </div>
                   </div>
                 </article>
               );
@@ -120,22 +131,33 @@ export function Marketplace() {
                   <span>{item.icon}</span>
                 </div>
                 <div className="product-body">
-                  <h3>{item.title}</h3>
-                  <div>
+                  <div className="product-tags">
                     {item.tags.map((tag, i) => (
                       <span className="product-tag" key={i}>
                         {tag}
                       </span>
                     ))}
                   </div>
-                  <p>{item.desc}</p>
-                  <button
-                    type="button"
-                    className="btn primary"
-                    onClick={() => openModal('buyer', item.title)}
-                  >
-                    {t.requestDetails}
-                  </button>
+
+                  <div className="product-header">
+                    <h3 className="product-title" title={item.title}>
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  <div className="product-desc-wrap">
+                    <p className="product-desc">{item.desc}</p>
+                  </div>
+
+                  <div className="product-action">
+                    <button
+                      type="button"
+                      className="btn primary"
+                      onClick={() => openModal('buyer', item.title)}
+                    >
+                      {t.requestDetails}
+                    </button>
+                  </div>
                 </div>
               </article>
             ))}
@@ -158,4 +180,3 @@ export function Marketplace() {
     </section>
   );
 }
-

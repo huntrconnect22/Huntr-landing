@@ -125,18 +125,37 @@ export function Tenders() {
           <div className="tender-grid">
             {apiItems.map((item) => {
               const isOpen = item.status === 'open' || item.status === 'active';
+              const detailUrl = 'https://app.huntr.id/rfq';
               return (
                 <article className="tender-card" key={item.id}>
-                  <span className={`status ${isOpen ? '' : 'closed'}`}>
-                    {isOpen ? t.filterOpen : t.filterClosed}
-                  </span>
-                  <h3>{item.title}</h3>
+                  <div className="tender-header">
+                    <span className={`status ${isOpen ? '' : 'closed'}`}>
+                      {isOpen ? t.filterOpen : t.filterClosed}
+                    </span>
+                  </div>
+                  <h3>
+                    <a href={detailUrl} target="_blank" rel="noopener noreferrer">
+                      {item.title}
+                    </a>
+                  </h3>
                   <div className="org">{item.company?.name || 'HUNTR Verified Buyer'}</div>
-                  <p>{item.description || 'Request for procurement quotation and commercial proposal.'}</p>
+                  <div className="desc-wrap">
+                    <p className="desc-text">
+                      {item.description || 'Request for procurement quotation and commercial proposal.'}
+                    </p>
+                    <a
+                      href={detailUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="read-more-link"
+                    >
+                      {t.readMore}
+                    </a>
+                  </div>
                   <div className="tender-meta">
                     <span>{t.postedRecent}</span>
                     <a
-                      href="https://app.huntr.id/rfq"
+                      href={detailUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:underline font-bold"
@@ -152,18 +171,35 @@ export function Tenders() {
           <div className="tender-grid">
             {fallbackFiltered.map((item) => {
               const isOpen = item.status === 'open';
+              const detailUrl = 'https://app.huntr.id/rfq';
               return (
                 <article className="tender-card" key={item.id}>
-                  <span className={`status ${isOpen ? '' : 'closed'}`}>
-                    {isOpen ? t.filterOpen : t.filterClosed}
-                  </span>
-                  <h3>{item.title}</h3>
+                  <div className="tender-header">
+                    <span className={`status ${isOpen ? '' : 'closed'}`}>
+                      {isOpen ? t.filterOpen : t.filterClosed}
+                    </span>
+                  </div>
+                  <h3>
+                    <a href={detailUrl} target="_blank" rel="noopener noreferrer">
+                      {item.title}
+                    </a>
+                  </h3>
                   <div className="org">{item.org}</div>
-                  <p>{item.desc}</p>
+                  <div className="desc-wrap">
+                    <p className="desc-text">{item.desc}</p>
+                    <a
+                      href={detailUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="read-more-link"
+                    >
+                      {t.readMore}
+                    </a>
+                  </div>
                   <div className="tender-meta">
                     <span>{t.postedRecent}</span>
                     <a
-                      href="https://app.huntr.id/rfq"
+                      href={detailUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:underline font-bold"
@@ -207,4 +243,3 @@ export function Tenders() {
     </section>
   );
 }
-
