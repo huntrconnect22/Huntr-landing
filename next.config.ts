@@ -44,6 +44,16 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: [
     'https://9000-firebase-studio-1769597153934.cluster-sumfw3zmzzhzkx4mpvz3ogth4y.cloudworkstations.dev',
   ],
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.huntr.id' }],
+        destination: 'https://huntr.id/:path*',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

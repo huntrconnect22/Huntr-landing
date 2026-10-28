@@ -38,15 +38,14 @@ HUNTR is a Strategic Sourcing Technology and cloud-based B2B procurement platfor
 - **Agentic Procurement Tools**: Intelligent assistants that parse procurement specifications, auto-match relevant suppliers, identify discrepancies in quotations, and flag cost-saving opportunities.
 
 ## Technical Architecture & Public APIs
-- Production Domain: https://huntr.id
-- Application Domain: https://app.huntr.id
+- Production Domain: [huntr.id](https://huntr.id)
+- Application Domain: [app.huntr.id](https://app.huntr.id)
 - Public Endpoints:
-  - GET `/api/rfqs`: Public listing of open RFQs/tenders with search and status parameters.
-  - GET `/api/catalogues`: Public catalogue of verified products and vendor supplies.
-  - GET `/api/auth/check`: Session check for app.huntr.id integration.
+  - [GET /api/rfqs](https://huntr.id/api/rfqs): Public listing of open RFQs/tenders with search and status parameters.
+  - [GET /api/catalogues](https://huntr.id/api/catalogues): Public catalogue of verified products and vendor supplies.
 
 ## Support & Verification
-- Official Email: support@huntr.id
-- LinkedIn: https://www.linkedin.com/company/huntr-id
-- Official Website: https://huntr.id
+- Official Email: [support@huntr.id](mailto:support@huntr.id)
+- LinkedIn: [HUNTR on LinkedIn](https://www.linkedin.com/company/huntr-id)
+- Official Website: [https://huntr.id](https://huntr.id)
 

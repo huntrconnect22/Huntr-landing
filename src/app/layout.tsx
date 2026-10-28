@@ -22,10 +22,10 @@ export const metadata: Metadata = {
   creator: 'HUNTR',
   publisher: 'HUNTR',
   alternates: {
-    canonical: '/',
+    canonical: 'https://huntr.id/',
     languages: {
-      'en-US': '/',
-      'id-ID': '/',
+      'en-US': 'https://huntr.id/',
+      'id-ID': 'https://huntr.id/',
     },
   },
   openGraph: {

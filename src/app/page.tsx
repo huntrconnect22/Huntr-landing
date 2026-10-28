@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: meta.description,
   keywords: meta.keywords,
   alternates: {
-    canonical: '/',
+    canonical: 'https://huntr.id/',
   },
   openGraph: {
     title: meta.title,

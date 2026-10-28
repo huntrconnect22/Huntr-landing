@@ -9,6 +9,8 @@ type MetaContent = {
   keywords?: string;
 };
 
+const CANONICAL_URL = 'https://huntr.id/';
+
 // This hook updates the page's title and meta description tag
 // when the language context changes.
 export const useDynamicSeo = (meta: MetaContent) => {
@@ -19,7 +21,6 @@ export const useDynamicSeo = (meta: MetaContent) => {
     if (!meta || !meta.title || !meta.description) return;
 
     const fullTitle = meta.title.includes('HUNTR') ? meta.title : `${meta.title} | HUNTR`;
-    const pageUrl = window.location.href;
 
     document.title = fullTitle;
     
@@ -43,15 +44,14 @@ export const useDynamicSeo = (meta: MetaContent) => {
       keywordsTag.setAttribute('content', meta.keywords);
     }
 
-    // Add/Update Canonical Link
+    // Add/Update Canonical Link - Always strictly points to single canonical URL
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (!canonicalLink) {
       canonicalLink = document.createElement('link');
       canonicalLink.setAttribute('rel', 'canonical');
       document.head.appendChild(canonicalLink);
     }
-    canonicalLink.setAttribute('href', pageUrl);
-
+    canonicalLink.setAttribute('href', CANONICAL_URL);
 
     // Update Open Graph tags
     const ogTitleTag = document.querySelector('meta[property="og:title"]');
@@ -64,7 +64,7 @@ export const useDynamicSeo = (meta: MetaContent) => {
     }
     const ogUrlTag = document.querySelector('meta[property="og:url"]');
     if (ogUrlTag) {
-        ogUrlTag.setAttribute('content', pageUrl);
+      ogUrlTag.setAttribute('content', CANONICAL_URL);
     }
     const ogLocaleTag = document.querySelector('meta[property="og:locale"]');
     if (ogLocaleTag) {
