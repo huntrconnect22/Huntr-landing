@@ -4,6 +4,7 @@ import React, { useContext, useState, useEffect, useCallback } from 'react';
 import { LanguageContext } from '@/context/language-context';
 import { useModal } from '@/context/modal-context';
 import { translations, SampleTender } from '@/lib/translations';
+import { TenderDetailModal, TenderDetailData } from '@/components/modal/tender-detail-modal';
 
 interface ApiRfqItem {
   id: string;
@@ -14,11 +15,12 @@ interface ApiRfqItem {
     name: string;
   };
   created_at?: string;
+  duration_days?: number;
 }
 
 export function Tenders() {
   const langContext = useContext(LanguageContext);
-  const lang = langContext?.language || 'en';
+  const lang = (langContext?.language || 'en') as 'en' | 'id';
   const { openModal } = useModal();
   const t = translations[lang].tenders;
 
@@ -27,6 +29,7 @@ export function Tenders() {
   const [apiItems, setApiItems] = useState<ApiRfqItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [isUsingFallback, setIsUsingFallback] = useState(false);
+  const [selectedTender, setSelectedTender] = useState<TenderDetailData | null>(null);
 
   // Fetch RFQs from API
   const fetchRfqs = useCallback(async () => {
@@ -72,6 +75,28 @@ export function Tenders() {
         .includes(search.toLowerCase());
     return okStatus && okText;
   });
+
+  const handleOpenApiTender = (item: ApiRfqItem) => {
+    setSelectedTender({
+      id: item.id,
+      title: item.title,
+      status: item.status,
+      org: item.company?.name || 'HUNTR Verified Buyer',
+      desc: item.description || 'Permintaan penawaran harga pengadaan dan proposal komersial.',
+      created_at: item.created_at,
+      duration_days: item.duration_days,
+    });
+  };
+
+  const handleOpenSampleTender = (item: SampleTender) => {
+    setSelectedTender({
+      id: item.id,
+      title: item.title,
+      status: item.status,
+      org: item.org,
+      desc: item.desc,
+    });
+  };
 
   return (
     <section className="section white" id="tenders">
@@ -125,43 +150,58 @@ export function Tenders() {
           <div className="tender-grid">
             {apiItems.map((item) => {
               const isOpen = item.status === 'open' || item.status === 'active';
-              const detailUrl = 'https://app.huntr.id/rfq';
               return (
-                <article className="tender-card" key={item.id}>
+                <article
+                  className="tender-card"
+                  key={item.id}
+                  style={{ cursor: 'pointer' }}
+                  onClick={() => handleOpenApiTender(item)}
+                >
                   <div className="tender-header">
                     <span className={`status ${isOpen ? '' : 'closed'}`}>
                       {isOpen ? t.filterOpen : t.filterClosed}
                     </span>
                   </div>
                   <h3>
-                    <a href={detailUrl} target="_blank" rel="noopener noreferrer">
+                    <button
+                      type="button"
+                      className="text-left font-inherit p-0 bg-transparent border-0 cursor-pointer text-inherit hover:text-[var(--orange)]"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleOpenApiTender(item);
+                      }}
+                    >
                       {item.title}
-                    </a>
+                    </button>
                   </h3>
                   <div className="org">{item.company?.name || 'HUNTR Verified Buyer'}</div>
                   <div className="desc-wrap">
                     <p className="desc-text">
                       {item.description || 'Request for procurement quotation and commercial proposal.'}
                     </p>
-                    <a
-                      href={detailUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="read-more-link"
+                    <button
+                      type="button"
+                      className="read-more-link bg-transparent border-0 p-0 cursor-pointer"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleOpenApiTender(item);
+                      }}
                     >
                       {t.readMore}
-                    </a>
+                    </button>
                   </div>
                   <div className="tender-meta">
                     <span>{t.postedRecent}</span>
-                    <a
-                      href={detailUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:underline font-bold"
+                    <button
+                      type="button"
+                      className="hover:underline font-bold text-left bg-transparent border-0 p-0 cursor-pointer text-inherit"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleOpenApiTender(item);
+                      }}
                     >
                       {isOpen ? t.viewOpportunity : t.opportunityClosed}
-                    </a>
+                    </button>
                   </div>
                 </article>
               );
@@ -171,41 +211,56 @@ export function Tenders() {
           <div className="tender-grid">
             {fallbackFiltered.map((item) => {
               const isOpen = item.status === 'open';
-              const detailUrl = 'https://app.huntr.id/rfq';
               return (
-                <article className="tender-card" key={item.id}>
+                <article
+                  className="tender-card"
+                  key={item.id}
+                  style={{ cursor: 'pointer' }}
+                  onClick={() => handleOpenSampleTender(item)}
+                >
                   <div className="tender-header">
                     <span className={`status ${isOpen ? '' : 'closed'}`}>
                       {isOpen ? t.filterOpen : t.filterClosed}
                     </span>
                   </div>
                   <h3>
-                    <a href={detailUrl} target="_blank" rel="noopener noreferrer">
+                    <button
+                      type="button"
+                      className="text-left font-inherit p-0 bg-transparent border-0 cursor-pointer text-inherit hover:text-[var(--orange)]"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleOpenSampleTender(item);
+                      }}
+                    >
                       {item.title}
-                    </a>
+                    </button>
                   </h3>
                   <div className="org">{item.org}</div>
                   <div className="desc-wrap">
                     <p className="desc-text">{item.desc}</p>
-                    <a
-                      href={detailUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="read-more-link"
+                    <button
+                      type="button"
+                      className="read-more-link bg-transparent border-0 p-0 cursor-pointer"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleOpenSampleTender(item);
+                      }}
                     >
                       {t.readMore}
-                    </a>
+                    </button>
                   </div>
                   <div className="tender-meta">
                     <span>{t.postedRecent}</span>
-                    <a
-                      href={detailUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:underline font-bold"
+                    <button
+                      type="button"
+                      className="hover:underline font-bold text-left bg-transparent border-0 p-0 cursor-pointer text-inherit"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleOpenSampleTender(item);
+                      }}
                     >
                       {isOpen ? t.viewOpportunity : t.opportunityClosed}
-                    </a>
+                    </button>
                   </div>
                 </article>
               );
@@ -230,16 +285,22 @@ export function Tenders() {
           >
             {t.askTenders}
           </a>
-          <a
+          <button
+            type="button"
             className="btn outline"
-            href="https://app.huntr.id/rfq"
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={() => openModal('vendor', 'Semua Tender')}
           >
             {t.seeMore}
-          </a>
+          </button>
         </div>
       </div>
+
+      {/* Tender Detail Modal */}
+      <TenderDetailModal
+        tender={selectedTender}
+        onClose={() => setSelectedTender(null)}
+        lang={lang}
+      />
     </section>
   );
 }
