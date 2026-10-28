@@ -390,9 +390,6 @@ export const translations = {
       linkedinText: 'HUNTR on LinkedIn ↗',
       btn: 'Talk to HUNTR',
     },
-    footer: {
-      watermark: 'Website concept prototype V3B by PandaRaksasa.Kece. Copy, tender listings, products, pricing, testimonials, and capabilities are illustrative and should be validated with the HUNTR team before publication. Contact forms in this prototype do not submit data.',
-    },
     modal: {
       titleTalk: 'Talk to HUNTR',
       titleBuyer: 'I am buying for my business',
@@ -754,9 +751,6 @@ export const translations = {
       email: 'support@huntr.id',
       linkedinText: 'HUNTR di LinkedIn ↗',
       btn: 'Hubungi HUNTR',
-    },
-    footer: {
-      watermark: 'Website concept prototype V3B by PandaRaksasa.Kece. Copy, tender listings, products, pricing, testimonials, and capabilities are illustrative and should be validated with the HUNTR team before publication. Contact forms in this prototype do not submit data.',
     },
     modal: {
       titleTalk: 'Hubungi HUNTR',

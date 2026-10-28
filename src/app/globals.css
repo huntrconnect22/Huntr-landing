@@ -796,15 +796,6 @@ footer {
   color: var(--ink);
 }
 
-footer small {
-  display: block;
-  color: var(--muted);
-  margin-top: 20px;
-  font-size: 11px;
-  max-width: 950px;
-  line-height: 1.5;
-}
-
 /* Modal */
 .modal {
   position: fixed;

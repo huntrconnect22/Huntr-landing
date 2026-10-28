@@ -40,7 +40,6 @@ export function Footer() {
             </a>
           </div>
         </div>
-        <small id="watermark">{t.footer.watermark}</small>
       </div>
     </footer>
   );
