@@ -2,6 +2,7 @@
 
 import { Toaster } from "@/components/ui/toaster";
 import { LanguageProvider, LanguageContext } from '@/context/language-context';
+import { ModalProvider } from '@/context/modal-context';
 import { useContext, useEffect } from 'react';
 import { CookieConsent } from "./cookie-consent";
 
@@ -10,7 +11,6 @@ const MainContent = ({ children }: { children: React.ReactNode }) => {
   const lang = context?.language || 'en';
   
   useEffect(() => {
-    // This only sets the lang attribute for accessibility and client-side logic
     document.documentElement.lang = lang;
   }, [lang]);
   
@@ -20,9 +20,11 @@ const MainContent = ({ children }: { children: React.ReactNode }) => {
 export function ClientProviders({ children }: { children: React.ReactNode }) {
   return (
     <LanguageProvider>
-      <MainContent>{children}</MainContent>
-      <Toaster />
-      <CookieConsent />
+      <ModalProvider>
+        <MainContent>{children}</MainContent>
+        <Toaster />
+        <CookieConsent />
+      </ModalProvider>
     </LanguageProvider>
   );
 }

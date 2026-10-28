@@ -1,32 +1,44 @@
 'use client';
 
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { useContext } from "react";
-import { LanguageContext } from "@/context/language-context";
-import { translations } from "@/lib/translations";
-import { AnimateOnScroll } from "../animate-on-scroll";
+import { useContext } from 'react';
+import { LanguageContext } from '@/context/language-context';
+import { translations } from '@/lib/translations';
+import { useModal } from '@/context/modal-context';
 
 export function Cta() {
   const context = useContext(LanguageContext);
   const lang = context?.language || 'en';
   const t = translations[lang].cta;
+  const { openModal } = useModal();
 
   return (
-    <section id="cta" className="py-16 sm:py-24 bg-primary/5">
-      <AnimateOnScroll className="container mx-auto px-4 text-center fade-in zoom-in-95 duration-500">
-        <h2 className="text-3xl sm:text-4xl font-headline font-bold text-primary">
-          {t.title}
-        </h2>
-        <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-          {t.subtitle}
-        </p>
-        <div className="mt-8">
-          <Button size="lg" asChild>
-            <Link href="/contact">{t.button}</Link>
-          </Button>
+    <section className="section">
+      <div className="wrap">
+        <div className="ctapanel">
+          <div>
+            <div className="eyebrow">{t.eyebrow}</div>
+            <h2>{t.title}</h2>
+            <p>{t.lead}</p>
+            <div className="contactline">
+              <a href={`mailto:${t.email}`}>{t.email}</a>
+              <a
+                href="https://www.linkedin.com/company/huntr-id/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t.linkedinText}
+              </a>
+            </div>
+          </div>
+          <button
+            className="btn yellow"
+            onClick={() => openModal('talk')}
+            type="button"
+          >
+            {t.btn}
+          </button>
         </div>
-      </AnimateOnScroll>
+      </div>
     </section>
   );
 }

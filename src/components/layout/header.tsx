@@ -1,199 +1,118 @@
 'use client';
 
+import React, { useContext, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
-import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, ChevronDown } from 'lucide-react';
-import { useContext } from 'react';
 import { LanguageContext } from '@/context/language-context';
+import { useModal } from '@/context/modal-context';
 import { translations } from '@/lib/translations';
-import { LanguageToggle } from '@/components/language-toggle';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Separator } from '@/components/ui/separator';
-import { cn } from '@/lib/utils';
+import { Menu, X } from 'lucide-react';
 
 export function Header() {
-  const context = useContext(LanguageContext);
-  const lang = context?.language || 'en';
-  const t = translations[lang].header;
-  const pathname = usePathname();
+  const langContext = useContext(LanguageContext);
+  const lang = langContext?.language || 'en';
+  const setLang = langContext?.setLanguage || (() => {});
+  const { openModal } = useModal();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const t = translations[lang].nav;
 
   const navLinks = [
-    {
-      title: t.insight,
-      items: [
-        { href: '/use-case', title: t.useCase },
-        { href: '/news', title: t.news },
-        { href: '/article', title: t.article },
-      ],
-    },
-    {
-      title: t.about,
-      items: [
-        { href: '/our-company', title: t.ourCompany },
-        { href: '/our-team', title: t.ourTeam },
-        { href: '/careers', title: t.careers },
-        { href: '/investor-relations', title: t.investorRelations },
-        { href: '/privacy-policy', title: t.privacyPolicy },
-      ]
-    }
+    { href: '#how', label: t.how },
+    { href: '#tenders', label: t.tenders },
+    { href: '#marketplace', label: t.marketplace },
+    { href: '#pricing', label: t.pricing },
+    { href: '#about', label: t.about },
+    { href: '#faq', label: t.faq },
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full">
-      <div className="relative mx-auto mt-4 flex h-20 max-w-6xl items-center justify-between rounded-2xl border border-black/10 bg-white px-6 shadow-lg">
-        
-        {/* Left side: Logo & Mobile Menu Trigger */}
-        <div className="flex items-center">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden mr-4 text-foreground hover:bg-black/5 hover:text-foreground">
-                <Menu className="h-4 w-4" />
-                <span className="sr-only">{t.openMenu}</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent
-              side="left"
-              className="w-full max-w-sm border-black/10 bg-white/95 text-foreground backdrop-blur-xl"
+    <header className="site-header">
+      <div className="wrap nav">
+        <Link href="#home" className="brand" aria-label="HUNTR home">
+          <Image
+            src="/assets/img/logo-dark.png"
+            alt="HUNTR logo"
+            width={166}
+            height={31}
+            priority
+            className="w-[140px] sm:w-[166px] h-auto object-contain"
+          />
+        </Link>
+
+        <div className="navright">
+          <nav className="main-nav" aria-label="Main Navigation">
+            {navLinks.map((link) => (
+              <a key={link.href} href={link.href}>
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          <div className="lang" aria-label="Language selector">
+            <button
+              type="button"
+              className={lang === 'en' ? 'active' : ''}
+              onClick={() => setLang('en')}
             >
-              <SheetHeader>
-                <SheetTitle className="sr-only">{t.openMenu}</SheetTitle>
-              </SheetHeader>
-              <div className="flex items-center">
-                <Link href="/" className="flex items-center space-x-2">
-                  <Image src="/assets/img/logo-dark.png" alt="HUNTR Logo" width={120} height={30} />
-                </Link>
-              </div>
-              <Separator className="my-4"/>
-
-              <div className="flex h-[calc(100%-5rem)] flex-col">
-                <div className="flex flex-col gap-2">
-                  <Link href="/" className={cn("px-2 py-2 font-medium transition-colors hover:text-primary", pathname === "/" ? "text-primary" : "text-foreground/80")}>
-                      {t.home}
-                  </Link>
-                  <Link href="/pricing" className={cn("px-2 py-2 font-medium transition-colors hover:text-primary", pathname === "/pricing" ? "text-primary" : "text-foreground/80")}>
-                    {t.pricing}
-                  </Link>
-                  <Link href="/rfq" className={cn("px-2 py-2 font-medium transition-colors hover:text-primary", pathname === "/rfq" ? "text-primary" : "text-foreground/80")}>
-                    {t.api}
-                  </Link>
-                  <Accordion type="single" collapsible className="w-full">
-                    {navLinks.map((link) => {
-                      const isActive = link.items.some((item) => pathname.startsWith(item.href));
-                      return (
-                        <AccordionItem value={link.title} key={link.title} className="border-b-0">
-                          <AccordionTrigger className={cn("px-2 py-2 font-medium hover:no-underline hover:text-primary", isActive ? "text-primary" : "text-foreground/80")}>
-                            {link.title}
-                          </AccordionTrigger>
-                          <AccordionContent>
-                            <div className="flex flex-col gap-4 pl-6 pt-2">
-                              {link.items.map((item) => (
-                                <Link key={item.href} href={item.href} className={cn("transition-colors hover:text-primary", pathname.startsWith(item.href) ? "text-primary" : "text-foreground/60")}>
-                                    {item.title}
-                                  </Link>
-                              ))}
-                            </div>
-                          </AccordionContent>
-                        </AccordionItem>
-                      )
-                    })}
-                  </Accordion>
-                  <Link href="/contact" className={cn("px-2 py-2 font-medium transition-colors hover:text-primary", pathname === "/contact" ? "text-primary" : "text-foreground/80")}>
-                    {t.contact}
-                  </Link>
-                </div>
-                <div className="mt-6 flex flex-col gap-3">
-                  <Separator />
-                  <a href="https://app.huntr.id/login" target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" className="w-full">{t.login}</Button>
-                  </a>
-                  <a href="https://app.huntr.id/register" target="_blank" rel="noopener noreferrer">
-                    <Button className="w-full">{t.register}</Button>
-                  </a>
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
-          
-          <Link href="/" className="flex items-center space-x-2">
-            <Image src="/assets/img/logo-dark.png" alt="HUNTR Logo" width={120} height={30} priority />
-          </Link>
-        </div>
-
-        {/* Center Nav (Desktop) */}
-        <nav className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-6 text-sm md:flex">
-          <Link
-            href="/"
-            className={cn("font-medium transition-colors hover:text-primary", pathname === "/" ? "text-primary" : "text-foreground/80")}
-          >
-            {t.home}
-          </Link>
-          <Link
-            href="/pricing"
-            className={cn("font-medium transition-colors hover:text-primary", pathname === "/pricing" ? "text-primary" : "text-foreground/80")}
-          >
-            {t.pricing}
-          </Link>
-          <Link
-            href="/rfq"
-            className={cn("font-medium transition-colors hover:text-primary", pathname === "/rfq" ? "text-primary" : "text-foreground/80")}
-          >
-            {t.api}
-          </Link>
-          {navLinks.map((link) => {
-            const isActive = link.items.some(item => pathname.startsWith(item.href));
-            return (
-             <DropdownMenu key={link.title}>
-              <DropdownMenuTrigger className={cn("flex items-center gap-1 font-medium transition-colors hover:text-primary focus:outline-none", isActive ? "text-primary" : "text-foreground/80")}>
-                {link.title}
-                <ChevronDown className="h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="center">
-                {link.items.map((item) => (
-                  <DropdownMenuItem key={item.href} asChild className={pathname.startsWith(item.href) ? 'bg-accent' : ''}>
-                    <Link href={item.href}>{item.title}</Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-          )})}
-           <Link
-            href="/contact"
-            className={cn("font-medium transition-colors hover:text-primary", pathname === "/contact" ? "text-primary" : "text-foreground/80")}
-          >
-            {t.contact}
-          </Link>
-        </nav>
-
-        {/* Right Side: Actions */}
-        <div className="flex items-center justify-end gap-2">
-          <div className="md:hidden">
-            <LanguageToggle />
+              EN
+            </button>
+            <button
+              type="button"
+              className={lang === 'id' ? 'active' : ''}
+              onClick={() => setLang('id')}
+            >
+              ID
+            </button>
           </div>
-          <div className="hidden md:flex items-center gap-2">
-             <LanguageToggle />
-             <a href="https://app.huntr.id/login" target="_blank" rel="noopener noreferrer">
-               <Button variant="outline" size="sm">{t.login}</Button>
-             </a>
-             <a href="https://app.huntr.id/register" target="_blank" rel="noopener noreferrer">
-               <Button size="sm">{t.register}</Button>
-             </a>
-          </div>
+
+          <button
+            type="button"
+            className="btn primary hidden sm:inline-flex"
+            onClick={() => openModal('talk')}
+          >
+            {t.talk}
+          </button>
+
+          {/* Mobile menu trigger */}
+          <button
+            type="button"
+            className="p-2 sm:hidden text-ink hover:text-orange transition-colors"
+            aria-label="Toggle mobile menu"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Drawer */}
+      {mobileMenuOpen && (
+        <div className="sm:hidden border-t border-line bg-cream px-6 py-4 flex flex-col gap-3 shadow-lg">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="py-2 text-sm font-bold text-ink hover:text-orange"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {link.label}
+            </a>
+          ))}
+          <div className="pt-2">
+            <button
+              type="button"
+              className="btn primary w-full text-sm"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                openModal('talk');
+              }}
+            >
+              {t.talk}
+            </button>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

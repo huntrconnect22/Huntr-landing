@@ -3,13 +3,23 @@
 import { useState, useEffect, useContext } from 'react';
 import { Button } from '@/components/ui/button';
 import { LanguageContext } from '@/context/language-context';
-import { translations } from '@/lib/translations';
 
 export function CookieConsent() {
   const [showConsent, setShowConsent] = useState(false);
   const context = useContext(LanguageContext);
   const lang = context?.language || 'en';
-  const t = translations[lang].cookie;
+
+  const t = lang === 'id'
+    ? {
+        message: 'Kami menggunakan cookie untuk meningkatkan pengalaman penjelajahan Anda di platform kami.',
+        accept: 'Terima',
+        decline: 'Tolak',
+      }
+    : {
+        message: 'We use cookies to enhance your browsing experience on our platform.',
+        accept: 'Accept',
+        decline: 'Decline',
+      };
 
   useEffect(() => {
     try {
@@ -18,45 +28,36 @@ export function CookieConsent() {
         setShowConsent(true);
       }
     } catch (e) {
-      // localStorage is not available
       console.error('Could not access localStorage:', e);
     }
   }, []);
 
   const handleResponse = (consent: boolean) => {
-     try {
+    try {
       localStorage.setItem('cookie_consent', consent.toString());
       setShowConsent(false);
     } catch (e) {
       console.error('Could not access localStorage:', e);
+      setShowConsent(false);
     }
   };
 
-  if (!showConsent || !t) {
+  if (!showConsent) {
     return null;
   }
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 z-[200] animate-in fade-in slide-in-from-bottom-5 duration-500 sm:left-auto">
-      <div className="max-w-md rounded-lg border border-white/10 bg-black/30 p-4 shadow-lg backdrop-blur-sm">
-        <p className="text-sm text-white/80">
+    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-background/80 backdrop-blur-md border-t border-border">
+      <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p className="text-sm text-muted-foreground text-center sm:text-left">
           {t.message}
         </p>
-        <div className="mt-4 flex items-center gap-2">
-          <Button 
-            className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90"
-            size="sm" 
-            onClick={() => handleResponse(true)}
-          >
-            {t.accept}
-          </Button>
-          <Button 
-            className="flex-1 border-white/20 bg-white/10 text-white hover:bg-white/20"
-            variant="outline" 
-            size="sm" 
-            onClick={() => handleResponse(false)}
-          >
+        <div className="flex gap-2">
+          <Button variant="outline" size="sm" onClick={() => handleResponse(false)}>
             {t.decline}
+          </Button>
+          <Button size="sm" onClick={() => handleResponse(true)}>
+            {t.accept}
           </Button>
         </div>
       </div>

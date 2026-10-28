@@ -1,25 +1,30 @@
 'use client';
 
-import { Header } from "@/components/layout/header";
-import { Hero } from "@/components/sections/hero";
-import { DemoBanner } from "@/components/sections/demo-banner";
-import { Solutions } from "@/components/sections/solutions";
-import { Features } from "@/components/sections/features";
-import { CatalogueProducts } from "@/components/sections/catalogue-products";
-import { Footer } from "@/components/layout/footer";
-import { Testimonials } from "@/components/sections/testimonials";
-import { Cta } from "@/components/sections/cta";
-import { Faq } from "@/components/sections/faq";
-import { Clients } from "@/components/sections/clients";
-import { useDynamicSeo } from "@/hooks/use-dynamic-seo";
-import { useContext } from "react";
-import { LanguageContext } from "@/context/language-context";
-import { translations } from "@/lib/translations";
+import { useContext } from 'react';
+import { Header } from '@/components/layout/header';
+import { Footer } from '@/components/layout/footer';
+import { Hero } from '@/components/sections/hero';
+import { Challenge } from '@/components/sections/challenge';
+import { Journey } from '@/components/sections/journey';
+import { Tenders } from '@/components/sections/tenders';
+import { Marketplace } from '@/components/sections/marketplace';
+import { Benefits } from '@/components/sections/benefits';
+import { Capabilities } from '@/components/sections/capabilities';
+import { VendorBand } from '@/components/sections/vendor-band';
+import { Pricing } from '@/components/sections/pricing';
+import { About } from '@/components/sections/about';
+import { Testimonials } from '@/components/sections/testimonials';
+import { Faq } from '@/components/sections/faq';
+import { Cta } from '@/components/sections/cta';
+import { TalkModal } from '@/components/modal/talk-modal';
+import { LanguageContext } from '@/context/language-context';
+import { translations } from '@/lib/translations';
+import { useDynamicSeo } from '@/hooks/use-dynamic-seo';
 
 export function HomeClient() {
   const context = useContext(LanguageContext);
   const lang = context?.language || 'en';
-  
+
   useDynamicSeo({
     title: translations[lang].metadata.title,
     description: translations[lang].metadata.description,
@@ -27,20 +32,25 @@ export function HomeClient() {
   });
 
   return (
-    <div className="flex flex-col min-h-dvh bg-background">
+    <div className="flex flex-col min-h-dvh" style={{ background: 'var(--cream)' }}>
       <Header />
-      <main className="flex-1 -mt-24">
+      <main className="flex-1">
         <Hero />
-        <DemoBanner />
-        <Solutions />
-        <Features />
-        <CatalogueProducts />
-        <Clients />
+        <Challenge />
+        <Journey />
+        <Tenders />
+        <Marketplace />
+        <Benefits />
+        <Capabilities />
+        <VendorBand />
+        <Pricing />
+        <About />
         <Testimonials />
         <Faq />
         <Cta />
       </main>
       <Footer />
+      <TalkModal />
     </div>
   );
 }

@@ -1,0 +1,52 @@
+# HUNTR (huntr.id) - Full Documentation for LLMs
+
+## Mission & Vision
+- **Vision**: To make business procurement more connected, clear, transparent, and accessible across Indonesia and Southeast Asia.
+- **Mission**: To help businesses and vendors work together through practical technology, clearer workflows, fair competition, and better access to purchasing opportunities.
+
+## What is HUNTR?
+HUNTR is a Strategic Sourcing Technology and cloud-based B2B procurement platform. Instead of managing purchasing through fragmented channels such as scattered email threads, WhatsApp messages, paper documents, and disconnected spreadsheets, HUNTR unifies the entire corporate procurement lifecycle:
+1. Requisition / Requirement Specification
+2. Supplier Discovery & Vendor Matching
+3. Request for Quotation (RFQ) & Tender Bidding
+4. Bid Evaluation & Commercial Comparison
+5. Purchase Order Issuance & Contract Execution
+6. Logistics & Fulfilment Tracking
+7. Invoice Verification & HUNTR Pay B2B Settlement
+8. Spend Analysis & Compliance Auditing
+
+## Key Stakeholder Journeys
+### For Buyers (Enterprises, Mid-Market, SMEs)
+- Publish purchase requirements or open RFQs.
+- Receive competitive bids from qualified vendors.
+- Compare quotations objectively by price, specifications, warranty, and delivery lead time.
+- Track order fulfilment and delivery milestones.
+- Consolidate purchasing records for accounting and audit readiness.
+
+### For Vendors, Principals & Distributors
+- Access a steady stream of verified enterprise tenders and purchase requests.
+- Submit quotations and proposals directly through the digital platform.
+- Showcase catalogued products and verified inventory.
+- Ensure guaranteed payment upon verified delivery through HUNTR Pay.
+- Scale business reach across diverse industries.
+
+## Product Modules
+- **HUNTR E-Procurement**: End-to-end digital sourcing, RFQ creation, vendor bidding, and approval workflows.
+- **HUNTR Open Tenders**: Public and targeted procurement opportunities categorized by industry, commodity, and urgency.
+- **HUNTR B2B Marketplace**: Digital catalogue of verified business supplies, MRO, electronics, raw materials, and logistics services.
+- **HUNTR Pay**: Safe B2B payment escrow, multi-tier approval disbursements, and invoice financing options.
+- **Agentic Procurement Tools**: Intelligent assistants that parse procurement specifications, auto-match relevant suppliers, identify discrepancies in quotations, and flag cost-saving opportunities.
+
+## Technical Architecture & Public APIs
+- Production Domain: https://huntr.id
+- Application Domain: https://app.huntr.id
+- Public Endpoints:
+  - GET `/api/rfqs`: Public listing of open RFQs/tenders with search and status parameters.
+  - GET `/api/catalogues`: Public catalogue of verified products and vendor supplies.
+  - GET `/api/auth/check`: Session check for app.huntr.id integration.
+
+## Support & Verification
+- Official Email: support@huntr.id
+- LinkedIn: https://www.linkedin.com/company/huntr-id
+- Official Website: https://huntr.id
+

@@ -1,0 +1,38 @@
+# HUNTR (huntr.id)
+> Your One-Stop Procurement Partner. A cloud-based B2B procurement platform in Indonesia connecting buyers looking to purchase goods and services with qualified vendors.
+
+## Overview
+HUNTR (https://huntr.id) simplifies enterprise and business procurement by centralizing supplier discovery, request for quotations (RFQs), open tender management, vendor management, e-catalogues, contract tracking, spend analytics, and secure B2B payments (HUNTR Pay).
+
+## Core Capabilities
+- **Supplier Discovery**: Discover verified vendors and suppliers matching business requirements across Indonesia.
+- **Requests & Quotations (RFQ)**: Create, publish, compare, and manage RFQs and vendor proposals in one transparent workflow.
+- **Open Tenders**: Real-time marketplace of public and private RFQs allowing vendors to bid and submit quotations.
+- **Marketplace & E-Catalogue**: Browse pre-vetted products, office equipment, industrial spare parts, warehouse consumables, and logistics services.
+- **Vendor Management**: Onboard, evaluate, and coordinate with suppliers in a structured portal.
+- **Contract Management**: Track agreements, procurement terms, milestones, and deliverables.
+- **Purchasing & Fulfilment**: Coordinate purchase orders (PO), delivery schedules, and receipts.
+- **HUNTR Pay**: Secure B2B payment escrow and settlement solutions tailored for corporate transactions.
+- **Spend & Reporting**: Real-time visibility into company procurement spend and vendor performance.
+- **Agentic & Digital Procurement**: AI-assisted supplier matching and proposal evaluation to empower human decision-makers.
+
+## Platform URLs & Key Links
+- Main Landing & Information: https://huntr.id/
+- Web Application & Portal: https://app.huntr.id/
+- Open Tenders & RFQs: https://huntr.id/#tenders
+- B2B Marketplace: https://app.huntr.id/marketplace
+- Registration / Free Trial: https://app.huntr.id/register
+
+## Commercial Model & Pricing
+- 14-day free trial from completed account registration.
+- Success-based transaction fee tiers:
+  - Up to Rp 100,000,000: 5% service fee
+  - Rp 100,000,001 to Rp 250,000,000: 3% service fee
+  - Above Rp 250,000,000: 2% service fee
+  - No transaction, no fee.
+
+## Contact Information
+- Inquiries & Support: support@huntr.id
+- LinkedIn: https://www.linkedin.com/company/huntr-id
+- Headquarters: Jakarta, Indonesia
+
