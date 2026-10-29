@@ -15,12 +15,6 @@ HUNTR brings the entire business procurement journey into a connected workflow, 
 - [HUNTR Pay](https://huntr.id/#about): Transaction and payment support built for corporate purchasing and commercial settlements.
 - [Agentic Procurement](https://huntr.id/#faq): AI-assisted tools that help match business needs with suppliers and compare quotations.
 
-## Pricing Plans
-
-- [Enterprise Starter](https://huntr.id/#pricing): Rp 25.000.000 / year for 15 users, 1 company, 1 warehouse, 1,000 e-Faktur, 500 AI/month, and Business Hours support.
-- [Enterprise Growth](https://huntr.id/#pricing): Rp 48.947.368 / year for 35 users, 4 companies, 2 warehouses, 3,000 e-Faktur, 2,000 AI/month, Budget Procurement Plan, and Priority support.
-- [Enterprise Pro](https://huntr.id/#pricing): Rp 75.000.000 / year for 200 users, 10 companies, 100 warehouses, 5,000 e-Faktur, 10,000 AI/month, CRM Enterprise, Budget Procurement Plan, and Priority support.
-
 ## Public APIs & Integrations
 
 - [Public RFQs API](https://huntr.id/api/rfqs): REST API providing real-time listing of active and public RFQs / open tenders.

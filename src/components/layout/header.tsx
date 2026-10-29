@@ -21,7 +21,6 @@ export function Header() {
     { href: '#how', label: t.how },
     { href: '#tenders', label: t.tenders },
     { href: '#marketplace', label: t.marketplace },
-    { href: '#pricing', label: t.pricing },
     { href: '#about', label: t.about },
     { href: '#faq', label: t.faq },
   ];

@@ -12,7 +12,6 @@ import { Benefits } from '@/components/sections/benefits';
 import { Capabilities } from '@/components/sections/capabilities';
 import { Products } from '@/components/sections/products';
 import { VendorBand } from '@/components/sections/vendor-band';
-import { Pricing } from '@/components/sections/pricing';
 import { About } from '@/components/sections/about';
 import { Testimonials } from '@/components/sections/testimonials';
 import { Faq } from '@/components/sections/faq';
@@ -46,7 +45,6 @@ export function HomeClient() {
         <Capabilities />
         <Products />
         <VendorBand />
-        <Pricing />
         <About />
         <Testimonials />
         <Faq />

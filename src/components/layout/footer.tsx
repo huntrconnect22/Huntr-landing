@@ -28,7 +28,6 @@ export function Footer() {
             <a href="#how">{t.nav.how}</a>
             <a href="#tenders">{t.nav.tenders}</a>
             <a href="#marketplace">{t.nav.marketplace}</a>
-            <a href="#pricing">{t.nav.pricing}</a>
             <a href="#about">{t.nav.about}</a>
             <a href="mailto:support@huntr.id">support@huntr.id</a>
             <a

@@ -14,23 +14,6 @@ export interface FaqItem {
   a: string;
 }
 
-export interface PricingPackage {
-  id: string;
-  name: string;
-  price: string;
-  period: string;
-  popular?: boolean;
-  popularBadge?: string;
-  features: string[];
-  cta: string;
-}
-
-export interface PricingRow {
-  tier: string;
-  fee: string;
-  details: string;
-}
-
 export interface SampleTender {
   id: string;
   status: 'open' | 'closed';
@@ -66,7 +49,6 @@ export const translations = {
       how: 'How it works',
       tenders: 'Tender',
       marketplace: 'HUNTR Catalogue',
-      pricing: 'Pricing',
       about: 'About us',
       faq: 'FAQ',
       talk: 'Talk to HUNTR',
@@ -285,64 +267,6 @@ export const translations = {
       lead: 'Tell us about your business and the products or services you offer. Our team will guide you through the next steps and explain any requirements.',
       cta: 'Introduce your business',
     },
-    pricing: {
-      eyebrow: 'Pricing plans',
-      title: 'Choose the right plan for your business.',
-      lead: 'Transparent enterprise procurement packages designed to scale with your organization.',
-      packages: [
-        {
-          id: 'starter',
-          name: 'Enterprise Starter',
-          price: 'Rp25.000.000',
-          period: '/ year',
-          features: [
-            '15 users',
-            '1 company',
-            '1 warehouse',
-            '1,000 e-Faktur/year',
-            '500 AI/month',
-            'Business Hours support',
-          ],
-          cta: 'Choose Starter',
-        },
-        {
-          id: 'growth',
-          name: 'Enterprise Growth',
-          popular: true,
-          popularBadge: 'Most Popular',
-          price: 'Rp48.947.368',
-          period: '/ year',
-          features: [
-            '35 users',
-            '4 companies',
-            '2 warehouses',
-            '3,000 e-Faktur/year',
-            '2,000 AI/month',
-            'Budget Procurement Plan',
-            'Priority support',
-          ],
-          cta: 'Choose Growth',
-        },
-        {
-          id: 'pro',
-          name: 'Enterprise Pro',
-          price: 'Rp75.000.000',
-          period: '/ year',
-          features: [
-            '200 users',
-            '10 companies',
-            '100 warehouses',
-            '5,000 e-Faktur/year',
-            '10,000 AI/month',
-            'CRM Enterprise',
-            'Budget Procurement Plan',
-            'Priority support',
-          ],
-          cta: 'Choose Pro',
-        },
-      ] as PricingPackage[],
-      approvalNote: 'Annual pricing packages for enterprise procurement. Contact HUNTR for custom requirements or enterprise onboarding assistance.',
-    },
     about: {
       eyebrow: 'About HUNTR',
       title: 'A clearer way to connect buyers and vendors.',
@@ -445,7 +369,6 @@ export const translations = {
       how: 'Cara kerja',
       tenders: 'Tender terbuka',
       marketplace: 'HUNTR Catalogue',
-      pricing: 'Harga',
       about: 'Tentang kami',
       faq: 'Tanya jawab',
       talk: 'Hubungi HUNTR',
@@ -663,64 +586,6 @@ export const translations = {
       title: 'Ingin bekerja sama dengan HUNTR?',
       lead: 'Ceritakan bisnis serta produk atau layanan yang Anda tawarkan. Tim kami akan menjelaskan langkah selanjutnya dan persyaratan yang perlu dipenuhi.',
       cta: 'Perkenalkan bisnis Anda',
-    },
-    pricing: {
-      eyebrow: 'Paket Harga',
-      title: 'Pilih paket yang tepat untuk bisnis Anda.',
-      lead: 'Paket pengadaan tahunan transparan yang dirancang untuk mendukung kebutuhan perusahaan Anda.',
-      packages: [
-        {
-          id: 'starter',
-          name: 'Enterprise Starter',
-          price: 'Rp25.000.000',
-          period: '/ tahun',
-          features: [
-            '15 pengguna',
-            '1 perusahaan',
-            '1 warehouse',
-            '1.000 e-Faktur/tahun',
-            '500 AI/bulan',
-            'Business Hours',
-          ],
-          cta: 'Pilih Starter',
-        },
-        {
-          id: 'growth',
-          name: 'Enterprise Growth',
-          popular: true,
-          popularBadge: 'Paling Populer',
-          price: 'Rp48.947.368',
-          period: '/ tahun',
-          features: [
-            '35 pengguna',
-            '4 perusahaan',
-            '2 warehouse',
-            '3.000 e-Faktur/tahun',
-            '2.000 AI/bulan',
-            'Budget Procurement Plan',
-            'Priority',
-          ],
-          cta: 'Pilih Growth',
-        },
-        {
-          id: 'pro',
-          name: 'Enterprise Pro',
-          price: 'Rp75.000.000',
-          period: '/ tahun',
-          features: [
-            '200 pengguna',
-            '10 perusahaan',
-            '100 warehouse',
-            '5.000 e-Faktur/tahun',
-            '10.000 AI/bulan',
-            'CRM Enterprise',
-            'Budget Procurement Plan',
-            'Priority',
-          ],
-          cta: 'Pilih Pro',
-        },
-      ] as PricingPackage[],
-      approvalNote: 'Paket harga tahunan pengadaan enterprise. Hubungi tim HUNTR untuk kebutuhan kustom atau pendampingan orientasi bisnis Anda.',
     },
     about: {
       eyebrow: 'Tentang HUNTR',
