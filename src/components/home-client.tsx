@@ -18,6 +18,7 @@ import { Testimonials } from '@/components/sections/testimonials';
 import { Faq } from '@/components/sections/faq';
 import { Cta } from '@/components/sections/cta';
 import { TalkModal } from '@/components/modal/talk-modal';
+import { WhatsAppButton } from '@/components/layout/whatsapp-button';
 import { LanguageContext } from '@/context/language-context';
 import { translations } from '@/lib/translations';
 import { useDynamicSeo } from '@/hooks/use-dynamic-seo';
@@ -53,6 +54,7 @@ export function HomeClient() {
       </main>
       <Footer />
       <TalkModal />
+      <WhatsAppButton />
     </div>
   );
 }

@@ -407,6 +407,13 @@ export const translations = {
       linkedinText: 'HUNTR on LinkedIn ↗',
       btn: 'Talk to HUNTR',
     },
+    whatsapp: {
+      label: 'Chat with HUNTR on WhatsApp',
+      name: 'HUNTR Support',
+      status: 'Usually replies within minutes',
+      message: 'Hi there! Have a question about procurement or HUNTR? Chat with our team.',
+      cta: 'Chat on WhatsApp',
+    },
     modal: {
       titleTalk: 'Talk to HUNTR',
       titleBuyer: 'I am buying for my business',
@@ -778,6 +785,13 @@ export const translations = {
       email: 'support@huntr.id',
       linkedinText: 'HUNTR di LinkedIn ↗',
       btn: 'Hubungi HUNTR',
+    },
+    whatsapp: {
+      label: 'Chat dengan HUNTR di WhatsApp',
+      name: 'HUNTR Support',
+      status: 'Biasanya membalas dalam beberapa menit',
+      message: 'Hai! Ada pertanyaan seputar pengadaan atau HUNTR? Tanya langsung ke tim kami.',
+      cta: 'Chat di WhatsApp',
     },
     modal: {
       titleTalk: 'Hubungi HUNTR',
