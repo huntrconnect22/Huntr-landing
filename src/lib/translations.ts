@@ -48,6 +48,13 @@ export interface SampleProduct {
   icon: string;
 }
 
+export interface ProductServiceItem {
+  icon: string;
+  tag: string;
+  name: string;
+  desc: string;
+}
+
 export const translations = {
   en: {
     metadata: {
@@ -58,7 +65,7 @@ export const translations = {
     nav: {
       how: 'How it works',
       tenders: 'Tender',
-      marketplace: 'Marketplace',
+      marketplace: 'HUNTR Catalogue',
       pricing: 'Pricing',
       about: 'About us',
       faq: 'FAQ',
@@ -136,7 +143,7 @@ export const translations = {
       opportunityClosed: 'Opportunity closed',
       joinVendor: 'Join as a vendor',
       askTenders: 'Ask about tenders',
-      seeMore: 'Ask to see more tenders',
+      seeMore: 'See more',
       approvalNote: 'Tender listings are sample content. Confirm live listings, deadlines, and participation requirements with HUNTR before publication.',
       loading: 'Loading open tenders...',
       sampleItems: [
@@ -191,7 +198,7 @@ export const translations = {
       ] as SampleTender[],
     },
     marketplace: {
-      eyebrow: 'Marketplace preview',
+      eyebrow: 'HUNTR Catalogue Preview',
       title: 'Products for everyday business needs.',
       lead: 'Preview examples of products and services vendors may offer through HUNTR. Explore a few examples here, then visit the HUNTR Marketplace to discover more.',
       requestDetails: 'Request details',
@@ -261,6 +268,16 @@ export const translations = {
         { no: '07', title: 'Spend & Reporting', desc: 'Review purchasing activity and spending, where supported.' },
         { no: '08', title: 'Digital Procurement Tools', desc: 'Explore digital tools that may help make everyday procurement tasks simpler and easier to manage.' },
       ] as CapabilityItem[],
+    },
+    products: {
+      eyebrow: 'HUNTR product solutions',
+      title: 'Product solutions built for daily operations.',
+      lead: 'Beyond procurement, HUNTR offers product solutions that help connect and manage different parts of your business operations.',
+      items: [
+        { icon: '◎', tag: 'Customer relationship', name: 'HUNTR CRM', desc: 'Manage customer relationships, track leads, and keep sales activities organised in one place.' },
+        { icon: '▤', tag: 'Warehouse management', name: 'HUNTR WMS', desc: 'Manage warehouse operations, stock levels, and inventory movements more clearly.' },
+        { icon: '⇄', tag: 'E-procurement', name: 'HUNTR E-PROCUREMENT', desc: 'Digitise purchasing requests, quotations, and approvals within a structured workflow.' },
+      ] as ProductServiceItem[],
     },
     vendorBand: {
       eyebrow: 'For vendors',
@@ -420,7 +437,7 @@ export const translations = {
     nav: {
       how: 'Cara kerja',
       tenders: 'Tender terbuka',
-      marketplace: 'Marketplace',
+      marketplace: 'HUNTR Catalogue',
       pricing: 'Harga',
       about: 'Tentang kami',
       faq: 'Tanya jawab',
@@ -498,7 +515,7 @@ export const translations = {
       opportunityClosed: 'Tender ditutup',
       joinVendor: 'Daftar sebagai vendor',
       askTenders: 'Tanyakan tentang tender',
-      seeMore: 'Tanyakan daftar tender lainnya',
+      seeMore: 'Lihat lebih banyak',
       approvalNote: 'Daftar tender ini merupakan contoh. Pastikan daftar aktif, tenggat waktu, dan persyaratan keikutsertaan kepada tim HUNTR sebelum dipublikasikan.',
       loading: 'Memuat tender terbuka...',
       sampleItems: [
@@ -553,7 +570,7 @@ export const translations = {
       ] as SampleTender[],
     },
     marketplace: {
-      eyebrow: 'Pratinjau marketplace',
+      eyebrow: 'Pratinjau HUNTR Catalogue',
       title: 'Produk untuk kebutuhan bisnis sehari-hari.',
       lead: 'Sedang mencari produk atau layanan untuk bisnis Anda? Lihat beberapa contohnya di sini, lalu kunjungi Marketplace HUNTR untuk menjelajahi pilihan lainnya.',
       requestDetails: 'Tanyakan produk',
@@ -623,6 +640,16 @@ export const translations = {
         { no: '07', title: 'Pengeluaran & Laporan', desc: 'Tinjau aktivitas dan pengeluaran pembelian jika layanan ini tersedia.' },
         { no: '08', title: 'Perangkat Digital untuk Pengadaan', desc: 'Jelajahi perangkat digital yang dapat membantu menyederhanakan tugas pengadaan sehari-hari.' },
       ] as CapabilityItem[],
+    },
+    products: {
+      eyebrow: 'Solusi produk HUNTR',
+      title: 'Solusi produk untuk operasional harian.',
+      lead: 'Selain pengadaan, HUNTR menyediakan solusi produk yang membantu menghubungkan dan mengelola berbagai bagian operasional bisnis Anda.',
+      items: [
+        { icon: '◎', tag: 'Hubungan pelanggan', name: 'HUNTR CRM', desc: 'Kelola hubungan pelanggan, lacak prospek, dan rapikan aktivitas penjualan dalam satu tempat.' },
+        { icon: '▤', tag: 'Manajemen gudang', name: 'HUNTR WMS', desc: 'Kelola operasional gudang, tingkat stok, dan pergerakan inventaris secara lebih jelas.' },
+        { icon: '⇄', tag: 'E-procurement', name: 'HUNTR E-PROCUREMENT', desc: 'Digitalkan permintaan pembelian, penawaran harga, dan persetujuan dalam alur kerja yang terstruktur.' },
+      ] as ProductServiceItem[],
     },
     vendorBand: {
       eyebrow: 'Untuk vendor',

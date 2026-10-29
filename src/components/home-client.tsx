@@ -10,6 +10,7 @@ import { Tenders } from '@/components/sections/tenders';
 import { Marketplace } from '@/components/sections/marketplace';
 import { Benefits } from '@/components/sections/benefits';
 import { Capabilities } from '@/components/sections/capabilities';
+import { Products } from '@/components/sections/products';
 import { VendorBand } from '@/components/sections/vendor-band';
 import { Pricing } from '@/components/sections/pricing';
 import { About } from '@/components/sections/about';
@@ -42,6 +43,7 @@ export function HomeClient() {
         <Marketplace />
         <Benefits />
         <Capabilities />
+        <Products />
         <VendorBand />
         <Pricing />
         <About />

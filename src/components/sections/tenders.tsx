@@ -18,6 +18,8 @@ interface ApiRfqItem {
   duration_days?: number;
 }
 
+const PAGE_SIZE = 6;
+
 export function Tenders() {
   const langContext = useContext(LanguageContext);
   const lang = (langContext?.language || 'en') as 'en' | 'id';
@@ -27,16 +29,30 @@ export function Tenders() {
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState<'all' | 'open' | 'closed'>('all');
   const [apiItems, setApiItems] = useState<ApiRfqItem[]>([]);
+  const [page, setPage] = useState(1);
+  const [hasMore, setHasMore] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [loading, setLoading] = useState(true);
+  const [loadingMore, setLoadingMore] = useState(false);
   const [isUsingFallback, setIsUsingFallback] = useState(false);
+  const [fallbackVisible, setFallbackVisible] = useState(PAGE_SIZE);
   const [selectedTender, setSelectedTender] = useState<TenderDetailData | null>(null);
 
-  // Fetch RFQs from API
-  const fetchRfqs = useCallback(async () => {
-    setLoading(true);
+  const mergeUnique = (current: ApiRfqItem[], incoming: ApiRfqItem[]) => {
+    const seen = new Set(current.map((item) => item.id));
+    return [...current, ...incoming.filter((item) => !seen.has(item.id))];
+  };
+
+  const fetchRfqs = useCallback(async (pageToLoad = 1, append = false) => {
+    if (append) {
+      setLoadingMore(true);
+    } else {
+      setLoading(true);
+    }
     try {
       const params = new URLSearchParams({
-        per_page: '12',
+        per_page: String(PAGE_SIZE),
+        page: String(pageToLoad),
         status: filter,
       });
       if (search.trim()) {
@@ -46,23 +62,52 @@ export function Tenders() {
       if (!res.ok) throw new Error('API request failed');
       const json = await res.json();
       const list: ApiRfqItem[] = Array.isArray(json) ? json : json.data ?? [];
+      const lastPage = Number(json.last_page ?? json.meta?.last_page ?? 0);
+      const moreFromMeta = lastPage > 0 ? pageToLoad < lastPage : list.length >= PAGE_SIZE;
 
       if (list.length > 0) {
-        setApiItems(list);
+        if (append) {
+          setApiItems((prev) => {
+            const next = mergeUnique(prev, list);
+            setHasMore(next.length > prev.length && moreFromMeta);
+            return next;
+          });
+          setVisibleCount((count) => count + PAGE_SIZE);
+        } else {
+          setApiItems(list);
+          setVisibleCount(PAGE_SIZE);
+          setHasMore(list.length > PAGE_SIZE || moreFromMeta);
+        }
         setIsUsingFallback(false);
-      } else {
-        // Fallback to sample items if no data from remote
+        setPage(pageToLoad);
+      } else if (!append) {
+        setApiItems([]);
         setIsUsingFallback(true);
+        setFallbackVisible(PAGE_SIZE);
+        setHasMore(false);
+      } else {
+        setHasMore(false);
       }
     } catch {
-      setIsUsingFallback(true);
+      if (!append) {
+        setApiItems([]);
+        setIsUsingFallback(true);
+        setFallbackVisible(PAGE_SIZE);
+        setHasMore(false);
+      } else {
+        setHasMore(false);
+      }
     } finally {
       setLoading(false);
+      setLoadingMore(false);
     }
   }, [filter, search]);
 
   useEffect(() => {
-    fetchRfqs();
+    setPage(1);
+    setVisibleCount(PAGE_SIZE);
+    setFallbackVisible(PAGE_SIZE);
+    fetchRfqs(1, false);
   }, [fetchRfqs]);
 
   // If using fallback, filter locally
@@ -75,6 +120,23 @@ export function Tenders() {
         .includes(search.toLowerCase());
     return okStatus && okText;
   });
+  const fallbackItems = fallbackFiltered.slice(0, fallbackVisible);
+  const hasMoreFallback = fallbackFiltered.length > fallbackVisible;
+
+  const displayedApiItems = apiItems.slice(0, visibleCount);
+  const hasMoreApi = visibleCount < apiItems.length || hasMore;
+
+  const handleLoadMore = () => {
+    if (isUsingFallback) {
+      setFallbackVisible((count) => count + PAGE_SIZE);
+      return;
+    }
+    if (visibleCount < apiItems.length) {
+      setVisibleCount((count) => Math.min(count + PAGE_SIZE, apiItems.length));
+      return;
+    }
+    fetchRfqs(page + 1, true);
+  };
 
   const handleOpenApiTender = (item: ApiRfqItem) => {
     setSelectedTender({
@@ -148,7 +210,7 @@ export function Tenders() {
           </div>
         ) : !isUsingFallback && apiItems.length > 0 ? (
           <div className="tender-grid">
-            {apiItems.map((item) => {
+            {displayedApiItems.map((item) => {
               const isOpen = item.status === 'open' || item.status === 'active';
               return (
                 <article
@@ -209,7 +271,7 @@ export function Tenders() {
           </div>
         ) : (
           <div className="tender-grid">
-            {fallbackFiltered.map((item) => {
+            {fallbackItems.map((item) => {
               const isOpen = item.status === 'open';
               return (
                 <article
@@ -268,6 +330,19 @@ export function Tenders() {
           </div>
         )}
 
+        {((!isUsingFallback && hasMoreApi) || (isUsingFallback && hasMoreFallback)) && (
+          <div className="actions" style={{ justifyContent: 'center', marginTop: '28px' }}>
+            <button
+              type="button"
+              className="btn outline"
+              onClick={handleLoadMore}
+              disabled={loadingMore}
+            >
+              {loadingMore ? t.loading : t.seeMore}
+            </button>
+          </div>
+        )}
+
         <p className="approval-note">{t.approvalNote}</p>
 
         {/* Actions */}
@@ -285,13 +360,6 @@ export function Tenders() {
           >
             {t.askTenders}
           </a>
-          <button
-            type="button"
-            className="btn outline"
-            onClick={() => openModal('vendor', 'Semua Tender')}
-          >
-            {t.seeMore}
-          </button>
         </div>
       </div>
 
